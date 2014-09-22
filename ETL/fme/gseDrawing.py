@@ -86,9 +86,9 @@ def getFloorID(feature):
     floorID = getBuildingID(feature) + namedelimiter + getFloor(feature)
     return floorID
 
-def getSpaceID(feature):
+def getSpaceID(feature,attrname):
 	global namedelimiter
-	spaceID = getFloorID(feature) + namedelimiter + feature.getAttribute("ROOM")
+	spaceID = getFloorID(feature) + namedelimiter + feature.getAttribute(attrname)
 	return spaceID
 
 def getBuildingFromName(dwg):
