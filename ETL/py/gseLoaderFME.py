@@ -162,10 +162,11 @@ def doLoad(playlist_xml,folder,dwg,gse):
     return retVal
 
 def getFeatureTypes(playlist,nm):
-    ds = gzSupport.getDatasets(playlist)
+    ds = gzSupport.getAllDatasets(playlist)
     vals = []
     for d in ds:
-        vals.append(d.getAttributeNode(nm).nodeValue)
+        if d.getAttributeNode(nm) != None:
+            vals.append(d.getAttributeNode(nm).nodeValue)
     strVals = " ".join(vals)
     return strVals
 
