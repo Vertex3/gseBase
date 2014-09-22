@@ -9,7 +9,7 @@
 #          --DestDataset_GEODATABASE_SDE sde
 #          --OUT_CONNECTION_FILE_GEODATABASE_SDE "C:\Users\Steve\Documents\GitHub\gse\ETL\serverConfig\GIS Staging.sde"
 #          --ProductionConnectionFile "C:\Users\Steve\Documents\GitHub\gse\ETL\serverConfig\GIS Production.sde"
-#          --GizintaProject C:\Users\Steve\Documents\GitHub\gse\ETL\config\bldgArchivePlaylist.xml
+#          --GizintaProject C:\Users\Steve\Documents\GitHub\gse\ETL\config\bldgOutlineArchivePlaylist.xml
 #          --SourceFieldQA False
 #          --TargetFieldQA True
 #          --IgnoreErrors False
@@ -22,7 +22,7 @@
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="0 83"
+#! VIEW_POSITION="0 78"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON="import&lt;space&gt;xml.dom.minidom&lt;lf&gt;import&lt;space&gt;os&lt;lf&gt;import&lt;space&gt;sys&lt;lf&gt;import&lt;space&gt;time&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;&lt;lf&gt;ospath&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;FME_MF_DIR&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;print&lt;space&gt;ospath&lt;lf&gt;if&lt;space&gt;ospath&lt;space&gt;not&lt;space&gt;in&lt;space&gt;sys.path:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;sys.path.append&lt;openparen&gt;ospath&lt;closeparen&gt;&lt;lf&gt;import&lt;space&gt;gzfme&lt;lf&gt;&lt;lf&gt;ErrorUniqueID&lt;space&gt;=&lt;space&gt;&lt;quote&gt;ErrorUniqueID&lt;quote&gt;&lt;lf&gt;ErrorRequiredValue&lt;space&gt;=&lt;space&gt;&lt;quote&gt;ErrorRequiredValue&lt;quote&gt;&lt;lf&gt;ErrorValueMap&lt;space&gt;=&lt;space&gt;&lt;quote&gt;ErrorValueMap&lt;quote&gt;&lt;lf&gt;Errors&lt;space&gt;=&lt;space&gt;False&lt;lf&gt;&lt;lf&gt;debug&lt;space&gt;=&lt;space&gt;gzfme.setDebug&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;gzDebug&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;lf&gt;logger&lt;space&gt;=&lt;space&gt;fmeobjects.FMELogFile&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;gzfme.logger&lt;space&gt;=&lt;space&gt;logger"
@@ -31,7 +31,7 @@
 #! TITLE="GizintaLoader"
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14232"
+#! FME_BUILD_NUM="14338"
 #! ZOOM_SCALE="65"
 #! CATEGORY="Gizinta"
 #! REDIRECT_TERMINATORS="NONE"
@@ -40,24 +40,24 @@
 #! USAGE="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Add the xml file and other parameters &lt;/p&gt;&#10;"
 #! END_PYTHON="import&lt;space&gt;fmeobjects&lt;comma&gt;&lt;space&gt;gzfme&lt;lf&gt;#gzfme.shutdown&lt;openparen&gt;Errors&lt;comma&gt;str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;IgnoreErrors&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;FME_TotalFeaturesWritten&lt;comma&gt;FME_MacroValues&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;del&lt;space&gt;Errors&lt;lf&gt;del&lt;space&gt;ErrorUniqueID&lt;lf&gt;del&lt;space&gt;ErrorRequiredValue&lt;lf&gt;del&lt;space&gt;ErrorValueMap&lt;space&gt;&lt;lf&gt;del&lt;space&gt;debug&lt;lf&gt;del&lt;space&gt;logger&lt;lf&gt;gzfme.logger&lt;space&gt;=&lt;space&gt;None"
 #! HISTORY="31&lt;solidus&gt;10&lt;solidus&gt;2013,support&lt;at&gt;Gizinta.com,First&lt;space&gt;Draft"
-#! FME_DOCUMENT_PRIORGUID="03e8161e-876e-4fb7-ad77-72a8476c60d0,4e804a79-b8cf-4fa1-a081-cad51bd6eca9,96793fce-7580-4025-8d85-c11b6131977a,59b66b5f-7e2c-42d5-b98c-f29ae8640422,78c71f3b-74c1-4586-b10d-6ea3963b7e17,269488da-fdd5-4609-ac2e-8929b9078b1b,5f9c35cf-f60c-4c62-a222-f4ff37f3ad24,e2487e82-a288-43b3-b3c9-b2701f82b948,512b40c9-1c14-4c0e-b1e8-43cec3e14435,3cd116a4-1227-4ea6-886e-d7fe46eb4e71,d64da4d1-7021-4838-96b2-8714de174900,b118b073-772b-4c18-b35c-e63f48ddf5fb,83e58684-d885-4293-bdaf-51b065918365"
+#! FME_DOCUMENT_PRIORGUID="03e8161e-876e-4fb7-ad77-72a8476c60d0,4e804a79-b8cf-4fa1-a081-cad51bd6eca9,96793fce-7580-4025-8d85-c11b6131977a,59b66b5f-7e2c-42d5-b98c-f29ae8640422,78c71f3b-74c1-4586-b10d-6ea3963b7e17,269488da-fdd5-4609-ac2e-8929b9078b1b,5f9c35cf-f60c-4c62-a222-f4ff37f3ad24,e2487e82-a288-43b3-b3c9-b2701f82b948,512b40c9-1c14-4c0e-b1e8-43cec3e14435,3cd116a4-1227-4ea6-886e-d7fe46eb4e71,d64da4d1-7021-4838-96b2-8714de174900,b118b073-772b-4c18-b35c-e63f48ddf5fb,83e58684-d885-4293-bdaf-51b065918365,336ef013-4575-418d-8b25-e0f11e604668"
 #! DOC_TOP_LEFT="454 -1220"
 #! REQUIREMENTS_KEYWORD="none"
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2014-03-06T11:42:29"
+#! LAST_SAVE_DATE="2014-09-22T12:31:40"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 (20140115 - Build 14232 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP2 (20140606 - Build 14338 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE="$(LOG_FILE)"
 #! REQUIREMENTS="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;test &lt;/p&gt;&#10;"
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="3375 947"
-#! FME_DOCUMENT_GUID="336ef013-4575-418d-8b25-e0f11e604668"
+#! FME_DOCUMENT_GUID="a1647038-7571-4296-81a2-66cadadbec8b"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -997,7 +997,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FILENAME_MUSTEXIST GizintaProject Xml|.xml Select the Gizinta Xml File to use:"
-#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\gse\ETL\config\bldgArchivePlaylist.xml"
+#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\gse\ETL\config\bldgOutlineArchivePlaylist.xml"
 #! IS_STAND_ALONE="true"
 #! />
 #! <GLOBAL_PARAMETER
@@ -1257,8 +1257,8 @@
 #! <XFORM_PARM PARM_NAME="IgnoreErrors" PARM_VALUE="False"/>
 #! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="gzWriteData"/>
-#! <XFORM_PARM PARM_NAME="FLOORID" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOORID&lt;closeparen&gt;"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GroupBy" PARM_VALUE="OBJECTID"/>
 #! <XFORM_PARM PARM_NAME="HASERRORS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;DRAWING&lt;closeparen&gt;"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
@@ -2972,1383 +2972,6 @@
 #! </ATTR_LINKS>
 #! </SUBDOCUMENT>
 #! <SUBDOCUMENT
-#! NAME="gseFloorPoint"
-#! FME_DOCUMENT_PRIORGUID=""
-#! IS_VISIBLE="false"
-#! DOC_TOP_LEFT="100 -2725"
-#! VIEW_POSITION="56 0"
-#! DOC_EXTENTS="6227 2693"
-#! SUPPRESS_UPGRADE="false"
-#! XFORM_DEPRECATED="No"
-#! REQUIREMENTS_KEYWORD="none"
-#! ZOOM_SCALE="90"
-#! FME_DOCUMENT_GUID=""
-#! FME_PROCESS_COUNT="NO_PARALLELISM"
-#! CATEGORY="Gizinta"
-#! FME_PROCESS_GROUPS_ORDERED="No"
-#! LEGAL_TERMS_CONDITIONS=""
-#! FME_PROCESS_GROUP_BY=""
-#! DESCRIPTION=""
-#! TITLE="gseFloorPoint"
-#! USAGE=""
-#! DOC_DYNAMIC_INPUT_ATTRS="0"
-#! HISTORY=""
-#! REQUIREMENTS=""
-#! >
-#! <GLOBAL_PARAMETERS>
-#! <GLOBAL_PARAMETER
-#! GUI_LINE="GUI OPTIONAL FILENAME_MUSTEXIST ProductionConnectionFile Connection_File|sde Enter the path and name of the Production SDE Connection:"
-#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\gse\ETL\GIS Production.sde"
-#! IS_STAND_ALONE="true"
-#! />
-#! </GLOBAL_PARAMETERS>
-#! <COMMENTS>
-#! </COMMENTS>
-#! <CONSTANTS>
-#! </CONSTANTS>
-#! <BOOKMARKS>
-#! </BOOKMARKS>
-#! <TRANSFORMERS>
-#! <TRANSFORMER
-#! IDENTIFIER="8"
-#! TYPE="FeatureMerger"
-#! VERSION="10"
-#! POSITION="2562 -1480"
-#! ORDER="45"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <OUTPUT_FEAT NAME="REFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="3"/>
-#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
-#! <FEAT_COLLAPSED COLLAPSED="4"/>
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="BUILDINGID"/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
-#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger"/>
-#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="16"
-#! TYPE="AttributeCreator"
-#! VERSION="3"
-#! POSITION="5611 -1205"
-#! ORDER="38"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="OUTPUT"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
-#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="fme_feature_type,Floor_Point,CALCROT,&lt;at&gt;Value&lt;openparen&gt;_tiltCALCROT&lt;closeparen&gt;,WORLDFILE,&lt;at&gt;Value&lt;openparen&gt;_tiltWORLDFILE&lt;closeparen&gt;,SCHELEV,&lt;at&gt;Value&lt;openparen&gt;_floorlevelSCHELEV&lt;closeparen&gt;,ALTITUDE,&lt;at&gt;Value&lt;openparen&gt;_floorlevelALTITUDE&lt;closeparen&gt;,FLOOR_LEVEL,&lt;at&gt;Value&lt;openparen&gt;_floorlevelFLOOR_LEVEL&lt;closeparen&gt;"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="19"
-#! TYPE="FeatureReader"
-#! VERSION="4"
-#! POSITION="1326 -1415"
-#! ORDER="42"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="DBO.Building_Point"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <OUTPUT_FEAT NAME="DBO.Active_Floor"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <OUTPUT_FEAT NAME="&lt;OTHER&gt;"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <OUTPUT_FEAT NAME="INITIATOR"/>
-#! <FEAT_COLLAPSED COLLAPSED="3"/>
-#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES" PARM_VALUE="yes"/>
-#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="INTERACT" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_COMPLEX_EDGES" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="DBO.Building_Point DBO.Active_Floor"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION" PARM_VALUE="SDE.DEFAULT"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEODATABASE_SDE_CONNECTION,&quot;OPTIONAL ACTIVECHOICE Parameters,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;OS Authentication&quot;&quot;,USERID,PASSWORD,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connection File&quot;&quot;,SERVER,DATASET,USERID,PASSWORD,INSTANCE,VERSION,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP&quot;,GEODATABASE_SDE&lt;space&gt;Connection:,GEODATABASE_SDE_CONNECTION_FILE,&quot;OPTIONAL FILENAME_MUSTEXIST Connection&quot;,GEODATABASE_SDE&lt;space&gt;File:,GEODATABASE_SDE_VERSION_TYPE,&quot;OPTIONAL ACTIVECHOICE &quot;&quot;Connect using a Transactional Version&quot;&quot;,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a Historical Marker&quot;&quot;,VERSION,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a specific date and time&quot;&quot;,VERSION,HISTORICAL_VERSION_NAME&quot;,GEODATABASE_SDE&lt;space&gt;Version&lt;space&gt;Type:,GEODATABASE_SDE_VERSION,&quot;OPTIONAL SDE_T_VERSION_LIST $[DATASET],SERVER,$[SERVER],INSTANCE,$[INSTANCE],USERID,$[USERID],PASSWORD,$[PASSWORD],VERSION,$[VERSION]&quot;,GEODATABASE_SDE&lt;space&gt;Transactional&lt;space&gt;Version:,GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER,&quot;OPTIONAL CHECKBOX YES%NO&quot;,GEODATABASE_SDE&lt;space&gt;Remove&lt;space&gt;Schema&lt;space&gt;Qualifier,GEODATABASE_SDE_TABLELIST,&quot;IGNORE TEXT&quot;,GEODATABASE_SDE&lt;space&gt;Table&lt;space&gt;List:,GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Spatial&lt;space&gt;Data&lt;space&gt;Only,GEODATABASE_SDE_RESOLVE_DOMAINS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Domains,GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Subtypes,GEODATABASE_SDE_IGNORE_NETWORK_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Network&lt;space&gt;Info,GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Relationship&lt;space&gt;Info,GEODATABASE_SDE_SPLIT_COMPLEX_EDGES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Complex&lt;space&gt;Edges,GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Multi-Part&lt;space&gt;Annotations"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION" PARM_VALUE="Connection File"/>
-#! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Keep result geometry only"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION_TYPE" PARM_VALUE="Connect using a Transactional Version"/>
-#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="COMBINE_ATTRS" PARM_VALUE="In case of conflict, keep result attributes"/>
-#! <XFORM_PARM PARM_NAME="CACHE_MSG" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER" PARM_VALUE="YES"/>
-#! <XFORM_PARM PARM_NAME="CACHE_TIMEOUT_HRS" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO" PARM_VALUE="yes"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader_3"/>
-#! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE="ENVELOPE_INTERSECT%INTERSECTS%CONTAINS%CROSSES%DISJOINT%EQUALS%OVERLAPS%TOUCHES%WITHIN"/>
-#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="sde"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TABLELIST" PARM_VALUE="DBO.Building_Point DBO.Active_Floor"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="DBO.Building_Point%DBO.Active_Floor"/>
-#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="DBO.Building_Point,,DBO.Active_Floor,"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="$(ProductionConnectionFile)"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="21"
-#! TYPE="FeatureMerger"
-#! VERSION="10"
-#! POSITION="1807 -1052"
-#! ORDER="43"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <OUTPUT_FEAT NAME="REFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="3"/>
-#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
-#! <FEAT_COLLAPSED COLLAPSED="4"/>
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="BUILDINGID"/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes and Geometry"/>
-#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_3"/>
-#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="31"
-#! TYPE="TestFilter"
-#! VERSION="1"
-#! POSITION="680 -123"
-#! ORDER="32"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="FloorplanLine_All"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <OUTPUT_FEAT NAME="InteriorSpace_All"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <OUTPUT_FEAT NAME="Floor_All"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
-#! <FEAT_COLLAPSED COLLAPSED="3"/>
-#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;FloorplanLine_All&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;DBO.FloorplanLine_All&lt;quote&gt;,FloorplanLine_All,BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;InteriorSpace_All&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;DBO.InteriorSpace_All&lt;quote&gt;,InteriorSpace_All,BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;Floor_All&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;DBO.Floor_All&lt;quote&gt;,Floor_All"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestFilter"/>
-#! <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="29"
-#! TYPE="StatisticsCalculator"
-#! VERSION="5"
-#! POSITION="2002 -32"
-#! ORDER="39"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="SUMMARY"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="COMPLETE"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <OUTPUT_FEAT NAME="CUMULATIVE"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MEAN_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="COMPUTE_HISTOGRAM" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="ATTIBUTES_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MAX_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StatisticsCalculator"/>
-#! <XFORM_PARM PARM_NAME="STATS_ATTRS" PARM_VALUE="OBJECTID FLOORID"/>
-#! <XFORM_PARM PARM_NAME="RANGE_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUM_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE="_count"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="NUMERIC_ATTR" PARM_VALUE="_numeric_count"/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HISTO_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="STDEV_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MODE_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MEDIAN_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MIN_ATTR" PARM_VALUE="_value"/>
-#! <XFORM_PARM PARM_NAME="PREPEND_ATTR_NAME_CHOICE" PARM_VALUE="Automatically"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="39"
-#! TYPE="AttributeCreator"
-#! VERSION="3"
-#! POSITION="3309 -157"
-#! ORDER="33"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="OUTPUT"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
-#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="HASFLOORPLANLINES,&lt;at&gt;Value&lt;openparen&gt;FLOORID._count&lt;closeparen&gt;"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="43"
-#! TYPE="AttributeCreator"
-#! VERSION="3"
-#! POSITION="3336 -375"
-#! ORDER="34"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="OUTPUT"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_3"/>
-#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="HASINTERIORSPACES,&lt;at&gt;Value&lt;openparen&gt;FLOORID._count&lt;closeparen&gt;"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="46"
-#! TYPE="AttributeCreator"
-#! VERSION="3"
-#! POSITION="3341 -594"
-#! ORDER="35"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="OUTPUT"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_4"/>
-#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="HASFLOORAREAS,&lt;at&gt;Value&lt;openparen&gt;FLOORID._count&lt;closeparen&gt;"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="52"
-#! TYPE="FeatureMerger"
-#! VERSION="10"
-#! POSITION="5133 -1197"
-#! ORDER="47"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelGlobalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <OUTPUT_FEAT NAME="REFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="3"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
-#! <FEAT_COLLAPSED COLLAPSED="4"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
-#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_4"/>
-#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOORID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOORID._value&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="45"
-#! TYPE="FeatureMerger"
-#! VERSION="10"
-#! POSITION="4497 -682"
-#! ORDER="37"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <OUTPUT_FEAT NAME="REFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="3"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
-#! <FEAT_COLLAPSED COLLAPSED="4"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
-#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_5"/>
-#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOORID._value&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOORID._value&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="55"
-#! TYPE="FeatureMerger"
-#! VERSION="10"
-#! POSITION="3952 -236"
-#! ORDER="36"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <OUTPUT_FEAT NAME="REFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="3"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
-#! <FEAT_COLLAPSED COLLAPSED="4"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
-#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_6"/>
-#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOORID._value&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOORID._value&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="54"
-#! TYPE="StatisticsCalculator"
-#! VERSION="5"
-#! POSITION="2002 -362"
-#! ORDER="40"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="SUMMARY"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="COMPLETE"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <OUTPUT_FEAT NAME="CUMULATIVE"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MEAN_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="COMPUTE_HISTOGRAM" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="ATTIBUTES_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MAX_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StatisticsCalculator_2"/>
-#! <XFORM_PARM PARM_NAME="STATS_ATTRS" PARM_VALUE="OBJECTID FLOORID"/>
-#! <XFORM_PARM PARM_NAME="RANGE_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUM_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE="_count"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="NUMERIC_ATTR" PARM_VALUE="_numeric_count"/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HISTO_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="STDEV_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MODE_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MEDIAN_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MIN_ATTR" PARM_VALUE="_value"/>
-#! <XFORM_PARM PARM_NAME="PREPEND_ATTR_NAME_CHOICE" PARM_VALUE="Automatically"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="60"
-#! TYPE="StatisticsCalculator"
-#! VERSION="5"
-#! POSITION="2002 -676"
-#! ORDER="41"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="SUMMARY"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="COMPLETE"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <OUTPUT_FEAT NAME="CUMULATIVE"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MEAN_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="COMPUTE_HISTOGRAM" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="ATTIBUTES_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MAX_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StatisticsCalculator_3"/>
-#! <XFORM_PARM PARM_NAME="STATS_ATTRS" PARM_VALUE="OBJECTID FLOORID"/>
-#! <XFORM_PARM PARM_NAME="RANGE_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUM_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE="_count"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="NUMERIC_ATTR" PARM_VALUE="_numeric_count"/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="HISTO_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="STDEV_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MODE_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MEDIAN_ATTR" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="MIN_ATTR" PARM_VALUE="_value"/>
-#! <XFORM_PARM PARM_NAME="PREPEND_ATTR_NAME_CHOICE" PARM_VALUE="Automatically"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="48"
-#! TYPE="FeatureMerger"
-#! VERSION="10"
-#! POSITION="3112 -2144"
-#! ORDER="44"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <OUTPUT_FEAT NAME="REFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="HULLROT" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="SPACING" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="MARGIN" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="XCENTER" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="3"/>
-#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="HULLROT" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="SPACING" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="MARGIN" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="XCENTER" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
-#! <FEAT_COLLAPSED COLLAPSED="4"/>
-#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="HULLROT" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="SPACING" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="MARGIN" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="XCENTER" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="BUILDINGID"/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
-#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_7"/>
-#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE="_tilt"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOORID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOORID&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="65"
-#! TYPE="FeatureReader"
-#! VERSION="4"
-#! POSITION="1299 -1915"
-#! ORDER="50"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="DBO.Building_Outline_Tilt"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="HULLROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="MARGIN" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="XCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="&lt;OTHER&gt;"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <OUTPUT_FEAT NAME="INITIATOR"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES" PARM_VALUE="yes"/>
-#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="INTERACT" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_COMPLEX_EDGES" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="DBO.Building_Outline_Tilt"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION" PARM_VALUE="SDE.DEFAULT"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEODATABASE_SDE_CONNECTION,&quot;OPTIONAL ACTIVECHOICE Parameters,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;OS Authentication&quot;&quot;,USERID,PASSWORD,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connection File&quot;&quot;,SERVER,DATASET,USERID,PASSWORD,INSTANCE,VERSION,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP&quot;,GEODATABASE_SDE&lt;space&gt;Connection:,GEODATABASE_SDE_CONNECTION_FILE,&quot;OPTIONAL FILENAME_MUSTEXIST Connection&quot;,GEODATABASE_SDE&lt;space&gt;File:,GEODATABASE_SDE_VERSION_TYPE,&quot;OPTIONAL ACTIVECHOICE &quot;&quot;Connect using a Transactional Version&quot;&quot;,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a Historical Marker&quot;&quot;,VERSION,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a specific date and time&quot;&quot;,VERSION,HISTORICAL_VERSION_NAME&quot;,GEODATABASE_SDE&lt;space&gt;Version&lt;space&gt;Type:,GEODATABASE_SDE_VERSION,&quot;OPTIONAL SDE_T_VERSION_LIST $[DATASET],SERVER,$[SERVER],INSTANCE,$[INSTANCE],USERID,$[USERID],PASSWORD,$[PASSWORD],VERSION,$[VERSION]&quot;,GEODATABASE_SDE&lt;space&gt;Transactional&lt;space&gt;Version:,GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER,&quot;OPTIONAL CHECKBOX YES%NO&quot;,GEODATABASE_SDE&lt;space&gt;Remove&lt;space&gt;Schema&lt;space&gt;Qualifier,GEODATABASE_SDE_TABLELIST,&quot;IGNORE TEXT&quot;,GEODATABASE_SDE&lt;space&gt;Table&lt;space&gt;List:,GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Spatial&lt;space&gt;Data&lt;space&gt;Only,GEODATABASE_SDE_RESOLVE_DOMAINS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Domains,GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Subtypes,GEODATABASE_SDE_IGNORE_NETWORK_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Network&lt;space&gt;Info,GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Relationship&lt;space&gt;Info,GEODATABASE_SDE_SPLIT_COMPLEX_EDGES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Complex&lt;space&gt;Edges,GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Multi-Part&lt;space&gt;Annotations"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION" PARM_VALUE="Connection File"/>
-#! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Keep result geometry only"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION_TYPE" PARM_VALUE="Connect using a Transactional Version"/>
-#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="COMBINE_ATTRS" PARM_VALUE="In case of conflict, keep result attributes"/>
-#! <XFORM_PARM PARM_NAME="CACHE_MSG" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="CACHE_TIMEOUT_HRS" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO" PARM_VALUE="yes"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader_4"/>
-#! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE="ENVELOPE_INTERSECT%INTERSECTS%CONTAINS%CROSSES%DISJOINT%EQUALS%OVERLAPS%TOUCHES%WITHIN"/>
-#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="sde"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TABLELIST" PARM_VALUE="DBO.Building_Outline_Tilt"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="DBO.Building_Outline_Tilt"/>
-#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="DBO.Building_Outline_Tilt,&quot;geodb_oid,OBJECTID,BUILDINGID,HULLROT,BLDGHEIGHT,SPACING,MARGIN,XCENTER,YCENTER,CALCROT,WORLDFILE,SOURCEID,SOURCEDWG,IN_DATE,LAST_USER,GlobalID,SHAPE.STArea(),SHAPE.STLength()&quot;"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="$(ProductionConnectionFile)"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="12"
-#! TYPE="FeatureMerger"
-#! VERSION="10"
-#! POSITION="3812 -2725"
-#! ORDER="46"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_floorlevelGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <OUTPUT_FEAT NAME="REFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
-#! <FEAT_COLLAPSED COLLAPSED="3"/>
-#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
-#! <FEAT_COLLAPSED COLLAPSED="4"/>
-#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
-#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_2"/>
-#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE="_floorlevel"/>
-#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
-#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOOR&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOOR&lt;closeparen&gt;"/>
-#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#! IDENTIFIER="25"
-#! TYPE="FeatureReader"
-#! VERSION="4"
-#! POSITION="1254 -2343"
-#! ORDER="51"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="DBO.Floor_Level"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <OUTPUT_FEAT NAME="&lt;OTHER&gt;"/>
-#! <FEAT_COLLAPSED COLLAPSED="1"/>
-#! <OUTPUT_FEAT NAME="INITIATOR"/>
-#! <FEAT_COLLAPSED COLLAPSED="2"/>
-#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES" PARM_VALUE="yes"/>
-#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="INTERACT" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_COMPLEX_EDGES" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="DBO.Floor_Level"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION" PARM_VALUE="SDE.DEFAULT"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEODATABASE_SDE_CONNECTION,&quot;OPTIONAL ACTIVECHOICE Parameters,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;OS Authentication&quot;&quot;,USERID,PASSWORD,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connection File&quot;&quot;,SERVER,DATASET,USERID,PASSWORD,INSTANCE,VERSION,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP&quot;,GEODATABASE_SDE&lt;space&gt;Connection:,GEODATABASE_SDE_CONNECTION_FILE,&quot;OPTIONAL FILENAME_MUSTEXIST Connection&quot;,GEODATABASE_SDE&lt;space&gt;File:,GEODATABASE_SDE_VERSION_TYPE,&quot;OPTIONAL ACTIVECHOICE &quot;&quot;Connect using a Transactional Version&quot;&quot;,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a Historical Marker&quot;&quot;,VERSION,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a specific date and time&quot;&quot;,VERSION,HISTORICAL_VERSION_NAME&quot;,GEODATABASE_SDE&lt;space&gt;Version&lt;space&gt;Type:,GEODATABASE_SDE_VERSION,&quot;OPTIONAL SDE_T_VERSION_LIST $[DATASET],SERVER,$[SERVER],INSTANCE,$[INSTANCE],USERID,$[USERID],PASSWORD,$[PASSWORD],VERSION,$[VERSION]&quot;,GEODATABASE_SDE&lt;space&gt;Transactional&lt;space&gt;Version:,GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER,&quot;OPTIONAL CHECKBOX YES%NO&quot;,GEODATABASE_SDE&lt;space&gt;Remove&lt;space&gt;Schema&lt;space&gt;Qualifier,GEODATABASE_SDE_TABLELIST,&quot;IGNORE TEXT&quot;,GEODATABASE_SDE&lt;space&gt;Table&lt;space&gt;List:,GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Spatial&lt;space&gt;Data&lt;space&gt;Only,GEODATABASE_SDE_RESOLVE_DOMAINS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Domains,GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Subtypes,GEODATABASE_SDE_IGNORE_NETWORK_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Network&lt;space&gt;Info,GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Relationship&lt;space&gt;Info,GEODATABASE_SDE_SPLIT_COMPLEX_EDGES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Complex&lt;space&gt;Edges,GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Multi-Part&lt;space&gt;Annotations"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION" PARM_VALUE="Connection File"/>
-#! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Keep result geometry only"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION_TYPE" PARM_VALUE="Connect using a Transactional Version"/>
-#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="COMBINE_ATTRS" PARM_VALUE="In case of conflict, keep result attributes"/>
-#! <XFORM_PARM PARM_NAME="CACHE_MSG" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER" PARM_VALUE="NO"/>
-#! <XFORM_PARM PARM_NAME="CACHE_TIMEOUT_HRS" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO" PARM_VALUE="yes"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader_2"/>
-#! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE="ENVELOPE_INTERSECT%INTERSECTS%CONTAINS%CROSSES%DISJOINT%EQUALS%OVERLAPS%TOUCHES%WITHIN"/>
-#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="sde"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TABLELIST" PARM_VALUE="DBO.Floor_Level"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="DBO.Floor_Level"/>
-#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="DBO.Floor_Level,&quot;geodb_oid,OBJECTID,FLOOR,FLOOR_LEVEL,NAME_LONG,NAME_SHORT,GlobalID&quot;"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="$(ProductionConnectionFile)"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
-#! </TRANSFORMER>
-#! </TRANSFORMERS>
-#! <SUBDOCUMENT_IOS>
-#! <SUBDOCUMENT_IO
-#! IDENTIFIER="1"
-#! NAME="INPUT"
-#! POSITION="100 -100"
-#! COLLAPSED="false"
-#! PUBLISHED="true"
-#! IS_SOURCE="true"
-#! ATTR_MODE="0"
-#! >
-#! </SUBDOCUMENT_IO>
-#! <SUBDOCUMENT_IO
-#! IDENTIFIER="2"
-#! NAME="OUTPUT"
-#! POSITION="6327 -1175"
-#! COLLAPSED="false"
-#! IS_SOURCE="false"
-#! ATTR_MODE="0"
-#! >
-#! </SUBDOCUMENT_IO>
-#! </SUBDOCUMENT_IOS>
-#! <FEAT_LINKS>
-#! <FEAT_LINK
-#! IDENTIFIER="23"
-#! SOURCE_NODE="19"
-#! TARGET_NODE="21"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 1"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="24"
-#! SOURCE_NODE="21"
-#! TARGET_NODE="8"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="26"
-#! SOURCE_NODE="19"
-#! TARGET_NODE="8"
-#! SOURCE_PORT_DESC="fo 1"
-#! TARGET_PORT_DESC="fi 1"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="32"
-#! SOURCE_NODE="1"
-#! TARGET_NODE="31"
-#! SOURCE_PORT_DESC="0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="40"
-#! SOURCE_NODE="31"
-#! TARGET_NODE="29"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="56"
-#! SOURCE_NODE="39"
-#! TARGET_NODE="55"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="49"
-#! SOURCE_NODE="43"
-#! TARGET_NODE="55"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 1"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="50"
-#! SOURCE_NODE="55"
-#! TARGET_NODE="45"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="58"
-#! SOURCE_NODE="45"
-#! TARGET_NODE="52"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 1"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="57"
-#! SOURCE_NODE="46"
-#! TARGET_NODE="45"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 1"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="53"
-#! SOURCE_NODE="52"
-#! TARGET_NODE="16"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="59"
-#! SOURCE_NODE="16"
-#! TARGET_NODE="2"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="61"
-#! SOURCE_NODE="31"
-#! TARGET_NODE="54"
-#! SOURCE_PORT_DESC="fo 1"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="63"
-#! SOURCE_NODE="29"
-#! TARGET_NODE="39"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="41"
-#! SOURCE_NODE="54"
-#! TARGET_NODE="43"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="42"
-#! SOURCE_NODE="60"
-#! TARGET_NODE="46"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="64"
-#! SOURCE_NODE="8"
-#! TARGET_NODE="48"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="69"
-#! SOURCE_NODE="65"
-#! TARGET_NODE="48"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 1"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="51"
-#! SOURCE_NODE="12"
-#! TARGET_NODE="52"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="66"
-#! SOURCE_NODE="48"
-#! TARGET_NODE="12"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="30"
-#! SOURCE_NODE="25"
-#! TARGET_NODE="12"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 1"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="44"
-#! SOURCE_NODE="31"
-#! TARGET_NODE="60"
-#! SOURCE_PORT_DESC="fo 2"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="47"
-#! SOURCE_NODE="31"
-#! TARGET_NODE="21"
-#! SOURCE_PORT_DESC="fo 2"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="62"
-#! SOURCE_NODE="31"
-#! TARGET_NODE="19"
-#! SOURCE_PORT_DESC="fo 2"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="67"
-#! SOURCE_NODE="31"
-#! TARGET_NODE="65"
-#! SOURCE_PORT_DESC="fo 2"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="68"
-#! SOURCE_NODE="31"
-#! TARGET_NODE="25"
-#! SOURCE_PORT_DESC="fo 2"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="70"
-#! SOURCE_NODE="21"
-#! TARGET_NODE="8"
-#! SOURCE_PORT_DESC="fo 1"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="71"
-#! SOURCE_NODE="8"
-#! TARGET_NODE="48"
-#! SOURCE_PORT_DESC="fo 1"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="72"
-#! SOURCE_NODE="48"
-#! TARGET_NODE="12"
-#! SOURCE_PORT_DESC="fo 1"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="73"
-#! SOURCE_NODE="55"
-#! TARGET_NODE="45"
-#! SOURCE_PORT_DESC="fo 1"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="74"
-#! SOURCE_NODE="45"
-#! TARGET_NODE="52"
-#! SOURCE_PORT_DESC="fo 1"
-#! TARGET_PORT_DESC="fi 1"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="75"
-#! SOURCE_NODE="12"
-#! TARGET_NODE="52"
-#! SOURCE_PORT_DESC="fo 1"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! </FEAT_LINKS>
-#! <BREAKPOINTS>
-#! </BREAKPOINTS>
-#! <ATTR_LINKS>
-#! </ATTR_LINKS>
-#! </SUBDOCUMENT>
-#! <SUBDOCUMENT
 #! NAME="gzSetupExtract"
 #! FME_DOCUMENT_PRIORGUID=""
 #! IS_VISIBLE="false"
@@ -5913,13 +4536,1390 @@
 #! </ATTR_LINKS>
 #! </SUBDOCUMENT>
 #! <SUBDOCUMENT
+#! NAME="gseFloorPoint"
+#! FME_DOCUMENT_PRIORGUID=""
+#! IS_VISIBLE="false"
+#! DOC_TOP_LEFT="100 -2725"
+#! VIEW_POSITION="56 0"
+#! DOC_EXTENTS="6227 2693"
+#! SUPPRESS_UPGRADE="false"
+#! XFORM_DEPRECATED="No"
+#! REQUIREMENTS_KEYWORD="none"
+#! ZOOM_SCALE="90"
+#! FME_DOCUMENT_GUID=""
+#! FME_PROCESS_COUNT="NO_PARALLELISM"
+#! CATEGORY="Gizinta"
+#! FME_PROCESS_GROUPS_ORDERED="No"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_PROCESS_GROUP_BY=""
+#! DESCRIPTION=""
+#! TITLE="gseFloorPoint"
+#! USAGE=""
+#! DOC_DYNAMIC_INPUT_ATTRS="0"
+#! HISTORY=""
+#! REQUIREMENTS=""
+#! >
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL FILENAME_MUSTEXIST ProductionConnectionFile Connection_File|sde Enter the path and name of the Production SDE Connection:"
+#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\gse\ETL\GIS Production.sde"
+#! IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="8"
+#! TYPE="FeatureMerger"
+#! VERSION="10"
+#! POSITION="2562 -1480"
+#! ORDER="45"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="BUILDINGID"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="16"
+#! TYPE="AttributeCreator"
+#! VERSION="3"
+#! POSITION="5611 -1205"
+#! ORDER="38"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="fme_feature_type,Floor_Point,CALCROT,&lt;at&gt;Value&lt;openparen&gt;_tiltCALCROT&lt;closeparen&gt;,WORLDFILE,&lt;at&gt;Value&lt;openparen&gt;_tiltWORLDFILE&lt;closeparen&gt;,SCHELEV,&lt;at&gt;Value&lt;openparen&gt;_floorlevelSCHELEV&lt;closeparen&gt;,ALTITUDE,&lt;at&gt;Value&lt;openparen&gt;_floorlevelALTITUDE&lt;closeparen&gt;,FLOOR_LEVEL,&lt;at&gt;Value&lt;openparen&gt;_floorlevelFLOOR_LEVEL&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="19"
+#! TYPE="FeatureReader"
+#! VERSION="4"
+#! POSITION="1326 -1415"
+#! ORDER="42"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="DBO.Building_Point"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <OUTPUT_FEAT NAME="DBO.Active_Floor"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <OUTPUT_FEAT NAME="&lt;OTHER&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <OUTPUT_FEAT NAME="INITIATOR"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES" PARM_VALUE="yes"/>
+#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="INTERACT" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_COMPLEX_EDGES" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="DBO.Building_Point DBO.Active_Floor"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION" PARM_VALUE="SDE.DEFAULT"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEODATABASE_SDE_CONNECTION,&quot;OPTIONAL ACTIVECHOICE Parameters,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;OS Authentication&quot;&quot;,USERID,PASSWORD,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connection File&quot;&quot;,SERVER,DATASET,USERID,PASSWORD,INSTANCE,VERSION,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP&quot;,GEODATABASE_SDE&lt;space&gt;Connection:,GEODATABASE_SDE_CONNECTION_FILE,&quot;OPTIONAL FILENAME_MUSTEXIST Connection&quot;,GEODATABASE_SDE&lt;space&gt;File:,GEODATABASE_SDE_VERSION_TYPE,&quot;OPTIONAL ACTIVECHOICE &quot;&quot;Connect using a Transactional Version&quot;&quot;,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a Historical Marker&quot;&quot;,VERSION,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a specific date and time&quot;&quot;,VERSION,HISTORICAL_VERSION_NAME&quot;,GEODATABASE_SDE&lt;space&gt;Version&lt;space&gt;Type:,GEODATABASE_SDE_VERSION,&quot;OPTIONAL SDE_T_VERSION_LIST $[DATASET],SERVER,$[SERVER],INSTANCE,$[INSTANCE],USERID,$[USERID],PASSWORD,$[PASSWORD],VERSION,$[VERSION]&quot;,GEODATABASE_SDE&lt;space&gt;Transactional&lt;space&gt;Version:,GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER,&quot;OPTIONAL CHECKBOX YES%NO&quot;,GEODATABASE_SDE&lt;space&gt;Remove&lt;space&gt;Schema&lt;space&gt;Qualifier,GEODATABASE_SDE_TABLELIST,&quot;IGNORE TEXT&quot;,GEODATABASE_SDE&lt;space&gt;Table&lt;space&gt;List:,GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Spatial&lt;space&gt;Data&lt;space&gt;Only,GEODATABASE_SDE_RESOLVE_DOMAINS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Domains,GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Subtypes,GEODATABASE_SDE_IGNORE_NETWORK_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Network&lt;space&gt;Info,GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Relationship&lt;space&gt;Info,GEODATABASE_SDE_SPLIT_COMPLEX_EDGES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Complex&lt;space&gt;Edges,GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Multi-Part&lt;space&gt;Annotations"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION" PARM_VALUE="Connection File"/>
+#! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Keep result geometry only"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION_TYPE" PARM_VALUE="Connect using a Transactional Version"/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="COMBINE_ATTRS" PARM_VALUE="In case of conflict, keep result attributes"/>
+#! <XFORM_PARM PARM_NAME="CACHE_MSG" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER" PARM_VALUE="YES"/>
+#! <XFORM_PARM PARM_NAME="CACHE_TIMEOUT_HRS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO" PARM_VALUE="yes"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader_3"/>
+#! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE="ENVELOPE_INTERSECT%INTERSECTS%CONTAINS%CROSSES%DISJOINT%EQUALS%OVERLAPS%TOUCHES%WITHIN"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="sde"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TABLELIST" PARM_VALUE="DBO.Building_Point DBO.Active_Floor"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="DBO.Building_Point%DBO.Active_Floor"/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="DBO.Building_Point,,DBO.Active_Floor,"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="$(ProductionConnectionFile)"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="21"
+#! TYPE="FeatureMerger"
+#! VERSION="10"
+#! POSITION="1807 -1052"
+#! ORDER="43"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="BUILDINGID"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes and Geometry"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_3"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="31"
+#! TYPE="TestFilter"
+#! VERSION="1"
+#! POSITION="680 -123"
+#! ORDER="32"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="FloorplanLine_All"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <OUTPUT_FEAT NAME="InteriorSpace_All"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <OUTPUT_FEAT NAME="Floor_All"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;FloorplanLine_All&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;DBO.FloorplanLine_All&lt;quote&gt;,FloorplanLine_All,BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;InteriorSpace_All&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;DBO.InteriorSpace_All&lt;quote&gt;,InteriorSpace_All,BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;Floor_All&lt;lf&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;DBO.Floor_All&lt;quote&gt;,Floor_All"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestFilter"/>
+#! <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="29"
+#! TYPE="StatisticsCalculator"
+#! VERSION="5"
+#! POSITION="2002 -32"
+#! ORDER="39"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="SUMMARY"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="COMPLETE"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="CUMULATIVE"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MEAN_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COMPUTE_HISTOGRAM" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MAX_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StatisticsCalculator"/>
+#! <XFORM_PARM PARM_NAME="STATS_ATTRS" PARM_VALUE="OBJECTID FLOORID"/>
+#! <XFORM_PARM PARM_NAME="RANGE_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUM_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE="_count"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="NUMERIC_ATTR" PARM_VALUE="_numeric_count"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="HISTO_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="STDEV_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MODE_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MEDIAN_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MIN_ATTR" PARM_VALUE="_value"/>
+#! <XFORM_PARM PARM_NAME="PREPEND_ATTR_NAME_CHOICE" PARM_VALUE="Automatically"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="39"
+#! TYPE="AttributeCreator"
+#! VERSION="3"
+#! POSITION="3309 -157"
+#! ORDER="33"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="HASFLOORPLANLINES,&lt;at&gt;Value&lt;openparen&gt;FLOORID._count&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="43"
+#! TYPE="AttributeCreator"
+#! VERSION="3"
+#! POSITION="3336 -375"
+#! ORDER="34"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_3"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="HASINTERIORSPACES,&lt;at&gt;Value&lt;openparen&gt;FLOORID._count&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="46"
+#! TYPE="AttributeCreator"
+#! VERSION="3"
+#! POSITION="3341 -594"
+#! ORDER="35"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_4"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="HASFLOORAREAS,&lt;at&gt;Value&lt;openparen&gt;FLOORID._count&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="52"
+#! TYPE="FeatureMerger"
+#! VERSION="10"
+#! POSITION="5133 -1197"
+#! ORDER="47"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelGlobalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_4"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOORID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOORID._value&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="45"
+#! TYPE="FeatureMerger"
+#! VERSION="10"
+#! POSITION="4497 -682"
+#! ORDER="37"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_5"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOORID._value&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOORID._value&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="55"
+#! TYPE="FeatureMerger"
+#! VERSION="10"
+#! POSITION="3952 -236"
+#! ORDER="36"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_6"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOORID._value&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOORID._value&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="54"
+#! TYPE="StatisticsCalculator"
+#! VERSION="5"
+#! POSITION="2002 -362"
+#! ORDER="40"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="SUMMARY"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="COMPLETE"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="CUMULATIVE"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MEAN_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COMPUTE_HISTOGRAM" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MAX_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StatisticsCalculator_2"/>
+#! <XFORM_PARM PARM_NAME="STATS_ATTRS" PARM_VALUE="OBJECTID FLOORID"/>
+#! <XFORM_PARM PARM_NAME="RANGE_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUM_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE="_count"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="NUMERIC_ATTR" PARM_VALUE="_numeric_count"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="HISTO_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="STDEV_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MODE_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MEDIAN_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MIN_ATTR" PARM_VALUE="_value"/>
+#! <XFORM_PARM PARM_NAME="PREPEND_ATTR_NAME_CHOICE" PARM_VALUE="Automatically"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="60"
+#! TYPE="StatisticsCalculator"
+#! VERSION="5"
+#! POSITION="2002 -676"
+#! ORDER="41"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="SUMMARY"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="COMPLETE"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="CUMULATIVE"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MEAN_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COMPUTE_HISTOGRAM" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MAX_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StatisticsCalculator_3"/>
+#! <XFORM_PARM PARM_NAME="STATS_ATTRS" PARM_VALUE="OBJECTID FLOORID"/>
+#! <XFORM_PARM PARM_NAME="RANGE_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUM_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE="_count"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="NUMERIC_ATTR" PARM_VALUE="_numeric_count"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="HISTO_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="STDEV_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MODE_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MEDIAN_ATTR" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MIN_ATTR" PARM_VALUE="_value"/>
+#! <XFORM_PARM PARM_NAME="PREPEND_ATTR_NAME_CHOICE" PARM_VALUE="Automatically"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="48"
+#! TYPE="FeatureMerger"
+#! VERSION="10"
+#! POSITION="3112 -2144"
+#! ORDER="44"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HULLROT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="SPACING" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="MARGIN" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="XCENTER" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HULLROT" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="SPACING" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="MARGIN" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="XCENTER" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HULLROT" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="SPACING" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="MARGIN" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="XCENTER" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="BUILDINGID"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_7"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE="_tilt"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOORID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOORID&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="65"
+#! TYPE="FeatureReader"
+#! VERSION="4"
+#! POSITION="1299 -1915"
+#! ORDER="50"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="DBO.Building_Outline_Tilt"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HULLROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACING" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MARGIN" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="XCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;OTHER&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <OUTPUT_FEAT NAME="INITIATOR"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES" PARM_VALUE="yes"/>
+#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="INTERACT" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_COMPLEX_EDGES" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="DBO.Building_Outline_Tilt"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION" PARM_VALUE="SDE.DEFAULT"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEODATABASE_SDE_CONNECTION,&quot;OPTIONAL ACTIVECHOICE Parameters,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;OS Authentication&quot;&quot;,USERID,PASSWORD,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connection File&quot;&quot;,SERVER,DATASET,USERID,PASSWORD,INSTANCE,VERSION,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP&quot;,GEODATABASE_SDE&lt;space&gt;Connection:,GEODATABASE_SDE_CONNECTION_FILE,&quot;OPTIONAL FILENAME_MUSTEXIST Connection&quot;,GEODATABASE_SDE&lt;space&gt;File:,GEODATABASE_SDE_VERSION_TYPE,&quot;OPTIONAL ACTIVECHOICE &quot;&quot;Connect using a Transactional Version&quot;&quot;,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a Historical Marker&quot;&quot;,VERSION,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a specific date and time&quot;&quot;,VERSION,HISTORICAL_VERSION_NAME&quot;,GEODATABASE_SDE&lt;space&gt;Version&lt;space&gt;Type:,GEODATABASE_SDE_VERSION,&quot;OPTIONAL SDE_T_VERSION_LIST $[DATASET],SERVER,$[SERVER],INSTANCE,$[INSTANCE],USERID,$[USERID],PASSWORD,$[PASSWORD],VERSION,$[VERSION]&quot;,GEODATABASE_SDE&lt;space&gt;Transactional&lt;space&gt;Version:,GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER,&quot;OPTIONAL CHECKBOX YES%NO&quot;,GEODATABASE_SDE&lt;space&gt;Remove&lt;space&gt;Schema&lt;space&gt;Qualifier,GEODATABASE_SDE_TABLELIST,&quot;IGNORE TEXT&quot;,GEODATABASE_SDE&lt;space&gt;Table&lt;space&gt;List:,GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Spatial&lt;space&gt;Data&lt;space&gt;Only,GEODATABASE_SDE_RESOLVE_DOMAINS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Domains,GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Subtypes,GEODATABASE_SDE_IGNORE_NETWORK_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Network&lt;space&gt;Info,GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Relationship&lt;space&gt;Info,GEODATABASE_SDE_SPLIT_COMPLEX_EDGES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Complex&lt;space&gt;Edges,GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Multi-Part&lt;space&gt;Annotations"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION" PARM_VALUE="Connection File"/>
+#! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Keep result geometry only"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION_TYPE" PARM_VALUE="Connect using a Transactional Version"/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="COMBINE_ATTRS" PARM_VALUE="In case of conflict, keep result attributes"/>
+#! <XFORM_PARM PARM_NAME="CACHE_MSG" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="CACHE_TIMEOUT_HRS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO" PARM_VALUE="yes"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader_4"/>
+#! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE="ENVELOPE_INTERSECT%INTERSECTS%CONTAINS%CROSSES%DISJOINT%EQUALS%OVERLAPS%TOUCHES%WITHIN"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="sde"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TABLELIST" PARM_VALUE="DBO.Building_Outline_Tilt"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="DBO.Building_Outline_Tilt"/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="DBO.Building_Outline_Tilt,&quot;geodb_oid,OBJECTID,BUILDINGID,HULLROT,BLDGHEIGHT,SPACING,MARGIN,XCENTER,YCENTER,CALCROT,WORLDFILE,SOURCEID,SOURCEDWG,IN_DATE,LAST_USER,GlobalID,SHAPE.STArea(),SHAPE.STLength()&quot;"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="$(ProductionConnectionFile)"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="12"
+#! TYPE="FeatureMerger"
+#! VERSION="10"
+#! POSITION="3812 -2725"
+#! ORDER="46"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelFLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelNAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_floorlevelGlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="_tiltgeodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltOBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltHULLROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltBLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSPACING" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltMARGIN" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltXCENTER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltYCENTER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltCALCROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltWORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltIN_DATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltLAST_USER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltGlobalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_tiltSHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger_2"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE="_floorlevel"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOOR&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOOR&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="25"
+#! TYPE="FeatureReader"
+#! VERSION="4"
+#! POSITION="1254 -2343"
+#! ORDER="51"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="DBO.Floor_Level"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;OTHER&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <OUTPUT_FEAT NAME="INITIATOR"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES" PARM_VALUE="yes"/>
+#! <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="INTERACT" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_COMPLEX_EDGES" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="DBO.Floor_Level"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION" PARM_VALUE="SDE.DEFAULT"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEODATABASE_SDE_CONNECTION,&quot;OPTIONAL ACTIVECHOICE Parameters,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;OS Authentication&quot;&quot;,USERID,PASSWORD,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connection File&quot;&quot;,SERVER,DATASET,USERID,PASSWORD,INSTANCE,VERSION,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP&quot;,GEODATABASE_SDE&lt;space&gt;Connection:,GEODATABASE_SDE_CONNECTION_FILE,&quot;OPTIONAL FILENAME_MUSTEXIST Connection&quot;,GEODATABASE_SDE&lt;space&gt;File:,GEODATABASE_SDE_VERSION_TYPE,&quot;OPTIONAL ACTIVECHOICE &quot;&quot;Connect using a Transactional Version&quot;&quot;,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a Historical Marker&quot;&quot;,VERSION,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a specific date and time&quot;&quot;,VERSION,HISTORICAL_VERSION_NAME&quot;,GEODATABASE_SDE&lt;space&gt;Version&lt;space&gt;Type:,GEODATABASE_SDE_VERSION,&quot;OPTIONAL SDE_T_VERSION_LIST $[DATASET],SERVER,$[SERVER],INSTANCE,$[INSTANCE],USERID,$[USERID],PASSWORD,$[PASSWORD],VERSION,$[VERSION]&quot;,GEODATABASE_SDE&lt;space&gt;Transactional&lt;space&gt;Version:,GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER,&quot;OPTIONAL CHECKBOX YES%NO&quot;,GEODATABASE_SDE&lt;space&gt;Remove&lt;space&gt;Schema&lt;space&gt;Qualifier,GEODATABASE_SDE_TABLELIST,&quot;IGNORE TEXT&quot;,GEODATABASE_SDE&lt;space&gt;Table&lt;space&gt;List:,GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Spatial&lt;space&gt;Data&lt;space&gt;Only,GEODATABASE_SDE_RESOLVE_DOMAINS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Domains,GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Subtypes,GEODATABASE_SDE_IGNORE_NETWORK_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Network&lt;space&gt;Info,GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Relationship&lt;space&gt;Info,GEODATABASE_SDE_SPLIT_COMPLEX_EDGES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Complex&lt;space&gt;Edges,GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Multi-Part&lt;space&gt;Annotations"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION" PARM_VALUE="Connection File"/>
+#! <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Keep result geometry only"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION_TYPE" PARM_VALUE="Connect using a Transactional Version"/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="COMBINE_ATTRS" PARM_VALUE="In case of conflict, keep result attributes"/>
+#! <XFORM_PARM PARM_NAME="CACHE_MSG" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="CACHE_TIMEOUT_HRS" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO" PARM_VALUE="yes"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader_2"/>
+#! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE="ENVELOPE_INTERSECT%INTERSECTS%CONTAINS%CROSSES%DISJOINT%EQUALS%OVERLAPS%TOUCHES%WITHIN"/>
+#! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="sde"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TABLELIST" PARM_VALUE="DBO.Floor_Level"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="DBO.Floor_Level"/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="DBO.Floor_Level,&quot;geodb_oid,OBJECTID,FLOOR,FLOOR_LEVEL,NAME_LONG,NAME_SHORT,GlobalID&quot;"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
+#! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="$(ProductionConnectionFile)"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="1"
+#! NAME="INPUT"
+#! POSITION="100 -100"
+#! COLLAPSED="false"
+#! PUBLISHED="true"
+#! IS_SOURCE="true"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="2"
+#! NAME="OUTPUT"
+#! POSITION="6327 -1175"
+#! COLLAPSED="false"
+#! IS_SOURCE="false"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="23"
+#! SOURCE_NODE="19"
+#! TARGET_NODE="21"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="24"
+#! SOURCE_NODE="21"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="26"
+#! SOURCE_NODE="19"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="32"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="31"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="40"
+#! SOURCE_NODE="31"
+#! TARGET_NODE="29"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="56"
+#! SOURCE_NODE="39"
+#! TARGET_NODE="55"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="49"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="55"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="50"
+#! SOURCE_NODE="55"
+#! TARGET_NODE="45"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="58"
+#! SOURCE_NODE="45"
+#! TARGET_NODE="52"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="57"
+#! SOURCE_NODE="46"
+#! TARGET_NODE="45"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="53"
+#! SOURCE_NODE="52"
+#! TARGET_NODE="16"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="59"
+#! SOURCE_NODE="16"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="61"
+#! SOURCE_NODE="31"
+#! TARGET_NODE="54"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="63"
+#! SOURCE_NODE="29"
+#! TARGET_NODE="39"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="41"
+#! SOURCE_NODE="54"
+#! TARGET_NODE="43"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="42"
+#! SOURCE_NODE="60"
+#! TARGET_NODE="46"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="64"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="48"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="69"
+#! SOURCE_NODE="65"
+#! TARGET_NODE="48"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="51"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="52"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="66"
+#! SOURCE_NODE="48"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="30"
+#! SOURCE_NODE="25"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="44"
+#! SOURCE_NODE="31"
+#! TARGET_NODE="60"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="47"
+#! SOURCE_NODE="31"
+#! TARGET_NODE="21"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="62"
+#! SOURCE_NODE="31"
+#! TARGET_NODE="19"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="67"
+#! SOURCE_NODE="31"
+#! TARGET_NODE="65"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="68"
+#! SOURCE_NODE="31"
+#! TARGET_NODE="25"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="70"
+#! SOURCE_NODE="21"
+#! TARGET_NODE="8"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="71"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="48"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="72"
+#! SOURCE_NODE="48"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="73"
+#! SOURCE_NODE="55"
+#! TARGET_NODE="45"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="74"
+#! SOURCE_NODE="45"
+#! TARGET_NODE="52"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="75"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="52"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! </SUBDOCUMENT>
+#! <SUBDOCUMENT
 #! NAME="SelfIntersectChecker"
 #! FME_DOCUMENT_PRIORGUID=""
 #! IS_VISIBLE="false"
 #! DOC_TOP_LEFT="83 -977"
 #! VIEW_POSITION="0 0"
 #! DOC_EXTENTS="2311 949"
-#! GUID="{D4AA1E74-1436-417F-B46D-F12208A65DE0}"
+#! GUID="D4AA1E74-1436-417F-B46D-F12208A65DE0"
 #! SUPPRESS_UPGRADE="false"
 #! XFORM_DEPRECATED="No"
 #! ZOOM_SCALE="84"
@@ -7031,7 +7031,7 @@ DEFAULT_MACRO OUT_CONNECTION_FILE_GEODATABASE_SDE C:\Users\Steve\Documents\GitHu
 GUI FILENAME_EXISTING OUT_CONNECTION_FILE_GEODATABASE_SDE Connection File:
 DEFAULT_MACRO ProductionConnectionFile C:\Users\Steve\Documents\GitHub\gse\ETL\serverConfig\GIS Production.sde
 GUI OPTIONAL FILENAME_EXISTING ProductionConnectionFile Connection_File|.sde Enter the path and name of the Production SDE Database connection file:
-DEFAULT_MACRO GizintaProject C:\Users\Steve\Documents\GitHub\gse\ETL\config\bldgArchivePlaylist.xml
+DEFAULT_MACRO GizintaProject C:\Users\Steve\Documents\GitHub\gse\ETL\config\bldgOutlineArchivePlaylist.xml
 GUI OPTIONAL FILENAME_EXISTING GizintaProject Xml|.xml Select the Gizinta Xml File to use:
 DEFAULT_MACRO SourceFieldQA False
 GUI OPTIONAL CHOICE SourceFieldQA True%False Choose whether to perform QA on Source Fields:
@@ -8184,17 +8184,17 @@ MACRO $(gzWriteData_WORKSPACE_NAME)_TRANSFORMER_GROUP
 MACRO $(gzWriteData_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
 MACRO $(gzWriteData_WORKSPACE_NAME)_IgnoreErrors False
 MACRO $(gzWriteData_WORKSPACE_NAME)_HASERRORS <at>Value<openparen>DRAWING<closeparen>
-MACRO $(gzWriteData_WORKSPACE_NAME)_FLOORID <at>Value<openparen>FLOORID<closeparen>
+MACRO $(gzWriteData_WORKSPACE_NAME)_GroupBy OBJECTID
 INCLUDE_CUSTOM_TRANSFORMER_VER gzWriteData:1
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzWriteData gzLogWriter Output Renamer/Nuker"   INPUT FEATURE_TYPE gzWriteData_gzLogWriter   OUTPUT FEATURE_TYPE gzWriteData_gzLogWriter
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzWriteData gzFeatureWriter Output Renamer/Nuker"   INPUT FEATURE_TYPE gzWriteData_gzFeatureWriter   OUTPUT FEATURE_TYPE gzWriteData_gzFeatureWriter
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzWriteData gzErrorWriter Output Renamer/Nuker"   INPUT FEATURE_TYPE gzWriteData_gzErrorWriter   OUTPUT FEATURE_TYPE gzWriteData_gzErrorWriter
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzLogWriter -> DBO.gzLog Correlator"    INPUT FEATURE_TYPE gzWriteData_gzLogWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE) @EvaluateExpression(ATTR_CREATE_EXPR,ACTIVEFLAG,Y, ATTR_SET)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.gzLog)
+FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzLogWriter -> DBO.gzLog Correlator"    INPUT FEATURE_TYPE gzWriteData_gzLogWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE) "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,ACTIVEFLAG,Y, ATTR_SET)"       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.gzLog)
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzErrorWriter -> DBO.gzError Correlator"    INPUT FEATURE_TYPE gzWriteData_gzErrorWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE) @EvaluateExpression(ATTR_CREATE_EXPR,ACTIVEFLAG,Y, ATTR_SET)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.gzError)
+FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzErrorWriter -> DBO.gzError Correlator"    INPUT FEATURE_TYPE gzWriteData_gzErrorWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE) "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,ACTIVEFLAG,Y, ATTR_SET)"       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.gzError)
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzFeatureWriter -> NewFeatureType Correlator"    INPUT FEATURE_TYPE gzWriteData_gzFeatureWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 1       @Transform(FME_GENERIC,GEODATABASE_SDE)       @SupplyAttributes(ENCODED,fme_template_feature_type,NewFeatureType)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,NewFeatureType)       @CopyAttributes(ENCODED,__wb_out_feat_type__,fme_feature_type)

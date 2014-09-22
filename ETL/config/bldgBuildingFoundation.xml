@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <Gizinta errorTableName="gzError" logTableName="gzLog" version="2013.1" xmlns:gizinta="http://gizinta.com">
 	<Extract>
-		<CADDataset sourceIDField="autocad_entity_handle" sourceName="Building_Foundation" targetName="Building_Foundation">
+		<CADDataset sourceIDField="autocad_entity_handle" sourceName="Building_Footprint" targetName="Building_Foundation">
 			<WhereClause/>
 		</CADDataset>
 	</Extract>
