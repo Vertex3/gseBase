@@ -1,0 +1,20 @@
+
+UW_Seattle.dwg
+
+Loading UW_Seattle.dwg to database
+fmeFile = gseBasemapLoader.fmw
+FME processing time: 2m1s
+UW_Seattle.dwg Load processing time: 2m1s
+return value set to: True
+
+Loading UW_Seattle.dwg to database
+fmeFile = gseBuildingDerive.fmw
+FME processing time: 0m18s
+UW_Seattle.dwg Load processing time: 0m18s
+return value set to: False
+UW_Seattle.dwg total processing time: 2m20s
+Number of Errors = 1
+Total Number of Errors = 1
+outputSuccess set to: False, 1 drawings processed
+Total Processing time: 2m20s
+
