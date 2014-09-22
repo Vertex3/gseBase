@@ -1,0 +1,109 @@
+
+<Gizinta xmlns:gizinta="http://gizinta.com" errorTableName="gzError" logTableName="gzLog" version="2013.1">
+	<Extract>
+		<CADDataset sourceIDField="autocad_entity_handle" sourceName="BSE" targetName="FloorplanLine">
+			<WhereClause/>
+		</CADDataset>
+	</Extract>
+	<Transform>
+		<Dataset name="FloorplanLine" qa="CheckFields,CheckGeometry" sourceIDField="SOURCEID" sourceNameField="LINETYPE">
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">SITEID</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getSiteID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">BUILDINGID</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getBuildingID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">building</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getBuildingID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">FLOOR</SourceName>
+				<TargetName qa="Required">FLOOR</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getFloor(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>6</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">FLOORID</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getFloorID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">floorid</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getFloorID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">autocad_layer</SourceName>
+				<TargetName qa="Optional">SOURCELAYER</TargetName>
+				<Method>Copy</Method>
+<!--				<PythonExpression>"|Layer|" if "|Layer|" != "None" else "tip: Copy autocad_layer"</PythonExpression>-->
+				<FieldType>String</FieldType>
+				<FieldLength>24</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">SENSITIVITY</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getSensitivity(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">IN_DATE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
+				<FieldType>Date</FieldType>
+				<FieldLength>36</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">LAST_USER</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">autocad_entity_handle</SourceName>
+				<TargetName qa="Required">SOURCEID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>30</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">DRAWING</SourceName>
+				<TargetName qa="Required">SOURCEDWG</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<ChangeDetection exceptProductionView="FloorplanLineExceptProduction" exceptStagingView="FloorplanLineExceptStaging" idField="FLOORID"
+			viewFields="BUILDINGID,FLOOR,FLOORID,SOURCELAYER,SOURCEID,SOURCEDWG,SHAPE"/>
+			<SourceFieldNames>Color,Elevation,Entity,FACFLOOR,FACNUM,FLOOR,GRIDVAL,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
+		</Dataset>
+	</Transform>
+</Gizinta>

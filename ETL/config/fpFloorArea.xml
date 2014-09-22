@@ -1,0 +1,86 @@
+<Gizinta xmlns:gizinta="http://gizinta.com" errorTableName="gzError" logTableName="gzLog" version="2013.1">
+	<Extract>
+		<GDBDataset sourceIDField="SOURCEID" sourceName="Floor_Poly" targetName="Floor_Area">
+			<WhereClause/>
+		</GDBDataset>
+	</Extract>
+	<Transform>
+		<Dataset name="Floor_Area" qa="CheckFields,CheckGeometry" sourceIDField="FLOORID" sourceNameField="FLOORID">
+			<Field>
+				<SourceName qa="Optional">SITEID</SourceName>
+				<TargetName qa="Required">SITEID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">BUILDINGID</SourceName>
+				<TargetName qa="Required">BUILDINGID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">BUILDINGID</SourceName>
+				<TargetName qa="Required">buildingid</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">FLOOR</SourceName>
+				<TargetName qa="Required">FLOOR</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>6</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">FLOORID</SourceName>
+				<TargetName qa="Required">FLOORID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">FLOORID</SourceName>
+				<TargetName qa="Required">floorid</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">SENSITIVITY</SourceName>
+				<TargetName qa="Required">SENSITIVITY</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">IN_DATE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
+				<FieldType>Date</FieldType>
+				<FieldLength>36</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">LAST_USER</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">DRAWING</SourceName>
+				<TargetName qa="Required">SOURCEDWG</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<SourceFieldNames>Color,Elevation,Entity,FACFLOOR,FACNUM,FLOOR,GSF_AREA,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
+			<ChangeDetection exceptProductionView="FloorExceptProduction" exceptStagingView="FloorExceptStaging" idField="FLOORID"
+			viewFields="FLOORID,SCHELEV,ALTITUDE,SOURCEDWG,SHAPE"/>	
+		</Dataset>
+	</Transform>
+</Gizinta>

@@ -1,0 +1,23 @@
+import xml.dom.minidom
+import os
+import sys
+import time
+import fmeobjects
+
+ospath = FME_MacroValues['FME_MF_DIR']
+print ospath
+if ospath not in sys.path:
+    sys.path.append(ospath)
+import gzfme
+
+ErrorUniqueID = "ErrorUniqueID"
+ErrorRequiredValue = "ErrorRequiredValue"
+ErrorValueMap = "ErrorValueMap"
+Errors = False
+
+debug = gzfme.setDebug(FME_MacroValues['gzDebug'])
+logger = fmeobjects.FMELogFile()
+gzfme.logger = logger
+
+
+

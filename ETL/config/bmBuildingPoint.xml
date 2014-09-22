@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Gizinta errorTableName="gzError" logTableName="gzLog" version="2013.1" xmlns:gizinta="http://gizinta.com">
+	<Extract>
+		<GDBDataset sourceIDField="BUILDINGID" sourceName="Building" targetName="Building_Point">
+			<WhereClause/>
+		</GDBDataset>
+	</Extract>
+	<Transform>
+		<Dataset name="Building_Point" qa="CheckFields,CheckGeometry" sourceIDField="BUILDINGID" sourceNameField="BUILDINGID">
+			<Field>
+				<SourceName qa="Optional">SITEID</SourceName>
+				<TargetName qa="Required">SITEID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">BUILDINGID</SourceName>
+				<TargetName qa="Optional">BUILDINGID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>4</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">BUILDINGID</SourceName>
+				<TargetName qa="Optional">buildingid</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>4</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">SOURCEDWG</SourceName>
+				<TargetName qa="Optional">SOURCEDWG</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">SENSITIVITY</SourceName>
+				<TargetName qa="Required">SENSITIVITY</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">IN_DATE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
+				<FieldType>Date</FieldType>
+				<FieldLength>36</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">LAST_USER</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<ChangeDetection exceptProductionView="BuildingPointExceptProduction" exceptStagingView="BuildingPointExceptStaging" 
+			idField="BUILDINGID" viewIdField="SOURCEDWG"
+			viewFields="BUILDINGID,SOURCEDWG,SHAPE"/>
+			<SourceFieldNames>Color,Elevation,Entity,FACNUM,Handle,Layer,LineWt,Linetype,RULEID,RefName</SourceFieldNames>
+		</Dataset>
+	</Transform>
+</Gizinta>

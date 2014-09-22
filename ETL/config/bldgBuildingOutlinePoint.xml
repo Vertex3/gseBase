@@ -1,0 +1,94 @@
+<Gizinta xmlns:gizinta="http://gizinta.com" errorTableName="gzError" logTableName="gzLog" version="2013.1">
+	<Extract>
+		<GDBDataset sourceIDField="BUILDINGID" sourceName="Building_Outline_Tilt" targetName="Building_Outline_Point">
+			<WhereClause/>
+		</GDBDataset>
+	</Extract>
+	<Transform>
+		<Dataset name="Building_Outline_Point" qa="CheckFields,CheckGeometry" sourceIDField="BUILDING" sourceNameField="BUILDINGID">
+			<Field>
+				<SourceName qa="Optional">SITEID</SourceName>
+				<TargetName qa="Required">SITEID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">BUILDINGID</SourceName>
+				<TargetName qa="Optional">BUILDINGID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">BUILDINGID</SourceName>
+				<TargetName qa="Optional">buildingid</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">CALCROT</SourceName>
+				<TargetName qa="Optional">CALCROT</TargetName>
+				<Method>Copy</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">NUMFLOORS</TargetName>
+				<Method>Copy</Method>
+				<FieldType>Integer</FieldType>
+				<FieldLength>4</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">SOURCEDWG</SourceName>
+				<TargetName qa="Optional">SOURCEDWG</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">SCALE_85X11</TargetName>
+				<Method>DefaultValue</Method>
+				<DefaultValue>1000</DefaultValue>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">SCALE_11X17</TargetName>
+				<Method>DefaultValue</Method>
+				<DefaultValue>1000</DefaultValue>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">SENSITIVITY</SourceName>
+				<TargetName qa="Required">SENSITIVITY</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">IN_DATE</SourceName>
+				<TargetName qa="Optional">IN_DATE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>myGizinta.GetDBTime()</PythonExpression>
+				<FieldType>Date</FieldType>
+				<FieldLength>36</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">LAST_USER</SourceName>
+				<TargetName qa="Optional">LAST_USER</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>30</FieldLength>
+			</Field>
+			<ChangeDetection exceptProductionView="BuildingOutlinePtExceptProduction" exceptStagingView="BuildingOutlinePtExceptStaging" idField="BUILDINGID" viewIdField="SOURCEDWG" viewFields="BUILDINGID,SOURCEDWG"/>
+			<SourceFieldNames>BLDGHEIGHT,BUILDINGID,CALCROT,GlobalID,HULLROT,IN_DATE,LAST_USER,MARGIN,SOURCEDWG,SOURCEID,SPACING,WORLDFILE,XCENTER,YCENTER</SourceFieldNames>
+		</Dataset>
+	</Transform>
+</Gizinta>

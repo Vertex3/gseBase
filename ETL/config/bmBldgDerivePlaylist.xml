@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<GizintaPlaylist errorTableName="gzError" fileExtension=".dwg" logTableName="gzLog" xmlns:gizinta="http://gizinta.com">
+	<LoadSettings 
+		nameContains="" 
+		logFileName="gseBuildingDerive.log" 
+		fmeLoadFile="gseBuildingDerive.fmw" 
+		source="GDB"/>
+	<File>bmBuilding.xml</File>
+	<File>bmBuildingPoint.xml</File>
+</GizintaPlaylist>

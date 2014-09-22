@@ -1,0 +1,89 @@
+
+<Gizinta xmlns:gizinta="http://gizinta.com" errorTableName="gzError" logTableName="gzLog" version="2013.1">
+	<Extract>
+		<CADDataset sourceIDField="Handle" sourceName="MiscSurfaceFeatures" targetName="SiteAmenityLine">
+			<WhereClause/>
+		</CADDataset>
+	</Extract>
+	<Transform>
+		<Dataset name="SiteAmenityLine" qa="CheckFields,CheckGeometry" sourceIDField="" sourceNameField="">
+			<Field>
+				<SourceName qa="Optional">DRAWING</SourceName>
+				<TargetName qa="Optional">FACILITYID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">AMENTYPE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getAmenityLayer(feature.getAttribute("Layer"))</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">INSTALLDATE</TargetName>
+				<Method>None</Method>
+				<FieldType>Date</FieldType>
+				<FieldLength>36</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">CONDITION</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">OWNEDBY</TargetName>
+				<Method>DefaultValue</Method>
+				<DefaultValue>1</DefaultValue>
+				<FieldType>SmallInteger</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">MAINTBY</TargetName>
+				<Method>DefaultValue</Method>
+				<DefaultValue>1</DefaultValue>
+				<FieldType>SmallInteger</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">LASTUPDATE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
+				<FieldType>Date</FieldType>
+				<FieldLength>36</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">LASTEDITOR</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">autocad_entity_handle</SourceName>
+				<TargetName qa="Optional">SOURCEID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>30</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">DRAWING</SourceName>
+				<TargetName qa="Optional">SOURCEDWG</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<ChangeDetection exceptProductionView="SiteAmenityExceptProduction" exceptStagingView="SiteAmenityExceptStaging" idField="SOURCEID" viewIdField="SOURCEDWG" viewFields="SOURCEDWG,SOURCEID,AMENTYPE,SHAPE"/>
+			<SourceFieldNames>Color,Elevation,Entity,FACNUM,Handle,Layer,LineWt,Linetype,OBJECT,RULEID,RefName</SourceFieldNames>
+		</Dataset>
+	</Transform>
+</Gizinta>

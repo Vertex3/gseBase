@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<GizintaPlaylist errorTableName="gzError" fileExtension=".dwg" logTableName="gzLog" xmlns:gizinta="http://gizinta.com">
+	<File>bldgBuildingFoundation.xml</File>
+	<File>bldgBuildingOutline.xml</File>
+	<File>bldgBuildingOutlinePoint.xml</File>
+	<File>bldgBuildingRoof.xml</File>
+	<File>bmBuilding.xml</File>
+	<File>bmBuildingPoint.xml</File>
+	<File>bmGrassSource.xml</File>
+	<File>bmIslands.xml</File>
+	<File>bmParkingSource.xml</File>
+	<File>bmPathSource.xml</File>
+	<File>bmRoadCitySource.xml</File>
+	<File>bmRoadUWSource.xml</File>
+	<File>bmSiteAmenityLine.xml</File>
+	<File>bmWaterSource.xml</File>
+	<File>fpFloorArea.xml</File>
+	<File>fpFloorplanLine.xml</File>
+	<File>fpFloorplanLinePublish.xml</File>
+	<File>fpFloorPoint.xml</File>
+	<File>fpFloorPoly.xml</File>
+	<File>fpInteriorSpace.xml</File>
+	<File>fpInteriorSpacePoint.xml</File>
+	<File>fpInteriorSpaceTilt.xml</File>
+</GizintaPlaylist>

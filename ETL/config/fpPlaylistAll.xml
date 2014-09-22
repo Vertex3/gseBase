@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<GizintaPlaylist errorTableName="gzError" fileExtension=".dwg" logTableName="gzLog" xmlns:gizinta="http://gizinta.com">
+	<File>fpFloorArea.xml</File>
+	<File>fpFloorPoly.xml</File>
+	<File>fpFloorplanLine.xml</File>
+	<File>fpFloorplanLinePublish.xml</File>
+	<File>fpFloorPoint.xml</File>
+	<File>fpInteriorSpace.xml</File>
+	<File>fpInteriorSpacePoint.xml</File>
+	<File>fpInteriorSpaceTilt.xml</File>
+	<File>fpLoadPlaylist.xml</File>
+</GizintaPlaylist>

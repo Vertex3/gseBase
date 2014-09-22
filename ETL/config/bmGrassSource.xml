@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Gizinta errorTableName="gzError" logTableName="gzLog" version="2013.1" xmlns:gizinta="http://gizinta.com">
+	<Extract>
+		<CADDataset sourceIDField="autocad_entity_handle" sourceName="Grass_Source" targetName="LandscapeArea">
+			<WhereClause/>
+		</CADDataset>
+	</Extract>
+	<Transform>
+		<Dataset name="LandscapeArea" qa="CheckFields,CheckGeometry" sourceIDField="autocad_entity_handle" sourceNameField="autocad_entity_handle">
+			<Field>
+				<SourceName qa="Optional">DRAWING</SourceName>
+				<TargetName qa="Optional">FACILITYID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">SURFTYPE</TargetName>
+				<Method>DefaultValue</Method>
+				<DefaultValue>Grass</DefaultValue>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">INSTALLDATE</TargetName>
+				<Method>None</Method>
+				<FieldType>Date</FieldType>
+				<FieldLength>36</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">CONDITION</TargetName>
+				<Method>None</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">OWNEDBY</TargetName>
+				<Method>DefaultValue</Method>
+				<DefaultValue>1</DefaultValue>
+				<FieldType>SmallInteger</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">MAINTBY</TargetName>
+				<Method>DefaultValue</Method>
+				<DefaultValue>1</DefaultValue>
+				<FieldType>SmallInteger</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">autocad_entity_handle</SourceName>
+				<TargetName qa="Required">SOURCEID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>30</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">DRAWING</SourceName>
+				<TargetName qa="Required">SOURCEDWG</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">LASTUPDATE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
+				<FieldType>Date</FieldType>
+				<FieldLength>36</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">LASTEDITOR</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<ChangeDetection viewFields="FACILITYID,SURFTYPE,SOURCEID,SOURCEDWG,SHAPE" idField="SOURCEID" viewIdField="SOURCEDWG" exceptStagingView="LandscapeAreaExceptStaging" exceptProductionView="LandscapeAreaExceptProduction"/>
+			<SourceFieldNames>Color,Elevation,Entity,Handle,Layer,LineWt,Linetype,RULEID,RefName</SourceFieldNames>
+		</Dataset>
+	</Transform>
+</Gizinta>

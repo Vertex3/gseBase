@@ -1,0 +1,178 @@
+<?xml version="1.0" ?>
+<Gizinta errorTableName="gzError" logTableName="gzLog" version="2013.1" xmlns:gizinta="http://gizinta.com">
+	<Extract>
+		<GDBDataset sourceIDField="BUILDINGID" sourceName="Building_Outline_Point" targetName="Floor_Point">
+			<WhereClause/>
+		</GDBDataset>
+	</Extract>
+	<Transform>
+		<Dataset name="Floor_Point" qa="CheckFields,CheckGeometry" sourceIDField="BUILDINGID" sourceNameField="BUILDINGID">
+			<Field>
+				<SourceName qa="Optional">SITEID</SourceName>
+				<TargetName qa="Required">SITEID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">BUILDINGID</SourceName>
+				<TargetName qa="Optional">BUILDINGID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">BUILDINGID</SourceName>
+				<TargetName qa="Optional">buildingid</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">FLOORID</SourceName>
+				<TargetName qa="Optional">FLOORID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>12</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">FLOORID</SourceName>
+				<TargetName qa="Optional">floorid</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>12</FieldLength>
+			</Field>
+<!--			<Field>
+				<SourceName qa="Optional">*FLOOR*</SourceName>
+				<TargetName qa="Optional">FLOOR</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>6</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*FLOORID*</SourceName>
+				<TargetName qa="Optional">FLOORID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>12</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*CALCROT*</SourceName>
+				<TargetName qa="Optional">CALCROT</TargetName>
+				<Method>Copy</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*WEBMERCROT*</SourceName>
+				<TargetName qa="Optional">WEBMERCROT</TargetName>
+				<Method>Copy</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*MODPORTRAIT*</SourceName>
+				<TargetName qa="Optional">MODPORTRAIT</TargetName>
+				<Method>Copy</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*MODLANDSCAPE*</SourceName>
+				<TargetName qa="Optional">MODLANDSCAPE</TargetName>
+				<Method>Copy</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*FLOOR_NAME*</SourceName>
+				<TargetName qa="Optional">FLOOR_NAME</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>254</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*SCALE_85X11*</SourceName>
+				<TargetName qa="Optional">SCALE_85X11</TargetName>
+				<Method>Copy</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*SCALE_11X17*</SourceName>
+				<TargetName qa="Optional">SCALE_11X17</TargetName>
+				<Method>Copy</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*FLOOR_LEVEL*</SourceName>
+				<TargetName qa="Optional">FLOOR_LEVEL</TargetName>
+				<Method>Copy</Method>
+				<FieldType>Integer</FieldType>
+				<FieldLength>4</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*NAME_LONG*</SourceName>
+				<TargetName qa="Optional">NAME_LONG</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>255</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*NAME_SHORT*</SourceName>
+				<TargetName qa="Optional">NAME_SHORT</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>255</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">*NAME*</SourceName>
+				<TargetName qa="Optional">NAME</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>254</FieldLength>
+			</Field>-->
+			<Field>
+				<SourceName qa="Optional">FACNUM</SourceName>
+				<TargetName qa="Optional">FACILITY_CODE</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>254</FieldLength>
+			</Field>
+<!--			<Field>
+				<SourceName qa="Optional">*FACLEVEL*</SourceName>
+				<TargetName qa="Optional">FACLEVEL</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>14</FieldLength>
+			</Field>-->
+			<Field>
+				<SourceName qa="Optional">SENSITIVITY</SourceName>
+				<TargetName qa="Required">SENSITIVITY</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">IN_DATE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
+				<FieldType>Date</FieldType>
+				<FieldLength>36</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">LAST_USER</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.defaultUser()</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<SourceFieldNames>Color,Elevation,Entity,FACNUM,Handle,Layer,LineWt,Linetype,RULEID,RefName</SourceFieldNames>
+			<ChangeDetection exceptProductionView="FloorPointExceptProduction" exceptStagingView="FloorPointExceptStaging" idField="FLOORID"
+			viewFields="FLOORID,CALCROT,WEBMERCROT,FLOOR_NAME,SCALE_85X11,SCALE_11X17,FLOOR_LEVEL,NAME_LONG,NAME_SHORT,NAME,HASINTERIORSPACES,HASFLOORPLANLINES,HASFLOORAREAS,FACILITY_CODE,FACLEVEL"/>
+		</Dataset>
+	</Transform>
+</Gizinta>

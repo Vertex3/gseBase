@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gseDataConfig xmlns:gizinta="http://gizinta.com">
+	<Settings 
+		cadFolder="gseFolder + '\\CAD\\UWS\\Siteplan'" 
+		stagingWS="GIS Staging.sde" productionWS="GIS Production.sde" 
+		deleteCADFiles="False" 
+		minTime="01/11/1900 9:00:00 AM"
+		fileExt = ".dwg"
+		fmeExe = "D:\\apps\\FME\\fme.exe"
+		sourceEPSG="2285"
+		runas="FME"
+		/>
+</gseDataConfig>

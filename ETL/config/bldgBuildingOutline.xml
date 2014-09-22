@@ -1,0 +1,138 @@
+<?xml version="1.0" ?>
+<Gizinta errorTableName="gzError" logTableName="gzLog" version="2013.1" xmlns:gizinta="http://gizinta.com">
+	<Extract>
+		<CADDataset sourceIDField="autocad_entity_handle" sourceName="Building_Outline_Tilt" targetName="Building_Outline_Tilt">
+			<WhereClause/>
+		</CADDataset>
+	</Extract>
+	<Transform>
+		<Dataset name="Building_Outline_Tilt" qa="CheckFields,CheckGeometry" sourceIDField="autocad_entity_handle" sourceNameField="FACNUM">
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">SITEID</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getSiteID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">BUILDINGID</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getBuildingID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">buildingid</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getBuildingID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">HULLROT</TargetName>
+				<Method>None</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">BLDGHEIGHT</TargetName>
+				<Method>DefaultValue</Method>
+				<DefaultValue>100</DefaultValue>				
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">SPACING</TargetName>
+				<Method>DefaultValue</Method>
+				<DefaultValue>20</DefaultValue>				
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">MARGIN</TargetName>
+				<Method>DefaultValue</Method>
+				<DefaultValue>.1</DefaultValue>				
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">XCENTER</TargetName>
+				<Method>None</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">YCENTER</TargetName>
+				<Method>None</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">CALCROT</TargetName>
+				<Method>None</Method>
+				<FieldType>Double</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Optional">WORLDFILE</TargetName>
+				<Method>None</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>255</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">Handle</SourceName>
+				<TargetName qa="Optional">SOURCEID</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>30</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">DRAWING</SourceName>
+				<TargetName qa="Optional">SOURCEDWG</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">SENSITIVITY</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getSensitivity(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">IN_DATE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
+				<FieldType>Date</FieldType>
+				<FieldLength>8</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">LAST_USER</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<ChangeDetection exceptProductionView="BuildingOutlineTiltExceptProduction" exceptStagingView="BuildingOutlineTiltExceptStaging" 
+			idField="BUILDINGID"
+			viewIdField="BUILDINGID"
+			viewFields="BUILDINGID,HULLROT,BLDGHEIGHT,SPACING,MARGIN,XCENTER,YCENTER,SOURCEID,CALCROT,WORLDFILE,SHAPE"/>
+			<SourceFieldNames>Color,Elevation,Entity,FACNUM,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
+		</Dataset>
+	</Transform>
+</Gizinta>

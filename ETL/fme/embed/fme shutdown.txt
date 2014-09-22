@@ -1,0 +1,11 @@
+import fmeobjects, gzfme
+
+gzfme.shutdown(Errors,str(FME_MacroValues['IgnoreErrors']),FME_TotalFeaturesWritten,FME_MacroValues)
+
+del Errors
+del ErrorUniqueID
+del ErrorRequiredValue
+del ErrorValueMap 
+del debug
+del logger
+gzfme.logger = None
