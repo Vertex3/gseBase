@@ -151,7 +151,8 @@ def doLoad(playlist_xml,folder,dwg,gse):
         msg("No FME file for loading")
         retVal = True
     else:
-        retVal = gseRunFME.load(inputDrawing,gse.fmeExe,gse.fmeLoadFile,gse.stagingWS,gse.productionWS,gse.sourceEPSG,gse.runas,playlist_xml,gse.source)
+        retVal = gseRunFME.load(inputDrawing,gse.fmeExe,gse.fmeLoadFile,gse.stagingWS,gse.productionWS,gse.sourceEPSG,gse.runas,playlist_xml,gse.source,
+                getFeatureTypes(playlist_xml,"sourceName"),getFeatureTypes(playlist_xml,"targetName"))
         msg("FME processing time: " + getTimeElapsed(drawingTime))
         logProcess(gse.fmeLoadFile[:gse.fmeLoadFile.rfind(os.sep)+1],dwg,retVal,gse.stagingWS)
     msg(dwg + " Load processing time: " + getTimeElapsed(drawingTime) )
@@ -159,6 +160,14 @@ def doLoad(playlist_xml,folder,dwg,gse):
 
     msg("return value set to: " + str(retVal))
     return retVal
+
+def getFeatureTypes(playlist,nm):
+    ds = gzSupport.getDatasets(playlist)
+    vals = []
+    for d in ds:
+        vals.append(d.getAttributeNode(nm).nodeValue)
+    strVals = " ".join(vals)
+    return strVals
 
 def doSync(playlist_xml,folder,dwg,gse):
     # Sync process drawing

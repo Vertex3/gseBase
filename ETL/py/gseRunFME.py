@@ -17,9 +17,11 @@ if etlFolder not in sys.path:
     sys.path.insert(0, etlFolder)
 import gseDrawing
 
-def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,runas,playlist_xml,source):
+def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,runas,playlist_xml,source,fread,fwrite):
 
     global runAs
+    print fread
+    print fwrite
     ret = False
     sTime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     logFolder = fmeFile[:fmeFile.rfind(os.sep)] + os.sep + "log" + os.sep
@@ -30,9 +32,9 @@ def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG
     print ("Creating subprocess for: " + fmeFile[fmeFile.rfind(os.sep)+1:] + "\n")
     try:
         if source == "CAD":
-            comm = getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,playlist_xml,logFile)
+            comm = getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,playlist_xml,logFile,fread,fwrite)
         elif source == "GDB":
-            comm = getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,playlist_xml,logFile)
+            comm = getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,playlist_xml,logFile,fread,fwrite)
         else:
             print "No config file available for mode: " + source
             return false
@@ -71,7 +73,7 @@ def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG
         print("Completed fme process\n")
         return ret
 
-def getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,playlist_xml,logFile):
+def getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,playlist_xml,logFile,fread,fwrite):
 
     floorID = getFloorID(inputDrawing)
     #worldFile = inputDrawing[:inputDrawing.rfind(os.sep)+1] + "esri_cad.wld"
@@ -90,10 +92,10 @@ def getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
     makeFMEParam("SourceCoordinateSystem",sourceEPSG) + \
     makeFMEParam("gzDebug","False") + \
     makeFMEParam("LOG_FILE",logFile) + \
+    makeFMEParam("FEATURE_TYPES",fwrite) + \
+    makeFMEParam("FEATURE_TYPES_READ",fread) + \
     makeFMEParam("SourceDataset_ESRIMSD",inputDrawing)
 
-    #makeFMEParam("FEATURE_TYPES","InteriorSpace_Tilt;FloorplanLine;InteriorSpace;Floor_Point;Building_Foundation;Building_Point;Building_Outline_Tilt;Floor_Poly;FloorplanLine_Publish;Building_Roof;Floor_Area;Building") + \
-    #makeFMEParam("FEATURE_TYPES_READ","BSE RMS GSF") + \
 
     #makeFMEParam("SCHEMA_IN_REAL_FORMAT_SCHEMA_MSD","ESRIMSD") + \
 
@@ -102,7 +104,7 @@ def getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
     #makeFMEParam("SourceWorldFile",worldFile)
     return comm
 
-def getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,playlist_xml,logFile):
+def getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,playlist_xml,logFile,fread,fwrite):
 
     #dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
     floorID = getFloorID(inputDrawing)
@@ -122,6 +124,8 @@ def getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
     makeFMEParam("pFLOORID",floorID) + \
     makeFMEParam("SourceCoordinateSystem",sourceEPSG) + \
     makeFMEParam("gzDebug","False") + \
+    makeFMEParam("FEATURE_TYPES",fwrite) + \
+    makeFMEParam("FEATURE_TYPES_READ",fread) + \
     makeFMEParam("LOG_FILE",logFile)
 
     comm = getCloseString(comm)
