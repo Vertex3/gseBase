@@ -5,11 +5,11 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME\fme.exe (TOPFOLDER)\ETL\fme\gseFloorplanDerive.fmw
+#    C:\apps\FME\fme.exe C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\fme\gseFloorplanDerive.fmw
 #          --DestDataset_GEODATABASE_SDE sde
-#          --OUT_CONNECTION_FILE_GEODATABASE_SDE "(TOPFOLDER)\ETL\serverConfig\GIS Staging.sde"
-#          --ProductionConnectionFile "(TOPFOLDER)\ETL\serverConfig\GIS Production.sde"
-#          --GizintaProject (TOPFOLDER)\ETL\config\fpDerivePlaylist.xml
+#          --OUT_CONNECTION_FILE_GEODATABASE_SDE "C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Staging.sde"
+#          --ProductionConnectionFile "C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde"
+#          --GizintaProject C:\Users\Steve\Documents\GitHub\gse\ETL\config\fpDerivePlaylist.xml
 #          --SourceFieldQA False
 #          --TargetFieldQA True
 #          --IgnoreErrors False
@@ -913,12 +913,12 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI FILENAME_MUSTEXIST OUT_CONNECTION_FILE_GEODATABASE_SDE Connection File:"
-#! DEFAULT_VALUE="(TOPFOLDER)\ETL\serverConfig\GIS Staging.sde"
+#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Staging.sde"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FILENAME_MUSTEXIST ProductionConnectionFile Connection_File|.sde Enter the path and name of the Production SDE Database connection file:"
-#! DEFAULT_VALUE="(TOPFOLDER)\ETL\serverConfig\GIS Production.sde"
+#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde"
 #! IS_STAND_ALONE="true"
 #! />
 #! <GLOBAL_PARAMETER
@@ -967,7 +967,7 @@
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#! GUI_LINE="GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ &quot;sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\&quot;(TOPFOLDER)\ETL\serverConfig\GIS Staging.sde\&quot;,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
+#! GUI_LINE="GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ &quot;sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\&quot;C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Staging.sde\&quot;,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
 #! DEFAULT_VALUE="Floor_Area Floor_Poly InteriorSpace FloorplanLine"
 #! IS_STAND_ALONE="false"
 #! />
@@ -4618,7 +4618,7 @@
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_FEATURE_READ_MODE" PARM_VALUE="Features"/>
 #! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="(TOPFOLDER)\ETL\serverConfig\GIS Production.sde"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
@@ -5399,7 +5399,7 @@
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_FEATURE_READ_MODE" PARM_VALUE="Features"/>
 #! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="(TOPFOLDER)\ETL\serverConfig\GIS Production.sde"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
@@ -8622,7 +8622,7 @@
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_FEATURE_READ_MODE" PARM_VALUE="Features"/>
 #! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="(TOPFOLDER)\ETL\serverConfig\GIS Production.sde"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
@@ -10020,7 +10020,7 @@
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_FEATURE_READ_MODE" PARM_VALUE="Features"/>
 #! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="(TOPFOLDER)\ETL\serverConfig\GIS Production.sde"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
@@ -10431,7 +10431,7 @@
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_FEATURE_READ_MODE" PARM_VALUE="Features"/>
 #! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="(TOPFOLDER)\ETL\serverConfig\GIS Production.sde"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
@@ -13334,9 +13334,9 @@
 GUI IGNORE SourceDataset_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1,_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1,_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1,_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1,_GEODBInSearchFeature_GEODATABASE_SDE_1,_GEODBInSearchOrder_GEODATABASE_SDE_1,_GEODBInSearchMethod_GEODATABASE_SDE_1,_GEODBInChildVersionName_GEODATABASE_SDE_1,_GEODBInFeatureReadMode_GEODATABASE_SDE_1,_GEODBInArchiveWhereClause_GEODATABASE_SDE_1,_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1,_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1,_GEODBInPersistentConnection_GEODATABASE_SDE_1,_GEODBInBeginSql_GEODATABASE_SDE_1,_GEODBInEndSql_GEODATABASE_SDE_1,SourceDataset_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_2,_GEODBSplitComplexAnnotations_GEODATABASE_SDE_2,_GEODBCacheMultipatchTextures_GEODATABASE_SDE_2,_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_2,_GEODBInSearchFeature_GEODATABASE_SDE_2,_GEODBInSearchOrder_GEODATABASE_SDE_2,_GEODBInSearchMethod_GEODATABASE_SDE_2,_GEODBInChildVersionName_GEODATABASE_SDE_2,_GEODBInFeatureReadMode_GEODATABASE_SDE_2,_GEODBInArchiveWhereClause_GEODATABASE_SDE_2,_GEODBInCheckSimpleGeom_GEODATABASE_SDE_2,_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_2,_GEODBInPersistentConnection_GEODATABASE_SDE_2,_GEODBInBeginSql_GEODATABASE_SDE_2,_GEODBInEndSql_GEODATABASE_SDE_2,DestDataset_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_TEMPLATEFILE_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_SIMPLIFY_GEOM_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_ORIGIN_X_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_ORIGIN_Y_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_XY_SCALE_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_HAS_Z_VALUES_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_Z_ORIGIN_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_Z_SCALE_GEODATABASE_SDE_3,GEODATABASE_SDE_OUT_GRID_1_GEODATABASE_SDE_3,_GEODBOutDefaultZValue_GEODATABASE_SDE_3,_GEODBOutWriterMode_GEODATABASE_SDE_3,_GEODBOutTransaction_GEODATABASE_SDE_3,_GEODBOutTransactionInterval_GEODATABASE_SDE_3,_GEODBOutIgnoreFailedFeatureEntry_GEODATABASE_SDE_3,_GEODBOutMaxNumberFailedFeatures_GEODATABASE_SDE_3,_GEODBOutDumpFailedFeatures_GEODATABASE_SDE_3,_GEODBOutFFSDumpFile_GEODATABASE_SDE_3,_GEODBOutAnnotationUnits_GEODATABASE_SDE_3,_GEODBOutMeasures_GEODATABASE_SDE_3,_GEODBOutMeasureOrigin_GEODATABASE_SDE_3,_GEODBOutMeasureScale_GEODATABASE_SDE_3,_GEODBOutReconcileAndPost_GEODATABASE_SDE_3,_GEODBOutDeleteChildAfterReconcileAndPost_GEODATABASE_SDE_3,_GEODBOutValidateFeatures_GEODATABASE_SDE_3,_GEODBOutSimplifyNetworkFeatures_GEODATABASE_SDE_3,_GEODBOutPersistentConnection_GEODATABASE_SDE_3,_GEODBOutCommitTransactionsAfterWrite_GEODATABASE_SDE_3,_GEODBOutBeginSql_GEODATABASE_SDE_3,_GEODBOutEndSql_GEODATABASE_SDE_3
 DEFAULT_MACRO DestDataset_GEODATABASE_SDE sde
 GUI TEXT DestDataset_GEODATABASE_SDE Destination Esri ArcSDE Geodatabase Dataset:
-DEFAULT_MACRO OUT_CONNECTION_FILE_GEODATABASE_SDE (TOPFOLDER)\ETL\serverConfig\GIS Staging.sde
+DEFAULT_MACRO OUT_CONNECTION_FILE_GEODATABASE_SDE C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Staging.sde
 GUI FILENAME_EXISTING OUT_CONNECTION_FILE_GEODATABASE_SDE Connection File:
-DEFAULT_MACRO ProductionConnectionFile (TOPFOLDER)\ETL\serverConfig\GIS Production.sde
+DEFAULT_MACRO ProductionConnectionFile C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde
 GUI OPTIONAL FILENAME_EXISTING ProductionConnectionFile Connection_File|.sde Enter the path and name of the Production SDE Database connection file:
 DEFAULT_MACRO GizintaProject C:\Users\Steve\Documents\GitHub\gse\ETL\config\fpDerivePlaylist.xml
 GUI OPTIONAL FILENAME_EXISTING GizintaProject Xml|.xml Select the Gizinta Xml File to use:
@@ -13357,7 +13357,7 @@ GUI OPTIONAL FILENAME LOG_FILE Log_Files_(*.log)|*.log|All_Files_(*.*)|*.* Log F
 DEFAULT_MACRO FEATURE_TYPES InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish Floor_Area InteriorSpace_Point
 GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES InteriorSpace_Tilt%FloorplanLine%InteriorSpace%Floor_Outline%Floor_Point%Floor_Poly%FloorplanLine_Publish%Floor_Area%InteriorSpace_Point Feature Types to Write:
 DEFAULT_MACRO FEATURE_TYPES_READ Floor_Area Floor_Poly InteriorSpace FloorplanLine
-GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\"(TOPFOLDER)\ETL\serverConfig\GIS Staging.sde\",TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
+GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Staging.sde\",TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
 INCLUDE [ if {{$(DestDataset_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'DestDataset_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(OUT_CONNECTION_FILE_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'OUT_CONNECTION_FILE_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
 #! START_HEADER
@@ -14279,7 +14279,7 @@ FACTORY_DEF * TestFactory    FACTORY_NAME $(gzTiltRooms_WORKSPACE_NAME)_Duplicat
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_DuplicateRemover_2 UNIQUE Splitter"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_DuplicateRemover_2_UNIQUE"   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_DuplicateRemover_2_UNIQUE_0_FZbdP51W3ZQ="   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_DuplicateRemover_2_UNIQUE_1_FZbdP51W3ZQ="
 # -------------------------------------------------------------------------
-MACRO $(gzTiltRooms_WORKSPACE_NAME)_FloorsReader_DIRECTIVES CONNECTION "Connection File" CONNECTION_FILE "(TOPFOLDER)\ETL\serverConfig\GIS Production.sde" VERSION_TYPE "Connect using a Transactional Version" VERSION SDE.DEFAULT REMOVE_TABLE_QUALIFIER YES TABLELIST Active_Floor WHERE buildingid=buildingid TRANSLATE_SPATIAL_DATA_ONLY no RESOLVE_DOMAINS no RESOLVE_SUBTYPE_NAMES yes IGNORE_NETWORK_INFO yes IGNORE_RELATIONSHIP_INFO yes SPLIT_COMPLEX_EDGES no SPLIT_MULTI_PART_ANNOS no FEATURE_READ_MODE Features
+MACRO $(gzTiltRooms_WORKSPACE_NAME)_FloorsReader_DIRECTIVES CONNECTION "Connection File" CONNECTION_FILE "C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde" VERSION_TYPE "Connect using a Transactional Version" VERSION SDE.DEFAULT REMOVE_TABLE_QUALIFIER YES TABLELIST Active_Floor WHERE buildingid=buildingid TRANSLATE_SPATIAL_DATA_ONLY no RESOLVE_DOMAINS no RESOLVE_SUBTYPE_NAMES yes IGNORE_NETWORK_INFO yes IGNORE_RELATIONSHIP_INFO yes SPLIT_COMPLEX_EDGES no SPLIT_MULTI_PART_ANNOS no FEATURE_READ_MODE Features
 
 Tcl2 proc $(gzTiltRooms_WORKSPACE_NAME)_FloorsReader_findInListElseDefault { value defaultValue } {    if { [lsearch [split $::$(gzTiltRooms_WORKSPACE_NAME)_FloorsReader_FORMATTEDFEATURETYPES {:}] $value] >= 0} {       return $value    } else {       return $defaultValue    } }
 INCLUDE [if { {} == {} } {             puts {MACRO REMOVE_GEOM_FUNC @RemoveGeometry()};             puts {MACRO QUERY_INTERACTION_LINE};          } else {             puts {MACRO REMOVE_GEOM_FUNC};             if { {} != {ENVELOPE_INTERSECT} } {                puts {MACRO QUERY_INTERACTION_LINE QUERY_INTERACTION };             } else {                puts {MACRO QUERY_INTERACTION_LINE};             }          }         ]
@@ -14305,7 +14305,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzTiltRooms_WORKSPACE_NAME)_BulkAttri
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3    INPUT  FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_BulkAttributeRenamer_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3_OUTPUT"         @CopyAttributes(STACKLEVEL,schelev)
 
 # -------------------------------------------------------------------------
-MACRO $(gzTiltRooms_WORKSPACE_NAME)_BldgReader_DIRECTIVES CONNECTION "Connection File" CONNECTION_FILE "(TOPFOLDER)\ETL\serverConfig\GIS Production.sde" VERSION_TYPE "Connect using a Transactional Version" VERSION SDE.DEFAULT REMOVE_TABLE_QUALIFIER YES TABLELIST Building_Outline_Tilt WHERE buildingid=buildingid TRANSLATE_SPATIAL_DATA_ONLY no RESOLVE_DOMAINS no RESOLVE_SUBTYPE_NAMES yes IGNORE_NETWORK_INFO yes IGNORE_RELATIONSHIP_INFO yes SPLIT_COMPLEX_EDGES no SPLIT_MULTI_PART_ANNOS no FEATURE_READ_MODE Features
+MACRO $(gzTiltRooms_WORKSPACE_NAME)_BldgReader_DIRECTIVES CONNECTION "Connection File" CONNECTION_FILE "C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde" VERSION_TYPE "Connect using a Transactional Version" VERSION SDE.DEFAULT REMOVE_TABLE_QUALIFIER YES TABLELIST Building_Outline_Tilt WHERE buildingid=buildingid TRANSLATE_SPATIAL_DATA_ONLY no RESOLVE_DOMAINS no RESOLVE_SUBTYPE_NAMES yes IGNORE_NETWORK_INFO yes IGNORE_RELATIONSHIP_INFO yes SPLIT_COMPLEX_EDGES no SPLIT_MULTI_PART_ANNOS no FEATURE_READ_MODE Features
 
 Tcl2 proc $(gzTiltRooms_WORKSPACE_NAME)_BldgReader_findInListElseDefault { value defaultValue } {    if { [lsearch [split $::$(gzTiltRooms_WORKSPACE_NAME)_BldgReader_FORMATTEDFEATURETYPES {:}] $value] >= 0} {       return $value    } else {       return $defaultValue    } }
 INCLUDE [if { {} == {} } {             puts {MACRO REMOVE_GEOM_FUNC @RemoveGeometry()};             puts {MACRO QUERY_INTERACTION_LINE};          } else {             puts {MACRO REMOVE_GEOM_FUNC};             if { {} != {ENVELOPE_INTERSECT} } {                puts {MACRO QUERY_INTERACTION_LINE QUERY_INTERACTION };             } else {                puts {MACRO QUERY_INTERACTION_LINE};             }          }         ]
@@ -14634,7 +14634,7 @@ FACTORY_DEF * TeeFactory FACTORY_NAME $(gseFloorPoint_WORKSPACE_NAME)_TestFilter
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gseFloorPoint_WORKSPACE_NAME)_TestFilter Floor_Area Splitter"   INPUT FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_TestFilter_Floor_Area"   OUTPUT FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_TestFilter_Floor_Area_0_6JRsq1glxGI="   OUTPUT FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_TestFilter_Floor_Area_1_6JRsq1glxGI="   OUTPUT FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_TestFilter_Floor_Area_2_6JRsq1glxGI="   OUTPUT FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_TestFilter_Floor_Area_3_6JRsq1glxGI="   OUTPUT FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_TestFilter_Floor_Area_4_6JRsq1glxGI="
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gseFloorPoint_WORKSPACE_NAME)_TestFilter <lt>UNFILTERED<gt> Output Nuker"   INPUT FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt>"
 # -------------------------------------------------------------------------
-MACRO $(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_2_DIRECTIVES CONNECTION "Connection File" CONNECTION_FILE "(TOPFOLDER)\ETL\serverConfig\GIS Production.sde" VERSION_TYPE "Connect using a Transactional Version" VERSION SDE.DEFAULT REMOVE_TABLE_QUALIFIER NO TABLELIST Floor_Level WHERE buildingid=buildingid TRANSLATE_SPATIAL_DATA_ONLY no RESOLVE_DOMAINS no RESOLVE_SUBTYPE_NAMES yes IGNORE_NETWORK_INFO yes IGNORE_RELATIONSHIP_INFO yes SPLIT_COMPLEX_EDGES no SPLIT_MULTI_PART_ANNOS no FEATURE_READ_MODE Features
+MACRO $(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_2_DIRECTIVES CONNECTION "Connection File" CONNECTION_FILE "C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde" VERSION_TYPE "Connect using a Transactional Version" VERSION SDE.DEFAULT REMOVE_TABLE_QUALIFIER NO TABLELIST Floor_Level WHERE buildingid=buildingid TRANSLATE_SPATIAL_DATA_ONLY no RESOLVE_DOMAINS no RESOLVE_SUBTYPE_NAMES yes IGNORE_NETWORK_INFO yes IGNORE_RELATIONSHIP_INFO yes SPLIT_COMPLEX_EDGES no SPLIT_MULTI_PART_ANNOS no FEATURE_READ_MODE Features
 
 Tcl2 proc $(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_2_findInListElseDefault { value defaultValue } {    if { [lsearch [split $::$(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_2_FORMATTEDFEATURETYPES {:}] $value] >= 0} {       return $value    } else {       return $defaultValue    } }
 INCLUDE [if { {} == {} } {             puts {MACRO REMOVE_GEOM_FUNC @RemoveGeometry()};             puts {MACRO QUERY_INTERACTION_LINE};          } else {             puts {MACRO REMOVE_GEOM_FUNC};             if { {} != {ENVELOPE_INTERSECT} } {                puts {MACRO QUERY_INTERACTION_LINE QUERY_INTERACTION };             } else {                puts {MACRO QUERY_INTERACTION_LINE};             }          }         ]
@@ -14656,7 +14656,7 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gseFloorPoint_WORKSPACE_NAME)_Feature
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(gseFloorPoint_WORKSPACE_NAME)_BulkAttributeRenamer    INPUT  FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_2_Floor_Level"    OUTPUT FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_BulkAttributeRenamer_OUTPUT"        @RenameAttributes(PATTERN_REPLACE, CASECHANGE, <Unused>, "<Unused>", "<Unused>", "lower", "<Unused>", "-_")
 
 # -------------------------------------------------------------------------
-MACRO $(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_4_DIRECTIVES CONNECTION "Connection File" CONNECTION_FILE "(TOPFOLDER)\ETL\serverConfig\GIS Production.sde" VERSION_TYPE "Connect using a Transactional Version" VERSION SDE.DEFAULT REMOVE_TABLE_QUALIFIER NO TABLELIST Building_Outline_Tilt WHERE buildingid=buildingid TRANSLATE_SPATIAL_DATA_ONLY no RESOLVE_DOMAINS no RESOLVE_SUBTYPE_NAMES yes IGNORE_NETWORK_INFO yes IGNORE_RELATIONSHIP_INFO yes SPLIT_COMPLEX_EDGES no SPLIT_MULTI_PART_ANNOS no FEATURE_READ_MODE Features
+MACRO $(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_4_DIRECTIVES CONNECTION "Connection File" CONNECTION_FILE "C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde" VERSION_TYPE "Connect using a Transactional Version" VERSION SDE.DEFAULT REMOVE_TABLE_QUALIFIER NO TABLELIST Building_Outline_Tilt WHERE buildingid=buildingid TRANSLATE_SPATIAL_DATA_ONLY no RESOLVE_DOMAINS no RESOLVE_SUBTYPE_NAMES yes IGNORE_NETWORK_INFO yes IGNORE_RELATIONSHIP_INFO yes SPLIT_COMPLEX_EDGES no SPLIT_MULTI_PART_ANNOS no FEATURE_READ_MODE Features
 
 Tcl2 proc $(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_4_findInListElseDefault { value defaultValue } {    if { [lsearch [split $::$(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_4_FORMATTEDFEATURETYPES {:}] $value] >= 0} {       return $value    } else {       return $defaultValue    } }
 INCLUDE [if { {} == {} } {             puts {MACRO REMOVE_GEOM_FUNC @RemoveGeometry()};             puts {MACRO QUERY_INTERACTION_LINE};          } else {             puts {MACRO REMOVE_GEOM_FUNC};             if { {} != {ENVELOPE_INTERSECT} } {                puts {MACRO QUERY_INTERACTION_LINE QUERY_INTERACTION };             } else {                puts {MACRO QUERY_INTERACTION_LINE};             }          }         ]
@@ -14678,7 +14678,7 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gseFloorPoint_WORKSPACE_NAME)_Feature
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(gseFloorPoint_WORKSPACE_NAME)_BulkAttributeRenamer_2    INPUT  FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_4_Building_Outline_Tilt"    OUTPUT FEATURE_TYPE "$(gseFloorPoint_WORKSPACE_NAME)_BulkAttributeRenamer_2_OUTPUT"        @RenameAttributes(PATTERN_REPLACE, CASECHANGE, <Unused>, "<Unused>", "<Unused>", "lower", "<Unused>", "-_")
 
 # -------------------------------------------------------------------------
-MACRO $(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_3_DIRECTIVES CONNECTION "Connection File" CONNECTION_FILE "(TOPFOLDER)\ETL\serverConfig\GIS Production.sde" VERSION_TYPE "Connect using a Transactional Version" VERSION dbo.DEFAULT REMOVE_TABLE_QUALIFIER YES TABLELIST "Building_Outline_Point Active_Floor" WHERE buildingid=buildingid TRANSLATE_SPATIAL_DATA_ONLY no RESOLVE_DOMAINS no RESOLVE_SUBTYPE_NAMES yes IGNORE_NETWORK_INFO yes IGNORE_RELATIONSHIP_INFO yes SPLIT_COMPLEX_EDGES no SPLIT_MULTI_PART_ANNOS no FEATURE_READ_MODE Features
+MACRO $(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_3_DIRECTIVES CONNECTION "Connection File" CONNECTION_FILE "C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde" VERSION_TYPE "Connect using a Transactional Version" VERSION dbo.DEFAULT REMOVE_TABLE_QUALIFIER YES TABLELIST "Building_Outline_Point Active_Floor" WHERE buildingid=buildingid TRANSLATE_SPATIAL_DATA_ONLY no RESOLVE_DOMAINS no RESOLVE_SUBTYPE_NAMES yes IGNORE_NETWORK_INFO yes IGNORE_RELATIONSHIP_INFO yes SPLIT_COMPLEX_EDGES no SPLIT_MULTI_PART_ANNOS no FEATURE_READ_MODE Features
 
 Tcl2 proc $(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_3_findInListElseDefault { value defaultValue } {    if { [lsearch [split $::$(gseFloorPoint_WORKSPACE_NAME)_FeatureReader_3_FORMATTEDFEATURETYPES {:}] $value] >= 0} {       return $value    } else {       return $defaultValue    } }
 INCLUDE [if { {} == {} } {             puts {MACRO REMOVE_GEOM_FUNC @RemoveGeometry()};             puts {MACRO QUERY_INTERACTION_LINE};          } else {             puts {MACRO REMOVE_GEOM_FUNC};             if { {} != {ENVELOPE_INTERSECT} } {                puts {MACRO QUERY_INTERACTION_LINE QUERY_INTERACTION };             } else {                puts {MACRO QUERY_INTERACTION_LINE};             }          }         ]
