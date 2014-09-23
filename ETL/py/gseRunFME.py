@@ -2,19 +2,20 @@
 # SG January 2014
 # ---------------------------------------------------------------------------
 
-import os, sys, time, subprocess
+import os, sys
+
+ospath = os.path.realpath(__file__)
+etl = os.sep+'ETL'+os.sep
+gsepath = ospath[:ospath.rfind(etl)]
+pypath = gsepath + etl + 'py'
+if (pypath) not in sys.path:
+	sys.path.insert(0, pypath)
+	print pypath
+
+import time, subprocess, gse, gseDrawing
 
 runAs = "FME" # default to FME
-ospath = sys.path[0]
-cstr = "gse"
-gsepath = ospath[:ospath.rfind(cstr)+len(cstr)]
-etlFolder = gsepath + "\\ETL"
-pyFolder = gsepath + "\\ETL\\fme"
 
-if pyFolder not in sys.path:
-    sys.path.insert(0, pyFolder)
-if etlFolder not in sys.path:
-    sys.path.insert(0, etlFolder)
 import gseDrawing
 
 def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,runas,playlist_xml,source,fread,fwrite):

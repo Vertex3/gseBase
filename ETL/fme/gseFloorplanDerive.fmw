@@ -9,7 +9,7 @@
 #          --DestDataset_GEODATABASE_SDE sde
 #          --OUT_CONNECTION_FILE_GEODATABASE_SDE "C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Staging.sde"
 #          --ProductionConnectionFile "C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde"
-#          --GizintaProject C:\Users\Steve\Documents\GitHub\gse\ETL\config\fpDerivePlaylist.xml
+#          --GizintaProject C:\Users\Steve\Documents\GitHub\VT\gse\ETL\config\fpDerivePlaylist.xml
 #          --SourceFieldQA False
 #          --TargetFieldQA True
 #          --IgnoreErrors False
@@ -923,7 +923,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FILENAME_MUSTEXIST GizintaProject Xml|.xml Select the Gizinta Xml File to use:"
-#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\gse\ETL\config\fpDerivePlaylist.xml"
+#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\VT\gse\ETL\config\fpDerivePlaylist.xml"
 #! IS_STAND_ALONE="true"
 #! />
 #! <GLOBAL_PARAMETER
@@ -13338,7 +13338,7 @@ DEFAULT_MACRO OUT_CONNECTION_FILE_GEODATABASE_SDE C:\Users\Steve\Documents\GitHu
 GUI FILENAME_EXISTING OUT_CONNECTION_FILE_GEODATABASE_SDE Connection File:
 DEFAULT_MACRO ProductionConnectionFile C:\Users\Steve\Documents\GitHub\SyncEngine\gse\ETL\serverConfig\GIS Production.sde
 GUI OPTIONAL FILENAME_EXISTING ProductionConnectionFile Connection_File|.sde Enter the path and name of the Production SDE Database connection file:
-DEFAULT_MACRO GizintaProject C:\Users\Steve\Documents\GitHub\gse\ETL\config\fpDerivePlaylist.xml
+DEFAULT_MACRO GizintaProject C:\Users\Steve\Documents\GitHub\VT\gse\ETL\config\fpDerivePlaylist.xml
 GUI OPTIONAL FILENAME_EXISTING GizintaProject Xml|.xml Select the Gizinta Xml File to use:
 DEFAULT_MACRO SourceFieldQA False
 GUI OPTIONAL CHOICE SourceFieldQA True%False Choose whether to perform QA on Source Fields:

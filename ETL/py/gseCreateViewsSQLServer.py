@@ -5,9 +5,7 @@
 # Description: Get values from change detection nodes in xml files and construct view statements
 # ---------------------------------------------------------------------------
 
-import os, sys, arcpy, datetime, xml.dom.minidom
-
-topFolderName = "gse"
+import os, sys, arcpy, datetime, xml.dom.minidom, gse. gzSupport
 
 # Script arguments
 playlist_xml = arcpy.GetParameterAsText(0) # one playlist xml value.
@@ -24,7 +22,7 @@ if productionWSName == '#' or productionWSName == None or productionWSName == ''
 
 sde = arcpy.GetParameterAsText(3) # sde Connection file for views Workspace
 if sde == '#' or sde == None or sde == '':
-    sde = os.path.join(sdeConnFolder,"GIS Staging.sde")
+    sde = os.path.join(gse.sdeConnFolder,"GIS Staging.sde")
 
 log = open(os.path.join(sys.path[0],"Create Views.sql"),"w")
 
@@ -129,32 +127,11 @@ def getFieldSql(fields):
     return fieldSql
 
 
-ospath = sys.path[0]
-print ospath
-cstr = topFolderName
-gsepath = ospath[:ospath.rfind(cstr)+len(cstr)]
-
-gseFolder = gsepath
-gzFolder = gsepath[:gsepath.rfind(os.sep)] + "\\Tools\\arcpy" # gz tools must be parallel to the gse folder
-fmeFolder = gsepath + "\\ETL\\fme\\"
-configFolder = gsepath + "\\ETL\\config\\"
-etlFolder = gsepath + "\\ETL\\"
-sdeConnFolder = gsepath + "\\ETL\\"
-pyFolder = gsepath + "\\ETL\\py\\"
-
-#if gzFolder not in sys.path:
-#     sys.path.insert(0, gzFolder)
-
-if pyFolder not in sys.path:
-    sys.path.insert(0, pyFolder)
-
-import gzSupport
-
 def fixConfigPath(playlist_xml):
     if playlist_xml == None:
         return None
     if not playlist_xml.find(os.sep) > 1:
-        playlist_xml = os.path.join(configFolder,playlist_xml)
+        playlist_xml = os.path.join(gse.configFolder,playlist_xml)
     return playlist_xml
 
 def printmsg(strVal):

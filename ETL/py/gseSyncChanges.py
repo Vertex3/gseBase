@@ -6,11 +6,9 @@
 # performs change detection/update if SQL Server views are set up and there is a change node in the Gizinta.
 # ---------------------------------------------------------------------------
 
-import os, sys, arcpy, datetime, xml.dom.minidom
+import os, sys, arcpy, datetime, xml.dom.minidom, gse, gzSupport, gseDrawing
 
 log = None
-topFolderName = "gse"
-
 inputDrawing = arcpy.GetParameterAsText(0)
 playlist_xml = arcpy.GetParameterAsText(1)
 GISStagingDefault_sde = arcpy.GetParameterAsText(2)
@@ -184,22 +182,6 @@ def msg(val):
     log.write(strVal + "\n")
     gzSupport.addMessage(strVal)
 
-ospath = sys.path[0]
-cstr = topFolderName
-gsepath = ospath[:ospath.rfind(cstr)+len(cstr)]
-
-gseFolder = gsepath
-gzFolder = gsepath[:gsepath.rfind(os.sep)] + "\\Tools\\arcpy" # gz tools must be parallel to the gse folder
-configFolder = gsepath + "\\ETL\\config"
-fmeFolder = gsepath + "\\ETL\\fme"
-
-if gzFolder not in sys.path:
-     sys.path.insert(0, gzFolder)
-import gzSupport
-
-if fmeFolder not in sys.path:
-    sys.path.insert(0, fmeFolder)
-import gseDrawing
 
 if __name__ == "__main__":
     main()
