@@ -111,8 +111,8 @@ def getExceptProdViewSql(dsname,exceptProd,exceptStaging,fields):
 	viewSql += " SELECT " + getFieldSql(evwname,fields)
 	viewSql += " FROM " + gse.dbSchema + "." + evwname
 	viewSql += " EXCEPT "
-	viewSql += 'SELECT * FROM   dblink(\'hostaddr='+ server + ' port='+ port +' dbname=' +dbname+' user='+user+' password='+password
-	viewSql += '\',\'SELECT ' + getFieldSql(evwname,fields) +' FROM ' + dbSchema + '.' + evwname + '\')' 
+	viewSql += 'SELECT * FROM   dblink(\'host='+ server + ' port='+ port +' dbname=' +dbname+' user='+user+' password='+password
+	viewSql += '\',\'SELECT ' + getFieldSql(evwname,fields) +' FROM ' + gse.dbSchema + '.' + evwname + '\')' 
 	viewSql += ' AS ' + dsname + 'ExceptProduction (' + getFieldDefs(evwname,fields) + ')';
 	#printmsg(viewSql)
 	return viewSql
@@ -121,12 +121,12 @@ def getExceptStagingViewSql(dsname,exceptProd,exceptStaging,fields):
 	evwname = dsname + "_evw"
 	viewSql = ""
 	#viewSql =  exceptStaging + " AS "
-	viewSql += 'SELECT * FROM   dblink(\'hostaddr='+ server + ' port='+ port +' dbname=' +dbname+' user='+user+' password='+password
-	viewSql += '\',\'SELECT ' + getFieldSql(evwname,fields) +' FROM ' + dbSchema + '.' + evwname + '\')' 
+	viewSql += 'SELECT * FROM   dblink(\'host='+ server + ' port='+ port +' dbname=' +dbname+' user='+user+' password='+password
+	viewSql += '\',\'SELECT ' + getFieldSql(evwname,fields) +' FROM ' + gse.dbSchema + '.' + evwname + '\')' 
 	viewSql += ' AS ' + dsname + 'ExceptStaging (' + getFieldDefs(evwname,fields) + ')';
 	viewSql += " EXCEPT "
 	viewSql += "SELECT " + getFieldSql(evwname,fields)
-	viewSql += " FROM " + dbSchema + "." + evwname
+	viewSql += " FROM " + gse.dbSchema + "." + evwname
 	#printmsg(viewSql)
 	return viewSql
 
