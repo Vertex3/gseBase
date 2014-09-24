@@ -11,10 +11,10 @@ import os, sys
 ospath = os.path.realpath(__file__)
 etl = os.sep+'ETL'+os.sep
 gsepath = ospath[:ospath.rfind(etl)]
-pypath = gsepath + etl + 'py'
-if (pypath) not in sys.path:
-	sys.path.insert(0, pypath)
-	print pypath
+etlpath = gsepath + etl
+if (etlpath) not in sys.path:
+	sys.path.insert(0, etlpath)
+	print etlpath
 
 import arcpy, datetime, xml.dom.minidom, gse, gzSupport, gseRunFME
 
