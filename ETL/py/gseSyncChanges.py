@@ -1,4 +1,4 @@
-# gzChanges.py - Sync changes from a staging GDB to Production
+# gseSyncChanges.py - Sync changes from a staging GDB to Production
 # ---------------------------------------------------------------------------
 # Created on: 2014 01 03
 #
