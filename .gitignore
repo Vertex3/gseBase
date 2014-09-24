@@ -1,0 +1,5 @@
+### objects
+*.pyc
+
+### log files
+*.log
