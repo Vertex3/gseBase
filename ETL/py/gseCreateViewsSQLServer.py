@@ -5,7 +5,17 @@
 # Description: Get values from change detection nodes in xml files and construct view statements
 # ---------------------------------------------------------------------------
 
-import os, sys, arcpy, datetime, xml.dom.minidom, gse. gzSupport
+import os, sys
+
+ospath = os.path.realpath(__file__)
+etl = os.sep+'ETL'+os.sep
+gsepath = ospath[:ospath.rfind(etl)]
+etlpath = gsepath + etl
+if (etlpath) not in sys.path:
+	sys.path.insert(0, etlpath)
+	print etlpath
+
+import arcpy, datetime, xml.dom.minidom, gse, gzSupport
 
 # Script arguments
 playlist_xml = arcpy.GetParameterAsText(0) # one playlist xml value.
