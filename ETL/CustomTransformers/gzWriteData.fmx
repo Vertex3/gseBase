@@ -1,0 +1,582 @@
+#! <?xml version="1.0" encoding="windows-1252" ?>
+#! <TRANSFORMER
+# TRANSFORMER_BEGIN gzWriteData,1,Gizinta,4f537007-0fea-401d-a8ab-61927a2a4623,"Linked by Default",No,NO_PARALLELISM,,No,14232,YES,No
+# <p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+#     <br/>
+# </p>
+# 
+# TRANSFORMER_END
+#! PASSWORD=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! VIEW_POSITION="-1503 345"
+#! SHOW_INFO_NODES="true"
+#! FME_LINKED_TRANSFORMER_VERSION="1"
+#! FMX_INSERT_MODE="Linked by Default"
+#! BLOCKED_LOOPING="No"
+#! DESCRIPTION="&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! TITLE="gzWriteData"
+#! MAX_LOOP_ITERATIONS=""
+#! ITERATION_COUNT_ATTR=""
+#! FME_BUILD_NUM="14232"
+#! ZOOM_SCALE="100"
+#! CATEGORY="Gizinta"
+#! LEGAL_TERMS_CONDITIONS="&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! FME_PROCESS_GROUP_BY=""
+#! USAGE="&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID="62d742f3-4aeb-4363-a675-4c2677296f07,32f96a57-0f0f-4970-ba23-6dd840fb8797"
+#! DOC_TOP_LEFT="-1723 -913"
+#! XFORM_DEPRECATED="No"
+#! REQUIREMENTS_KEYWORD="none"
+#! LAST_SAVE_DATE="2014-08-29T11:35:11"
+#! WORKSPACE_VERSION="1"
+#! LAST_SAVE_BUILD="FME(R) 2014 (20140115 - Build 14232 - WIN32)"
+#! FME_SERVER_SERVICES=""
+#! REQUIREMENTS="&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;br/&gt;&#10;&lt;/p&gt;&#10;"
+#! DOC_EXTENTS="3252 1176"
+#! FME_DOCUMENT_GUID="4f537007-0fea-401d-a8ab-61927a2a4623"
+#! FME_PROCESS_COUNT="NO_PARALLELISM"
+#! SHOW_ANNOTATIONS="true"
+#! FME_PROCESS_GROUPS_ORDERED="No"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL CHOICE_OR_ATTR IgnoreErrors True%False Ignore Errors and continue:"
+#! DEFAULT_VALUE="False"
+#! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT_EDIT_OR_NUM_OR_ATTR HASERRORS Haserrors:"
+#! DEFAULT_VALUE="@Value(HasErrors)"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT_EDIT_OR_NUM_OR_ATTR GroupBy GroupBy:"
+#! DEFAULT_VALUE="OBJECTID"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="1"
+#! TYPE="gzGetErrorInfo"
+#! VERSION="1"
+#! POSITION="866 -796"
+#! ORDER="29"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ErrorFieldName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ErrorGeometryDescription" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_dataset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ErrorRequiredValue" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ErrorUniqueID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ErrorGeometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ErrorValueMap" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="REASON" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DATASET" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PROCNAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SOURCENAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ERRTIME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="gzGetErrorInfo"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="2"
+#! TYPE="gzGetLogInfo"
+#! VERSION="1"
+#! POSITION="818 263"
+#! ORDER="31"
+#! PARMS_EDITED="false"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="StatisticsCalculator_SUMMARY_55"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DATASET" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_median" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_range" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_mean" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_stdev" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_mode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="PROCNAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LOADTIME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LOADNAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="COMPLETED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LOADUSER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ACTIVEFLAG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="gzGetLogInfo"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="3"
+#! TYPE="StatisticsCalculator"
+#! VERSION="6"
+#! POSITION="-992 196"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="SUMMARY"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors._min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._median" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._range" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mean" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._stdev" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="COMPLETE"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._median" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._range" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mean" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._stdev" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="CUMULATIVE"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._min" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._max" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._median" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._sum" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._range" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mean" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._stdev" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mode" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="$(GroupBy)"/>
+#! <XFORM_PARM PARM_NAME="MEAN_ATTR" PARM_VALUE="_mean"/>
+#! <XFORM_PARM PARM_NAME="COMPUTE_HISTOGRAM" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="ATTIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="MAX_ATTR" PARM_VALUE="_max"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StatisticsCalculator"/>
+#! <XFORM_PARM PARM_NAME="STATS_ATTRS" PARM_VALUE="HasErrors"/>
+#! <XFORM_PARM PARM_NAME="RANGE_ATTR" PARM_VALUE="_range"/>
+#! <XFORM_PARM PARM_NAME="SUM_ATTR" PARM_VALUE="_sum"/>
+#! <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE="_count"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="NUMERIC_ATTR" PARM_VALUE="_numeric_count"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="HISTO_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="STDEV_ATTR" PARM_VALUE="_stdev"/>
+#! <XFORM_PARM PARM_NAME="MODE_ATTR" PARM_VALUE="_mode"/>
+#! <XFORM_PARM PARM_NAME="MEDIAN_ATTR" PARM_VALUE="_median"/>
+#! <XFORM_PARM PARM_NAME="MIN_ATTR" PARM_VALUE="_min"/>
+#! <XFORM_PARM PARM_NAME="PREPEND_ATTR_NAME_CHOICE" PARM_VALUE="For all results"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="4"
+#! TYPE="TestFilter"
+#! VERSION="1"
+#! POSITION="-467 167"
+#! ORDER="48"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="NoErrors"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors._min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._median" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._range" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mean" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._stdev" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors._min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._median" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._range" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mean" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._stdev" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="BOOL_OP&lt;comma&gt;AND&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;HasErrors._max&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;!=&lt;space&gt;True&lt;lf&gt;TEST&lt;space&gt;$(IgnoreErrors)&lt;space&gt;=&lt;space&gt;False&lt;quote&gt;,NoErrors"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestHasErrors"/>
+#! <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="5"
+#! TYPE="TestFilter"
+#! VERSION="1"
+#! POSITION="-265 -773"
+#! ORDER="30"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="HasErrors"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;HasErrors&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;True&lt;quote&gt;,HasErrors"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestHasErrors_2"/>
+#! <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="6"
+#! TYPE="FeatureMerger"
+#! VERSION="11"
+#! POSITION="-39 -53"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors._min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._median" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._range" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mean" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._stdev" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors._min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._median" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._numeric_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._sum" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._range" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mean" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._stdev" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors._mode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="HasErrors" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="Yes"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes and Geometry"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="Build Polygons"/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="$(GroupBy) $(GroupBy) AUTO"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="13"
+#! NAME="gzFeatures"
+#! POSITION="-1723 -175"
+#! COLLAPSED="true"
+#! PUBLISHED="true"
+#! IS_SOURCE="true"
+#! ATTR_MODE="0"
+#! >
+#! <XFORM_ATTR ATTR_NAME="HasErrors" ATTR_VALUE="$(HASERRORS)" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" ATTR_VALUE="$(GroupBy)" />
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="17"
+#! NAME="gzFeatureWriter"
+#! POSITION="1514 -350"
+#! COLLAPSED="true"
+#! IS_SOURCE="false"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="21"
+#! NAME="gzLogWriter"
+#! POSITION="1511 260"
+#! COLLAPSED="true"
+#! IS_SOURCE="false"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="25"
+#! NAME="gzErrorWriter"
+#! POSITION="1529 -913"
+#! COLLAPSED="true"
+#! IS_SOURCE="false"
+#! ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="7"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="1"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="8"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="9"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="10"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="fo 4"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="11"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="12"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="fo 3"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="14"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="3"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="16"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="18"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="17"
+#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="22"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="21"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="24"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="5"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="26"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="25"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="27"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="17"
+#! SOURCE_PORT_DESC="fo 4"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="28"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </TRANSFORMER>
+#! 
+DEFAULT_MACRO $(gzWriteData_WORKSPACE_NAME)_IgnoreErrors False
+DEFAULT_MACRO $(gzWriteData_WORKSPACE_NAME)_HASERRORS @Value(HasErrors)
+DEFAULT_MACRO $(gzWriteData_WORKSPACE_NAME)_GroupBy OBJECTID
+#! START_HEADER
+#! END_HEADER
+
+LOG_FILTER_MASK -1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+DEFAULT_MACRO gzWriteData_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(gzWriteData_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(gzWriteData_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_gzFeatures1409326511 Input Splitter"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzFeatures"   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzFeatures_0_3QuTjRsowTM=" @EvaluateExpression(ATTR_CREATE_EXPR,HasErrors,$($(gzWriteData_WORKSPACE_NAME)_HASERRORS),FLOORID,$($(gzWriteData_WORKSPACE_NAME)_GroupBy), FEATURE_TYPE)   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzFeatures_1_3QuTjRsowTM=" @EvaluateExpression(ATTR_CREATE_EXPR,HasErrors,$($(gzWriteData_WORKSPACE_NAME)_HASERRORS),FLOORID,$($(gzWriteData_WORKSPACE_NAME)_GroupBy), FEATURE_TYPE)   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzFeatures_2_3QuTjRsowTM=" @EvaluateExpression(ATTR_CREATE_EXPR,HasErrors,$($(gzWriteData_WORKSPACE_NAME)_HASERRORS),FLOORID,$($(gzWriteData_WORKSPACE_NAME)_GroupBy), FEATURE_TYPE)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2    INPUT  FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzFeatures_2_3QuTjRsowTM="    OUTPUT FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2_TESTFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2_TestFactory_0 INPUT FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>HasErrors<closeparen>,$(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2) = True ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2_HasErrors OUTPUT FAILED FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2_TESTFILTERINPUTLINE_1
+FACTORY_DEF * TeeFactory FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2_TESTFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2_<lt>UNFILTERED<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2 <lt>UNFILTERED<gt> Output Nuker"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2_<lt>UNFILTERED<gt>"
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_gzGetErrorInfo INPUT Input Collector"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_TestHasErrors_2_HasErrors"   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzGetErrorInfo_INPUT"
+MACRO gzGetErrorInfo_WORKSPACE_NAME $(gzWriteData_WORKSPACE_NAME)_gzGetErrorInfo
+MACRO $(gzGetErrorInfo_WORKSPACE_NAME)_XFORMER_NAME $(gzWriteData_WORKSPACE_NAME)_gzGetErrorInfo
+MACRO $(gzGetErrorInfo_WORKSPACE_NAME)_TRANSFORMER_GROUP 
+MACRO $(gzGetErrorInfo_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
+INCLUDE_CUSTOM_TRANSFORMER_VER gzGetErrorInfo:1
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_gzGetErrorInfo OUTPUT Output Renamer/Nuker"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzGetErrorInfo_OUTPUT"   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzGetErrorInfo_OUTPUT"
+# -------------------------------------------------------------------------
+
+DEFAULT_MACRO __$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_63f98ef4_c7d4_413b_a008_0b74610d50740_GROUP_BY
+MACRO __$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_63f98ef4_c7d4_413b_a008_0b74610d50740_GROUP_BY $($(gzWriteData_WORKSPACE_NAME)_GroupBy)
+DYNAMIC_FUNCTION_CONFIGURATION Python FMEOBJECTS
+DYNAMIC_FUNCTION_CONFIGURATION Python import StatisticsCalculator
+DYNAMIC_FUNCTION_CONFIGURATION Python "StatisticsCalculator.connectTransformer(    '$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator',{     'GROUP_BY_MACRO':'__$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_63f98ef4_c7d4_413b_a008_0b74610d50740_GROUP_BY',     'GROUP_BY':'$($(gzWriteData_WORKSPACE_NAME)_GroupBy)',     'STATS_ATTRS':'HasErrors',     'MIN_ATTR':'_min',     'MAX_ATTR':'_max',     'COUNT_ATTR':'_count',     'NUMERIC_ATTR':'_numeric_count',     'SUM_ATTR':'_sum',     'RANGE_ATTR':'_range',     'MEAN_ATTR':'_mean',     'MEDIAN_ATTR':'_median',     'STDEV_ATTR':'_stdev',     'MODE_ATTR':'_mode',     'COMPUTE_HISTOGRAM':'NO',     'HISTO_ATTR':'<Unused>',     'PREPEND_ATTR_NAME':'Yes',     None:None})"
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_InputProcessor    INPUT  FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzFeatures_0_3QuTjRsowTM="    OUTPUT FEATURE_TYPE __ORIGINAL__       @Python(StatisticsCalculator.recordFeature,$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator)
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_UnneededInputNuker    INPUT FEATURE_TYPE __ORIGINAL__    OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_COMPLETE"
+FACTORY_DEF * SortFactory    FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_CompleteOutputter    INPUT FEATURE_TYPE __UNUSED_INPUT_TO_GUARANTEE_FACTORY_DOESNT_CONSUME_EVERYTHING__    INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_COMPLETE"    OUTPUT SORTED FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_COMPLETE"       @Python(StatisticsCalculator.summarizeStatistics,$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator,__ORIGINAL__)
+FACTORY_DEF * CreationFactory    FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_SummaryCreator    CREATE_AT_END    NUMBER_TO_CREATE 1    OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_SUMMARY"
+FACTORY_DEF * ElementFactory    FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_SummaryExploder    LIST_NAME $(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_stats{}    MODE LEAN_AND_MEAN    CLONE_GEOMETRY no    INPUT FEATURE_TYPE __UNUSED_INPUT_TO_GUARANTEE_FACTORY_DOESNT_CONSUME_EVERYTHING__    INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_SUMMARY"       @Python(StatisticsCalculator.summarizeStatistics,$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator,__SINGLE_GUY__)    OUTPUT ELEMENT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_SUMMARY"
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_TestHasErrors    INPUT  FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_SUMMARY"    INPUT  FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_StatisticsCalculator_COMPLETE"    OUTPUT FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_TESTFILTERINPUTLINE_0
+
+FACTORY_DEF * TestFactory FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_TestFactory_0 INPUT FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>HasErrors._max<closeparen>,$(gzWriteData_WORKSPACE_NAME)_TestHasErrors) != True ENCODED TEST @EvaluateExpression(STRING_ENCODED,$($(gzWriteData_WORKSPACE_NAME)_IgnoreErrors$encode),$(gzWriteData_WORKSPACE_NAME)_TestHasErrors) = False ENCODED BOOLEAN_OPERATOR AND COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_NoErrors OUTPUT FAILED FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_TESTFILTERINPUTLINE_1
+FACTORY_DEF * TeeFactory FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_TESTFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE $(gzWriteData_WORKSPACE_NAME)_TestHasErrors_<lt>UNFILTERED<gt>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_TestHasErrors <lt>UNFILTERED<gt> Output Nuker"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_TestHasErrors_<lt>UNFILTERED<gt>"
+# -------------------------------------------------------------------------
+
+INCLUDE [if { {GEOM_AND_ATTRS} == {ATTRIBUTES} } {                puts "MACRO $(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCE_INFO ATTRIBUTES";             }          elseif { {GEOM_AND_ATTRS} == {GEOM_BUILD} && {POLYGONS} == {POLYGONS}} {                puts "MACRO $(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCE_INFO GEOM_BUILD_POLYS";             }          elseif { {GEOM_AND_ATTRS} == {GEOM_BUILD} && {POLYGONS} == {AGGREGATES}} {                puts "MACRO $(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCE_INFO GEOM_BUILD_AGGREGATES";             }          elseif { {GEOM_AND_ATTRS} == {GEOM_BUILD} && {POLYGONS} == {LINESFROMPOINTS}} {                puts "MACRO $(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCE_INFO GEOM_BUILD_LINES_FROM_POINTS";             }          elseif { {GEOM_AND_ATTRS} == {GEOM_AND_ATTRS} && {POLYGONS} == {POLYGONS}} {                puts "MACRO $(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_POLYS";             }          elseif { {GEOM_AND_ATTRS} == {GEOM_AND_ATTRS} && {POLYGONS} == {AGGREGATES}} {                puts "MACRO $(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_AGGREGATES";             }          elseif { {GEOM_AND_ATTRS} == {GEOM_AND_ATTRS} && {POLYGONS} == {LINESFROMPOINTS}} {                puts "MACRO $(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_LINES_FROM_POINTS";             }          elseif { {GEOM_AND_ATTRS} == {GEOM_BUILD} } {                puts "MACRO $(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCE_INFO GEOM_BUILD_AGGREGATES";             }          elseif { {GEOM_AND_ATTRS} == {GEOM_AND_ATTRS} } {                puts "MACRO $(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_AGGREGATES";             }          else {}; ]
+
+FACTORY_DEF * ReferenceFactory    FACTORY_NAME $(gzWriteData_WORKSPACE_NAME)_FeatureMerger    INPUT REFERENCER FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_TestHasErrors_NoErrors"    INPUT REFERENCEE FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzFeatures_1_3QuTjRsowTM="    REFERENCE_INFO $($(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCE_INFO)    REFERENCE_TABLE @EvaluateExpression(STRING_ENCODED,$($(gzWriteData_WORKSPACE_NAME)_GroupBy),$(gzWriteData_WORKSPACE_NAME)_FeatureMerger) @EvaluateExpression(STRING_ENCODED,$($(gzWriteData_WORKSPACE_NAME)_GroupBy),$(gzWriteData_WORKSPACE_NAME)_FeatureMerger) AUTO    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES Yes    REFERENCEES_FIRST No    OUTPUT REFERENCED FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCED"    OUTPUT UNREFERENCED FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_UNREFERENCED"    OUTPUT DUPLICATE_REFERENCEE FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_DUPLICATE_SUPPLIER"
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger REFERENCED Splitter"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCED"   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCED_0_OVd0HmhILZc="   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCED_1_OVd0HmhILZc="
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger DUPLICATE_SUPPLIER Splitter"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_DUPLICATE_SUPPLIER"   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_DUPLICATE_SUPPLIER_0_ptR/a4RryvM="   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_DUPLICATE_SUPPLIER_1_ptR/a4RryvM="
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_gzGetLogInfo StatisticsCalculator_INPUT_55 Input Collector"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_UNREFERENCED"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCED_0_OVd0HmhILZc="   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_DUPLICATE_SUPPLIER_0_ptR/a4RryvM="   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzGetLogInfo_StatisticsCalculator_INPUT_55"
+MACRO gzGetLogInfo_WORKSPACE_NAME $(gzWriteData_WORKSPACE_NAME)_gzGetLogInfo
+MACRO $(gzGetLogInfo_WORKSPACE_NAME)_XFORMER_NAME $(gzWriteData_WORKSPACE_NAME)_gzGetLogInfo
+MACRO $(gzGetLogInfo_WORKSPACE_NAME)_TRANSFORMER_GROUP 
+MACRO $(gzGetLogInfo_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
+INCLUDE_CUSTOM_TRANSFORMER_VER gzGetLogInfo:1
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_gzGetLogInfo StatisticsCalculator_SUMMARY_55 Output Renamer/Nuker"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzGetLogInfo_StatisticsCalculator_SUMMARY_55"   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzGetLogInfo_StatisticsCalculator_SUMMARY_55"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_gzFeatureWriter1409326511 Output Collector"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_REFERENCED_1_OVd0HmhILZc="   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_FeatureMerger_DUPLICATE_SUPPLIER_1_ptR/a4RryvM="   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzFeatureWriter"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_gzLogWriter1409326511 Output Collector"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzGetLogInfo_StatisticsCalculator_SUMMARY_55"   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzLogWriter"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzWriteData_WORKSPACE_NAME)_gzErrorWriter1409326511 Output Collector"   INPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzGetErrorInfo_OUTPUT"   OUTPUT FEATURE_TYPE "$(gzWriteData_WORKSPACE_NAME)_gzErrorWriter"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(gzWriteData_WORKSPACE_NAME))}]
