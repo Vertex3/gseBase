@@ -13,8 +13,8 @@ etl = os.sep+'ETL'+os.sep
 gsepath = ospath[:ospath.rfind(etl)]
 etlpath = gsepath + etl
 if (etlpath) not in sys.path:
-	sys.path.insert(0, etlpath)
-	print etlpath
+    sys.path.insert(0, etlpath)
+    print etlpath
 
 import arcpy, datetime, xml.dom.minidom, gse, gzSupport, gseRunFME
 
@@ -121,6 +121,9 @@ def main(argv = None):
                         except:
                             msg("Unable to delete CAD file " + dwg + "... continuing")
                 gzSupport.cleanupGarbage()
+                if processed % 100 == 0:
+                    msg("Processed " + str(processed) + " database compress...")
+                    gzSupport.compressGDB(gss[0].productionWS)
     except:
         errorCount += 1
         msg("A fatal error was encountered in gseLoaderFME.py")
@@ -156,7 +159,7 @@ def doLoad(playlist_xml,folder,dwg,gs):
         msg("No FME file for loading")
         retVal = True
     else:
-        retVal = gseRunFME.load(inputDrawing,gs.fmeExe,gs.fmeLoadFile,gs.stagingWS,gs.productionWS,gs.sourceEPSG,gs.runas,playlist_xml,gs.source,
+        retVal = gseRunFME.load(inputDrawing,gs.fmeExe,gs.fmeLoadFile,gs.stagingWS,gs.productionWS,gs.sourceEPSG,gs.runas,gs.truncate,playlist_xml,gs.source,
                 getFeatureTypes(playlist_xml,"sourceName"),getFeatureTypes(playlist_xml,"targetName"))
         msg("FME processing time: " + getTimeElapsed(drawingTime))
         logProcess(gs.fmeLoadFile[:gs.fmeLoadFile.rfind(os.sep)+1],dwg,retVal,gs.stagingWS)
@@ -171,7 +174,11 @@ def getFeatureTypes(playlist,nm):
     vals = []
     for d in ds:
         if d.getAttributeNode(nm) != None:
-            vals.append(d.getAttributeNode(nm).nodeValue)
+            name = d.getAttributeNode(nm).nodeValue
+            try:
+                vals.index(name)
+            except:
+                vals.append(name)
     strVals = " ".join(vals)
     return strVals
 
@@ -229,6 +236,7 @@ class gseSettings:
         self.fmeExe = gseData.fmeExe
         self.sourceEPSG = gseData.sourceEPSG
         self.runas = gseData.runas
+        self.truncate = gseData.truncate
         self.nameContains = loadSettings.getAttributeNode("nameContains").nodeValue
         self.logFileName = os.path.join(gse.pyFolder,loadSettings.getAttributeNode("logFileName").nodeValue)
         fmename = loadSettings.getAttributeNode("fmeLoadFile").nodeValue
@@ -254,6 +262,10 @@ class gseDataSettings:
         self.fmeExe = dataSettings.getAttributeNode("fmeExe").nodeValue
         self.sourceEPSG = dataSettings.getAttributeNode("sourceEPSG").nodeValue
         self.runas = dataSettings.getAttributeNode("runas").nodeValue
+        try:
+            self.truncate = dataSettings.getAttributeNode("truncate").nodeValue
+        except:
+            self.truncate = 'Y'
 
 def fixConfigPath(playlist_xml):
     if playlist_xml == None:

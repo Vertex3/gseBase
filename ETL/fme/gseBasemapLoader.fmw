@@ -5,17 +5,17 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    D:\apps\FME\fme.exe C:\Users\Steve\Documents\GitHub\gse\ETL\fme\gseBasemapLoader.fmw
+#    D:\apps\FME\fme.exe C:\apps\Gizinta\gseUW\ETL\fme\gseBasemapLoader.fmw
 #          --DestDataset_GEODATABASE_SDE sde
-#          --OUT_CONNECTION_FILE_GEODATABASE_SDE "C:\Users\Steve\Documents\GitHub\gse\ETL\serverConfig\GIS Staging.sde"
-#          --ProductionConnectionFile "C:\Users\Steve\Documents\GitHub\gse\ETL\serverConfig\GIS Production.sde"
-#          --GizintaProject C:\Users\Steve\Documents\GitHub\gse\ETL\config\bmPlaylistAll.xml
+#          --OUT_CONNECTION_FILE_GEODATABASE_SDE "C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde"
+#          --ProductionConnectionFile "C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
+#          --GizintaProject C:\apps\Gizinta\gseUW\ETL\config\bmPlaylistAll.xml
 #          --SourceFieldQA False
 #          --TargetFieldQA True
 #          --IgnoreErrors False
 #          --SourceDatasetTypes CADDataset
 #          --SCHEMA_IN_REAL_FORMAT_SCHEMA_MSD ESRIMSD
-#          --SourceDataset_SCHEMA_MSD C:\Users\Steve\Documents\GitHub\gse\CAD\UWS\Siteplan\UW_Seattle.dwg
+#          --SourceDataset_SCHEMA_MSD C:\apps\Gizinta\gseUW\CAD\UWS\Siteplan\UW_Seattle.dwg
 #          --pFLOORID ""
 #          --SourceCoordinateSystem EPSG:2285
 #          --gzDebug False
@@ -826,17 +826,17 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI FILENAME_MUSTEXIST OUT_CONNECTION_FILE_GEODATABASE_SDE Connection File:"
-#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\gse\ETL\serverConfig\GIS Staging.sde"
+#! DEFAULT_VALUE="C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FILENAME_MUSTEXIST_OR_ATTR ProductionConnectionFile SDE Connection File |*.sde Production Connection File:"
-#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\gse\ETL\serverConfig\GIS Production.sde"
+#! DEFAULT_VALUE="C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
 #! IS_STAND_ALONE="true"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FILENAME_MUSTEXIST GizintaProject Xml|.xml Select the Gizinta Xml File to use:"
-#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\gse\ETL\config\bmPlaylistAll.xml"
+#! DEFAULT_VALUE="C:\apps\Gizinta\gseUW\ETL\config\bmPlaylistAll.xml"
 #! IS_STAND_ALONE="true"
 #! />
 #! <GLOBAL_PARAMETER
@@ -866,7 +866,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI FILE_OR_URL SourceDataset_SCHEMA_MSD All_files|*.* Source Dataset:"
-#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\gse\CAD\UWS\Siteplan\UW_Seattle.dwg"
+#! DEFAULT_VALUE="C:\apps\Gizinta\gseUW\CAD\UWS\Siteplan\UW_Seattle.dwg"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -5251,7 +5251,7 @@
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FILENAME_MUSTEXIST ProductionConnectionFile Connection GEODATABASE_SDE File:"
-#! DEFAULT_VALUE="C:\Users\Steve\Documents\GitHub\gse\ETL\serverConfig\GIS Production.sde"
+#! DEFAULT_VALUE="C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
 #! IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -6560,11 +6560,11 @@
 GUI IGNORE SourceDataset_SCHEMA_1,SCHEMA_IN_REAL_FORMAT_SCHEMA_1,SourceDataset_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1,_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1,_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1,_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1,_GEODBInSearchFeature_GEODATABASE_SDE_1,_GEODBInSearchOrder_GEODATABASE_SDE_1,_GEODBInSearchMethod_GEODATABASE_SDE_1,_GEODBInChildVersionName_GEODATABASE_SDE_1,_GEODBInFeatureReadMode_GEODATABASE_SDE_1,_GEODBInArchiveWhereClause_GEODATABASE_SDE_1,_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1,_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1,_GEODBInPersistentConnection_GEODATABASE_SDE_1,_GEODBInBeginSql_GEODATABASE_SDE_1,_GEODBInEndSql_GEODATABASE_SDE_1,DestDataset_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_TEMPLATEFILE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_SIMPLIFY_GEOM_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_ORIGIN_X_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_ORIGIN_Y_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_XY_SCALE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_HAS_Z_VALUES_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_Z_ORIGIN_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_Z_SCALE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_GRID_1_GEODATABASE_SDE_2,_GEODBOutDefaultZValue_GEODATABASE_SDE_2,_GEODBOutWriterMode_GEODATABASE_SDE_2,_GEODBOutTransaction_GEODATABASE_SDE_2,_GEODBOutTransactionInterval_GEODATABASE_SDE_2,_GEODBOutIgnoreFailedFeatureEntry_GEODATABASE_SDE_2,_GEODBOutMaxNumberFailedFeatures_GEODATABASE_SDE_2,_GEODBOutDumpFailedFeatures_GEODATABASE_SDE_2,_GEODBOutFFSDumpFile_GEODATABASE_SDE_2,_GEODBOutAnnotationUnits_GEODATABASE_SDE_2,_GEODBOutMeasures_GEODATABASE_SDE_2,_GEODBOutMeasureOrigin_GEODATABASE_SDE_2,_GEODBOutMeasureScale_GEODATABASE_SDE_2,_GEODBOutReconcileAndPost_GEODATABASE_SDE_2,_GEODBOutDeleteChildAfterReconcileAndPost_GEODATABASE_SDE_2,_GEODBOutValidateFeatures_GEODATABASE_SDE_2,_GEODBOutSimplifyNetworkFeatures_GEODATABASE_SDE_2,_GEODBOutPersistentConnection_GEODATABASE_SDE_2,_GEODBOutCommitTransactionsAfterWrite_GEODATABASE_SDE_2,_GEODBOutBeginSql_GEODATABASE_SDE_2,_GEODBOutEndSql_GEODATABASE_SDE_2
 DEFAULT_MACRO DestDataset_GEODATABASE_SDE sde
 GUI TEXT DestDataset_GEODATABASE_SDE Destination Esri ArcSDE Geodatabase Dataset:
-DEFAULT_MACRO OUT_CONNECTION_FILE_GEODATABASE_SDE C:\Users\Steve\Documents\GitHub\gse\ETL\serverConfig\GIS Staging.sde
+DEFAULT_MACRO OUT_CONNECTION_FILE_GEODATABASE_SDE C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde
 GUI FILENAME_EXISTING OUT_CONNECTION_FILE_GEODATABASE_SDE Connection File:
-DEFAULT_MACRO ProductionConnectionFile C:\Users\Steve\Documents\GitHub\gse\ETL\serverConfig\GIS Production.sde
+DEFAULT_MACRO ProductionConnectionFile C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde
 GUI OPTIONAL FILENAME_EXISTING ProductionConnectionFile SDE Connection File |*.sde Production Connection File:
-DEFAULT_MACRO GizintaProject C:\Users\Steve\Documents\GitHub\gse\ETL\config\bmPlaylistAll.xml
+DEFAULT_MACRO GizintaProject C:\apps\Gizinta\gseUW\ETL\config\bmPlaylistAll.xml
 GUI OPTIONAL FILENAME_EXISTING GizintaProject Xml|.xml Select the Gizinta Xml File to use:
 DEFAULT_MACRO SourceFieldQA False
 GUI OPTIONAL CHOICE SourceFieldQA True%False Choose whether to perform QA on Source Fields:
@@ -6576,7 +6576,7 @@ DEFAULT_MACRO SourceDatasetTypes CADDataset
 GUI OPTIONAL TEXT SourceDatasetTypes Enter the Gizinta Source Dataset Type:
 DEFAULT_MACRO SCHEMA_IN_REAL_FORMAT_SCHEMA_MSD ESRIMSD
 GUI READERPICK SCHEMA_IN_REAL_FORMAT_SCHEMA_MSD Input Format:
-DEFAULT_MACRO SourceDataset_SCHEMA_MSD C:\Users\Steve\Documents\GitHub\gse\CAD\UWS\Siteplan\UW_Seattle.dwg
+DEFAULT_MACRO SourceDataset_SCHEMA_MSD C:\apps\Gizinta\gseUW\CAD\UWS\Siteplan\UW_Seattle.dwg
 GUI FILE_OR_URL SourceDataset_SCHEMA_MSD All_files|*.* Source Dataset:
 DEFAULT_MACRO pFLOORID 
 GUI OPTIONAL TEXT pFLOORID Enter the Floor ID:

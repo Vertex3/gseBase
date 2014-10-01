@@ -103,11 +103,14 @@ def getFloorFromName(dwg):
 	return floor
 
 def getFloorCodeFromName(dwg):
-    dwg = dwg.lower().replace(".dwg",'')
+    if dwg.lower().rfind(".dwg") > -1:
+        dwg = dwg[:dwg.lower().rfind(".dwg")]
     floorNum = dwg[len(dwg)-2:]
-    return floorNum
+    return floorNum.upper()
 
 def getDrawingFromName(dwg):
+    if dwg.find(os.sep) > -1:
+        dwg = dwg[dwg.rfind(os.sep)+1:]
     if dwg.lower().rfind(".dwg") > -1:
         dwg = dwg[:dwg.lower().rfind(".dwg")]
     return dwg

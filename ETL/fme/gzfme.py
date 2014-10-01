@@ -232,7 +232,7 @@ def shutdown(Errors,ignore,numWritten,FME_MacroValues):
 		h = "*************************************************************************"
 		logger.logMessageString(h)
 		logger.logMessageString(h)
-		logger.logMessageString(e)
+		logger.logMessageString(err)
 		logger.logMessageString(h)
 		logger.logMessageString(h)
 
@@ -241,7 +241,7 @@ def shutdown(Errors,ignore,numWritten,FME_MacroValues):
 		#pp = pprint.PrettyPrinter(indent=4)
 		#pp.pprint(FME_MacroValues)
 		logger.logMessageString(err)
-		raise Exception(err)
+		#raise Exception(err)
 	else:
 		if ignore == 'true':
 			logger.logMessageString("gz IgnoreErrors parameter was set to ignore all QA errors")
