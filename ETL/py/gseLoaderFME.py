@@ -86,27 +86,26 @@ def main(argv = None):
                 msg("\n" + dwg)
                 for playlist in playlists: # Loop through the playlists and do the loading from CAD
                     if cont(errorCount,exitOnError,partFailed): # stop processing if any errors or continue if exit on error param is false
-                            retVal = doLoad(playlist,folder,dwg,gss[pVal]) # Load the playlist using FME subprocess
-                            if(retVal != True):
-                                outputSuccess = False
-                                errorCount += 1
-                                gss[pVal].loaded = False
-                                partFailed = True
-                            else:
-                                gss[pVal].loaded = True
+                        retVal = doLoad(playlist,folder,dwg,gss[pVal]) # Load the playlist using FME subprocess
+                        if(retVal != True):
+                            outputSuccess = False
+                            errorCount += 1
+                            gss[pVal].loaded = False
+                            partFailed = True
+                        else:
+                            gss[pVal].loaded = True
                     pVal += 1
                 if (errorCount,exitOnError,partFailed):
                     pVal = 0
-                    for playlist in playlists: # go back through the playlists and Sync for this drawing
-                        if errorCount == 0 and autoSync == True: # Sync is param set and no errors have been returned
-                            retVal = doSync(playlist,folder,dwg,gss[pVal]) # sync from Staging to Production
-                            if(retVal != True):
-                                outputSuccess = False
-                                errorCount += 1
-                                gss[pVal].syncd = False
-                            else:
+                    if errorCount == 0 or autoSync == True: # Sync is param set and no errors have been returned
+                        retVal = doSync(playlists,folder,dwg,gss[pVal]) # sync from Staging to Production
+                        if(retVal != True):
+                            outputSuccess = False
+                            errorCount += 1
+                        else:
+                            for playlist in playlists: # go back through the playlists and Sync for this drawing
                                 gss[pVal].syncd = True
-                        pVal += 1
+                                pVal += 1
                 loaded = False
                 for gs in gss:
                     if (gs.loaded == True or gs.syncd == True) and dwg.find(gs.nameContains) > -1: # if any load or sync processing happened...
@@ -188,8 +187,9 @@ def doSync(playlist_xml,folder,dwg,gs):
     inputDrawing = os.path.join(folder,dwg)
     drawingTime = gzSupport.timer(0)
     msg("Sync changes to database for " + dwg)
+    plists = " ".join(playlist_xml)
     # sync changes
-    result = arcpy.gseSyncChanges_gse(inputDrawing,playlist_xml,gs.stagingWS,gs.productionWS)
+    result = arcpy.gseSyncChanges_gse(inputDrawing,plists,gs.stagingWS,gs.productionWS)
     if result.getOutput(0) != None and result.getOutput(0).lower() == 'true':
         retVal=True
     else:

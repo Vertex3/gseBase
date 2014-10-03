@@ -74,6 +74,7 @@ def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG
 def getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,truncate,playlist_xml,logFile,fread,fwrite):
 
     floorID = getFloorID(inputDrawing)
+    bldg = getBuildingID(inputDrawing)
     #worldFile = inputDrawing[:inputDrawing.rfind(os.sep)+1] + "esri_cad.wld"
 
     line1 = getLine1(fmeFile,fmeExe)
@@ -87,6 +88,8 @@ def getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
     makeFMEParam("IgnoreErrors","False") + \
     makeFMEParam("SourceDatasetTypes","CADDataset") + \
     makeFMEParam("pFLOORID",floorID) + \
+    makeFMEParam("flr",floorID) + \
+    makeFMEParam("bldg",bldg) + \
     makeFMEParam("SourceCoordinateSystem",sourceEPSG) + \
     makeFMEParam("gzDebug","False") + \
     makeFMEParam("truncate",truncate) + \
@@ -107,6 +110,7 @@ def getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
 
     #dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
     floorID = getFloorID(inputDrawing)
+    bldg = getBuildingID(inputDrawing)
 
     line1 = getLine1(fmeFile,fmeExe)
 
@@ -121,6 +125,8 @@ def getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
     makeFMEParam("IgnoreErrors","False") + \
     makeFMEParam("SourceDatasetTypes","GDBDataset") + \
     makeFMEParam("pFLOORID",floorID) + \
+    makeFMEParam("flr",floorID) + \
+    makeFMEParam("bldg",bldg) + \
     makeFMEParam("SourceCoordinateSystem",sourceEPSG) + \
     makeFMEParam("gzDebug","False") + \
     makeFMEParam("truncate",truncate) + \
@@ -177,6 +183,14 @@ def getFloorID(inputDrawing):
     except:
         floorID = ""
     return floorID
+
+def getBuildingID(inputDrawing):
+    bldgID = ""
+    try:
+        bldgID = gseDrawing.getBuildingIDFromPath(inputDrawing) 
+    except:
+        bldgID = ""
+    return bldgID
 
 def printComm(comm):
     parts = comm.split('--')

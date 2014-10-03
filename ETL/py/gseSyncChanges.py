@@ -1,4 +1,4 @@
-# gseSyncChanges.py - Sync changes from a staging GDB to Production
+# gzChanges.py - Sync changes from a staging GDB to Production
 # ---------------------------------------------------------------------------
 # Created on: 2014 01 03
 #
@@ -10,7 +10,7 @@ import os, sys, arcpy, datetime, xml.dom.minidom, gse, gzSupport, gseDrawing
 
 log = None
 inputDrawing = arcpy.GetParameterAsText(0)
-playlist_xml = arcpy.GetParameterAsText(1)
+playlists = arcpy.GetParameterAsText(1)
 GISStagingDefault_sde = arcpy.GetParameterAsText(2)
 GISProdDefault_sde = arcpy.GetParameterAsText(3)
 successParam = 4
@@ -19,8 +19,11 @@ def main(argv = None):
     global log
     # sync from the staging database to prod. The staging database should have rows for the current drawing
     # This process will replace rows in the production database for the floor/drawing, it uses change detection if it is set up in the Gizinta Xml files
-    xmlDoc = xml.dom.minidom.parse(playlist_xml)
-    datasets = gzSupport.getXmlElements(playlist_xml,"Dataset")
+    plists = playlists.split(" ")
+    datasets = []
+    for playlist in plists:
+        xmlDoc = xml.dom.minidom.parse(playlist)
+        datasets = datasets + gzSupport.getXmlElements(playlist,"Dataset")
     gzSupport.workspace = GISProdDefault_sde
     retVal = True
     log = open(os.path.join(sys.path[0],"gseSyncChanges.log"),"w")
@@ -36,8 +39,11 @@ def main(argv = None):
             targetDataset = os.path.join(GISProdDefault_sde,name)
             changeNode = dataset.getElementsByTagName("ChangeDetection")[0]
             if changeNode != None and changeNode != []:
-                processed.append(name)
-                # if there is a change node then do change detection using SQL Server views
+                try:
+                    processed.index(name)
+                except:
+                    processed.append(name)
+                # if there is a change node then do change detection using views
                 arcpy.env.workspace = GISStagingDefault_sde
                 desc = arcpy.Describe(os.path.join(GISProdDefault_sde,name))
 
@@ -46,7 +52,7 @@ def main(argv = None):
                     viewIdField = changeNode.getAttributeNode("viewIdField").nodeValue
                     gzSupport.addMessage("Using Change detection id field " + viewIdField)
                 except:
-                    viewIdField = "FLOORID" # the default
+                    viewIdField = "floorid" # the default
                     gzSupport.addMessage("Using default id field " + viewIdField)
                 whereClause = buildViewWhereClause(viewIdField,inputDrawing)
                 adds = getChanges(changeNode,"exceptProductionView",GISStagingDefault_sde,whereClause,idField)
@@ -97,16 +103,17 @@ def main(argv = None):
                 else:
                     msg("No rows in source database to update for " + name)
                 del view
+    msg(processed)
     arcpy.SetParameter(successParam,retVal)
 
 def getChanges(changeNode,viewAttribute,sde,whereClause,idField):
     # get the list of changed rows - just the IDs
     exceptViewName = changeNode.getAttributeNode(viewAttribute).nodeValue
     view = os.path.join(sde,exceptViewName)
-    try:
-        arcpy.AnalyzeDatasets_management(sde,"NO_SYSTEM",exceptViewName,"ANALYZE_BASE")
-    except:
-        pass
+    #try:
+    #    arcpy.AnalyzeDatasets_management(sde,"NO_SYSTEM",exceptViewName,"ANALYZE_BASE")
+    #except:
+    #    pass
     diffs = getChangedRows(view,idField,whereClause)
     del view
 
@@ -115,13 +122,13 @@ def getChanges(changeNode,viewAttribute,sde,whereClause,idField):
 def buildViewWhereClause(viewIdField,inputDrawing):
     # build a where clause based on the idfield
     dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
-    if viewIdField == "SOURCEDWG":
+    if viewIdField.upper() == "SOURCEDWG":
         drawingID = gseDrawing.getDrawingFromName(dwg)
         whereClause = viewIdField + " = '" + drawingID  + "'"
-    elif viewIdField == "FLOORID":
+    elif viewIdField.upper() == "FLOORID":
         floorID = gseDrawing.getFloorIDFromPath(inputDrawing)
         whereClause = viewIdField + " = '" + floorID  + "'"
-    elif viewIdField == "BUILDINGID":
+    elif viewIdField.upper() == "BUILDINGID":
         buildingID = gseDrawing.getBuildingIDFromPath(inputDrawing)
         whereClause = viewIdField + " = '" + buildingID  + "'"
     else:
