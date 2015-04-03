@@ -22,8 +22,9 @@ def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG
     global runAs
     ret = False
     sTime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:len(inputDrawing)-4]
     logFolder = fmeFile[:fmeFile.rfind(os.sep)] + os.sep + "log" + os.sep
-    logFile = logFolder + fmeFile[fmeFile.rfind(os.sep)+1:].replace(".fmw",".log")
+    logFile = logFolder + fmeFile[fmeFile.rfind(os.sep)+1:].replace(".fmw",dwg + ".log").replace("*","")
     runAs = runas 
     if not sourceEPSG.upper().startswith("EPSG:"):
         sourceEPSG = "EPSG:" + sourceEPSG
@@ -87,9 +88,6 @@ def getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
     makeFMEParam("SourceFieldQA","False") + \
     makeFMEParam("IgnoreErrors","False") + \
     makeFMEParam("SourceDatasetTypes","CADDataset") + \
-    makeFMEParam("pFLOORID",floorID) + \
-    makeFMEParam("flr",floorID) + \
-    makeFMEParam("bldg",bldg) + \
     makeFMEParam("SourceCoordinateSystem",sourceEPSG) + \
     makeFMEParam("gzDebug","False") + \
     makeFMEParam("truncate",truncate) + \
@@ -104,6 +102,9 @@ def getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
     comm = getCloseString(comm)
     #SourceCoordinateSystem
     #makeFMEParam("SourceWorldFile",worldFile)
+    #makeFMEParam("pFLOORID",floorID) + \
+    #makeFMEParam("flr",floorID) + \
+    #makeFMEParam("bldg",bldg) + \
     return comm
 
 def getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,truncate,playlist_xml,logFile,fread,fwrite):
@@ -124,9 +125,6 @@ def getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
     makeFMEParam("TargetFieldQA","True") + \
     makeFMEParam("IgnoreErrors","False") + \
     makeFMEParam("SourceDatasetTypes","GDBDataset") + \
-    makeFMEParam("pFLOORID",floorID) + \
-    makeFMEParam("flr",floorID) + \
-    makeFMEParam("bldg",bldg) + \
     makeFMEParam("SourceCoordinateSystem",sourceEPSG) + \
     makeFMEParam("gzDebug","False") + \
     makeFMEParam("truncate",truncate) + \
@@ -137,12 +135,19 @@ def getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
     comm = getCloseString(comm)
 
     return comm
+    #makeFMEParam("pFLOORID",floorID) + \
+    #makeFMEParam("flr",floorID) + \
+    #makeFMEParam("bldg",bldg) + \
 
 def makeFMEParam(pName, pValue):
     # prepare FME parameters for sending to the FME subprocess as command line arguments
     global runAs
+    quot = ""
     if runAs == "FME":
-        param = " --" + pName + " \"" + pValue + "\""
+        if pValue.find(' ') > -1:
+            quot = "\""
+        
+        param = " --" + pName + "  " + quot + pValue + quot
         
         return param
     elif runAs == "DataInterop":

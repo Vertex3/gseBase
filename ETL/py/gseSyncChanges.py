@@ -1,4 +1,4 @@
-# gzChanges.py - Sync changes from a staging GDB to Production
+# gseSyncChanges.py - Sync changes from a staging GDB to Production
 # ---------------------------------------------------------------------------
 # Created on: 2014 01 03
 #
@@ -6,7 +6,21 @@
 # performs change detection/update if SQL Server views are set up and there is a change node in the Gizinta.
 # ---------------------------------------------------------------------------
 
-import os, sys, arcpy, datetime, xml.dom.minidom, gse, gzSupport, gseDrawing
+import os, sys, arcpy, time, datetime, xml.dom.minidom, gzSupport 
+
+ospath = os.path.realpath(__file__)
+etl = os.sep+'ETL'+os.sep
+gsepath = ospath[:ospath.rfind(etl)]
+etlpath = gsepath + etl
+pypath = gsepath + "\\ETL\\fme\\"
+if (etlpath) not in sys.path:
+    sys.path.insert(0, etlpath)
+    print etlpath
+if (pypath) not in sys.path:
+    sys.path.insert(0, pypath)
+    print pypath
+
+import gseDrawing, gse
 
 log = None
 inputDrawing = arcpy.GetParameterAsText(0)
@@ -20,13 +34,17 @@ def main(argv = None):
     # sync from the staging database to prod. The staging database should have rows for the current drawing
     # This process will replace rows in the production database for the floor/drawing, it uses change detection if it is set up in the Gizinta Xml files
     plists = playlists.split(" ")
+    arcpy.AddMessage(playlists)
     datasets = []
     for playlist in plists:
-        xmlDoc = xml.dom.minidom.parse(playlist)
+        #xmlFile = os.path.join(gse.configFolder,playlist + ".xml")
         datasets = datasets + gzSupport.getXmlElements(playlist,"Dataset")
     gzSupport.workspace = GISProdDefault_sde
     retVal = True
-    log = open(os.path.join(sys.path[0],"gseSyncChanges.log"),"w")
+    tm = time.strftime("%Y%m%d%H%M%S")	
+    dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
+    drawingID = gseDrawing.getDrawingFromName(dwg)
+    log = open(gse.pyLogFolder + 'gseSyncChanges_' + drawingID + '_' + tm + '.log','w')
     processed = []
     for dataset in datasets:
         name = dataset.getAttributeNode("name").nodeValue
@@ -103,7 +121,7 @@ def main(argv = None):
                 else:
                     msg("No rows in source database to update for " + name)
                 del view
-    msg(processed)
+    #msg(processed)
     arcpy.SetParameter(successParam,retVal)
 
 def getChanges(changeNode,viewAttribute,sde,whereClause,idField):
