@@ -1,0 +1,26 @@
+---
+title: fme folder 
+tagline: Safe Software FME workbench files and supporting scripts
+layout: default
+--- 
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+		<h3>Sync Engine fme Folder</h3>
+		<p>Folder that contains the FME Workbench files and related python scripts</p>
+		<p>The .fmw files in this folder are all FME workbench files that define key parts of the Sync Engine processing. 
+		These tools read from source CAD or Geodatabase datasets, perform a series of calculations on data, often including the creation 
+		of new fields and datasets for the target database. They read source 2D CAD drawings and write to staging and production 3D Geodatabases.
+		<p>Each of the FME files imports gseDrawing.py and gzfme.py.</p>
+		<p>gseDrawing.py contains the functions that calculate common field values such as SITEID, BUILDINGID, FLOORID, and 
+		portions of those values. These settings are unique for each organization, and all of the configuration files use gseDrawing.<function> 
+		to construct these values. This is one of the main places where changes are made for a new customer project, and the 
+		place that must be changed if the folder/file structure for the source CAD drawings changes, or if other organization-wide changes are made.</p>
+		<p>gzfme.py contains functions that are used by python scripts within FME related to the Gizinta configuration files. 
+		It also contains some of the logic for shutdown scripts and other common parts of the FME workbench setup.</p>
+		<h3>Folders:</h3>
+		<p>Customxfmr - Custom transformers that must be installed in the user or system fme transformer folder</p>
+		<p>embed - Python stub code to be embedded as startup and shutdown scripts in any new FME processes</p>
+		<p>log - Location of log files produced by the system. These files are very useful for debugging purposes</p>
+		<p>Utilities - Samples and other tools that are not actively used in normal processing</p>
+	  </section>
+    </div>

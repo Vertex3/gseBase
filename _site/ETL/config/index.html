@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="GseBase : Gizinta Sync Engine">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
+
+    <title>GseBase</title>
+  </head>
+
+    
+
+  <body>
+        <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Vertex3/gseBase" target='new'>View on GitHub</a>
+
+          <h1 id="project_title">GseBase</h1>
+          <h2 id="project_tagline">Gizinta Sync Engine</h2>
+<!--
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Vertex3/gseBase/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Vertex3/gseBase/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+-->
+        </header>
+    </div>
+
+    
+	    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+		<h3>Sync Engine config Folder</h3>
+		<p>Folder that contains Gizinta xml configuration files</p>
+		<p>This folder contains Gizinta playlist files along with subfolders containing the files referenced in the playlists.</P>
+		<p>A Gizinta plalylist is a list of datasets to be processed, and each of the Sync Engine processing steps uses a playlist argument
+		to control the source data that is read, and the target data that is written by the processing step. The playlist file also contains 
+		key settings such as the FME workbench process to run, the name of the log file to be created, a filter on file names (i.e., nameContains='XP') 
+		and an indication of the source dataset type.</p>
+		<p>Each Gizinta file contains the source and target dataset names, along with details for the field mapping and QA/QC processing for
+		each dataset. One addition to the Floorplan Sync Engine over typical Gizinta files is that they contain the details 
+		for the database views that are used for change detection. This information is stored in the ChangeDetection elements in the XML documents.</p>
+
+		<h3>Folders:</h3>
+		<p>bldg - Building config files</p>
+		<p>bm - Basemap config files</p>
+		<p>fp - Floorplan config files</p>
+		<p>rt - Routing config files</p>
+	  </section>
+	</div>
+
+    <!-- FOOTER  -->
+<div id="footer_wrap" class="outer">
+  <footer class="inner">
+	<p class="copyright">GseBase maintained by <a href="https://github.com/Vertex3">Vertex3</a></p>
+	<p>29 Jun 2015</p>
+  </footer>
+</div>
+
+    
+  </body>
+</html>

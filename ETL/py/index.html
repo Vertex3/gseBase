@@ -1,0 +1,22 @@
+---
+title: py folder 
+tagline: Python scripts
+layout: default
+--- 
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+		<h3>Sync Engine py Folder</h3>
+		<p>This folder contains the main python scripts that automate the CAD->GIS processing</p>
+		<p>The main script for processing is gseLoaderFME.py. This tool accepts 2 arguments - the playlist to run, and the server config file to be used. 
+		The playlist argument can be a single file or a comma-separated list of values. For example, for Floorplan processing, there is 
+		a loadplaylist,deriveplaylist argument. gseLoaderFME will run each of the playlists in order, and if everything works it will write 
+		data to the production cad sde database. If there are any issues they are logged, no data is written, and the processing will move on to the next drawing.</p>
+		<p>The server config file argument is an XML file that contains a number of settings for the processing. This includes the 
+		location of the cad files, the sde connection files for the staging and production databases, and other settings.</p>
+		<p>More documentation on the playlists and server config files can be found in the documentation for 
+		<a href="../config/doc_config.htm">config</a> and <a href="../serverConfig/doc_serverConfig.htm">serverConfig</a> folders.</p>
+		<h3>Folders:</h3>
+		<p>dwgManagement - scripts to populate the database list of active floors and other utilities developed for specific projects</p>
+		<p>log - Location of log files produced by the system. These files are very useful for debugging purposes</p>
+	  </section>
+	</div>

@@ -1,0 +1,25 @@
+---
+title: config folder 
+tagline: Gizinta configuration files
+layout: default
+--- 
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+		<h3>Sync Engine config Folder</h3>
+		<p>Folder that contains Gizinta xml configuration files</p>
+		<p>This folder contains Gizinta playlist files along with subfolders containing the files referenced in the playlists.</P>
+		<p>A Gizinta plalylist is a list of datasets to be processed, and each of the Sync Engine processing steps uses a playlist argument
+		to control the source data that is read, and the target data that is written by the processing step. The playlist file also contains 
+		key settings such as the FME workbench process to run, the name of the log file to be created, a filter on file names (i.e., nameContains='XP') 
+		and an indication of the source dataset type.</p>
+		<p>Each Gizinta file contains the source and target dataset names, along with details for the field mapping and QA/QC processing for
+		each dataset. One addition to the Floorplan Sync Engine over typical Gizinta files is that they contain the details 
+		for the database views that are used for change detection. This information is stored in the ChangeDetection elements in the XML documents.</p>
+
+		<h3>Folders:</h3>
+		<p>bldg - Building config files</p>
+		<p>bm - Basemap config files</p>
+		<p>fp - Floorplan config files</p>
+		<p>rt - Routing config files</p>
+	  </section>
+	</div>

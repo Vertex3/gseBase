@@ -1,0 +1,27 @@
+---
+title: serverConfig folder 
+tagline: Machine-specific settings
+layout: default
+--- 
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+		<h3>Sync Engine serverConfig Folder</h3>
+		<p>This folder contains machine-specific settings for processing</p>
+		<p>The .sde files in this folder are ArcGIS SDE Connection files. These contain the settings for the database server, database, and security. 
+		All of the Sync Engine processing relies on these files, and the 2 main ones are GIS Staging.sde and GIS Production.sde. 
+		These 2 files must be set to the correct databases.</p>
+		<p>The xml configuration files have a number of settings that are specific to a particular process. Most of the time 
+		gseDataConfig.xml is used for processing, and it has the following settings:
+		<li>cadFolder="'C:\Apps\Gizinta\gseUW\CAD\Floorplans'" -- the location of the source cad drawings</li>
+		<li>stagingWS="GIS Staging.sde" productionWS="GIS Production.sde" -- the names of the sde connection files</li>
+		<li>deleteCADFiles="True"  -- indicates whether cad files should be deleted if processing is successful</li>
+		<li>autoSync="True" -- automatically sync to the production database if processing is successful</li>
+		<li>exitOnError="False" -- continue processing if errors occur</li>
+		<li>minTime="'01/11/1900 9:00:00 AM'" -- will only process files since this date</li>
+		<li>fileExt = ".dwg" -- string for cad file extension</li>
+		<li>fmeExe = "C:\Apps\FME\fme.exe" -- location of FME install on this machine</li>
+		<li>sourceEPSG="2285" -- source coordinate system (EPSG values known by FME)</li>
+		<li>runas="FME" -- possible future option</li>
+		<li>truncate="Y" -- truncate the staging database during load processing. Can be used to load everything to staging for batch processing along with 'autoSync' setting.</li>
+	  </section>
+	</div>
