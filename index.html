@@ -6,14 +6,24 @@ published: true
 ---
 
 
+
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
 
-	  <h3><a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gizinta Sync Engine Base (gseBase) Documentation</h3>
+	  <h3><a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
         <p>gseBase contains the common files for the Gizinta Sync Engine Solution, and it is extended for use on specific projects.</p>
         <p>Implementation projects are built using Github private repositories, and they include most of the content from the gseBase project - with names like gseVT and gseUW.</p>	
 		
+        <h3>Key Concepts</h3>
+        <p>Sync Engine uses python and Safe Software's FME to automate spatial data update processes. It is a general concept that could be used to automate many processes, with some special features like playlists, built in QA, and change detection that provide a sophisticated way to link and automate multiple processing steps. Currently the emphasis is on Campus Floorplans and Routing sync from CAD-GIS. In this space, the main requirement is to build and incrementally update a seamless 2D and 3D Campus database from source CAD drawings. It's an industrial-strength solution that is capable of handling large volumes of data with minimal support beyond the maintenance of the source drawings.There are several challenges in a solution like this:</p>
+        <ul>
+          <li>Coordinate transformation from paper space to geographic space</li>
+          <li>Build derived data - add the third dimension and additional data required for GIS applications</li>
+          <li>Perform change detection and only update the database with things that have changed</li>
+          <li>Support multiple processing steps, and if any of the steps do not pass QA rules or fail for any reason then skip to the next drawing without posting any of the data from steps along the way</li>
+        </ul>
+
         <h3>Folders</h3>
 		<p>The project is organized into multiple folders. The base location for these files on disk is typically C:\Apps\Gizinta\gseBase or the specific project that you are working on.</p>
 
@@ -36,4 +46,3 @@ published: true
 		<p>Get in touch with us using the <a href="http://gizinta.com/forums/forum/g/" target='new'>Gizinta forum</a> and the <a href="http://gizinta.com/contact-us/" target='new'>Gizinta Contact</a> form for direct messages.</p>
       </section>
     </div>
-
