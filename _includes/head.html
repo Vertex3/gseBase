@@ -1,11 +1,15 @@
+{% capture root %}{% if page.root %}{{ page.root }}{% else %}{{ post.root }}{% endif %}{%endcapture%}
+
+<!--<script type="text/javascript" src="{{ root }}js/jquery-min.js"></script>-->
+<link rel="stylesheet" type="text/css" href="{{ root }}/stylesheets/stylesheet.css" />
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="GseBase : Gizinta Sync Engine">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
+	<!--    <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+	-->
     <title>{{ page.title }}</title>
   </head>
 
