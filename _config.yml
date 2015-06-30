@@ -1,4 +1,4 @@
-host: localhost
+host: http://vertex3.github.io
 include: [ETL, ETL/batch,ETL/config,ETL/serverConfig,ETL/views,ETL/fme,ETL/py]
 baseurl : /
 root: http://vertex3.github.io/gseBase/
