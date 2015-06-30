@@ -2,7 +2,9 @@
 title: GseBase
 tagline: Gizinta Sync Engine
 layout: default
+published: true
 ---
+
 <!DOCTYPE html>
 <html>
 
@@ -20,11 +22,13 @@ layout: default
 		<p>The project is organized into multiple folders. The base location for these files on disk is typically C:\Apps\Gizinta\gseBase or the specific project that you are working on.</p>
 
 <ul>
-  {% for page in site.pages %}
+<!--  {% for page in site.pages %}
   {% if page.title != 'GseBase' %}
     <li><a href="{{ site.url }}/{{ page.url }}">{{ page.title }}</a></li>
   {% endif %}
   {% endfor %}
+-->
+  <li><a href="{{ site.url }}ETL/index.html">{{ page.title }}</a> - the ETL folder contains the scripts that run the tools, along with subfolders for different parts of the Sync Engine.</li>
 </ul>
 <!--
 		<p><a href="ETL/index.html">ETL</a></p>
