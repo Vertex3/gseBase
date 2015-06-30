@@ -29,7 +29,7 @@ published: true
   <li><a href="{{ site.url }}ETL/index.html">ETL (Extract, Transform and Load) Folder</a> - the ETL folder contains the scripts that run the tools, along with subfolders for different parts of the Sync Engine.</li>
 </ul>
         <h3>Key Concepts</h3>
-        <p>Sync Engine uses python and Safe Software's FME to automate spatial data update processes. It is a general concept that could be used to automate many processes, with some special features like playlists, built in QA, and change detection that provide a sophisticated way to automate multiple processing steps. The concepts and implementation were developed based on many years building these kinds of solutions. Even though it might look a bit complicated at first, it's the kind of thing after working on this for a few years you might really appreciate.</p>
+        <p>Sync Engine uses python and Safe Software's FME to automate spatial data update processes. It is a general concept that could be used to automate many processes, with some special features like playlists, built in QA, and change detection that provide a sophisticated way to automate multiple processing steps. The concepts and implementation were developed based on many years building these kinds of solutions. Even though it might look a bit complicated at first, it's the kind of thing after working on this for a few years you might appreciate.</p>
           <p>Currently the emphasis is on Campus Floorplans and Routing sync from CAD-GIS. In this space, the main requirement is to build and incrementally update a seamless 2D and 3D Campus database from source CAD drawings. It requires an industrial-strength solution that is capable of handling large volumes of data with minimal support beyond the maintenance of the source drawings. There are several challenges for a solution like this:</p>
         <ul>
           <li>Coordinate transformation from paper space to geographic space</li>
@@ -38,6 +38,7 @@ published: true
           <li>Support multiple processing steps, and if any of the steps do not pass QA rules or fail for any other reason then skip to the next drawing without posting any of the data from steps along the way</li>
           <li>Provide logging capabilities that support debugging and problem solving for drawings and individual features</li>
           <li>Provide full access to FME and ArcGIS capabilities</li>
+          <li>Build a modular system that is supportable and manageable</li>
         </ul>
 
         <h3>Authors and Contributors</h3>
