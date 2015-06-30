@@ -13,7 +13,7 @@ published: true
 
 	  <h3><a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
         <p>Gizinta Sync Engine builds on the basic <a href="http://github.com/Gizinta/gzTools" target='new'>Gizinta</a> library. The key feature of the Gizinta method is XML configuration files for schema mapping between source and target data models. Gizinta also has 'playlists' - all Gizinta tools have the ability to run one or more datasets at a time, and this makes it possible to update parts or all of a target database by just passing an XML file to the process to be run.</p>
-        <p>Sync Engine takes the Gizinta idea further by providing a way to execute playlists, write data to a staging database, and update the target database with change-only updates if all playlists run successfully.</p>
+        <p>Sync Engine takes the Gizinta idea further by providing a way to execute enhanced playlists and update the target database with change-only updates if all playlists run successfully. Playlists are enhanced with reference to an FME process to run, along with details about the database views to be created for change-only updates.</p>
         <p>Implementation projects are built and managed using Github private repositories, and they include most of the content from the gseBase project - with names like gseVT and gseUW.</p>	
 		
         <h3>Folders</h3>
@@ -35,6 +35,7 @@ published: true
           <li>Coordinate transformation from paper space to geographic space</li>
           <li>Build derived data - add the third dimension and additional data required for GIS applications</li>
           <li>Perform change detection and change-only updates to the database</li>
+          <li>Changes should be written only if some fields change. For example, the LastUpdate field is updated every time a feature is written, so there is a need to update the database only if some fields have changed.</li>
           <li>Support multiple processing steps, and if any of the steps do not pass QA rules or fail for any other reason then skip to the next drawing without posting any of the data from steps along the way</li>
           <li>Provide logging capabilities that support debugging and problem solving for drawings and individual features</li>
           <li>Provide full access to FME and ArcGIS capabilities</li>
