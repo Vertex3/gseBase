@@ -12,17 +12,19 @@ published: true
       <section id="main_content" class="inner">
 
 	  <h3><a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
-        <p>Gizinta Sync Engine builds on the basic <a href="http://github.com/Gizinta/gzTools" target='new'>Gizinta</a> library. The key feature of the Gizinta method is XML configuration files for schema mapping between source and target data models. Gizinta also has 'playlists' - all Gizinta tools have an ability to run one or more datasets at a time, and this provides options for updating parts or all of a target database.</p>
+        <p>Gizinta Sync Engine builds on the basic <a href="http://github.com/Gizinta/gzTools" target='new'>Gizinta</a> library. The key feature of the Gizinta method is XML configuration files for schema mapping between source and target data models. Gizinta also has 'playlists' - all Gizinta tools have the ability to run one or more datasets at a time, and this makes it possible to update parts or all of a target database by just passing an XML file to the process to be run.</p>
         <p>Sync Engine takes the Gizinta idea further by providing a way to execute playlists, write data to a staging database, and update the target database with change-only updates if all playlists run successfully.</p>
-        <p>Implementation projects are built using Github private repositories, and they include most of the content from the gseBase project - with names like gseVT and gseUW.</p>	
+        <p>Implementation projects are built and managed using Github private repositories, and they include most of the content from the gseBase project - with names like gseVT and gseUW.</p>	
 		
         <h3>Key Concepts</h3>
-        <p>Sync Engine uses python and Safe Software's FME to automate spatial data update processes. It is a general concept that could be used to automate many processes, with some special features like playlists, built in QA, and change detection that provide a sophisticated way to link and automate multiple processing steps. Currently the emphasis is on Campus Floorplans and Routing sync from CAD-GIS. In this space, the main requirement is to build and incrementally update a seamless 2D and 3D Campus database from source CAD drawings. It's an industrial-strength solution that is capable of handling large volumes of data with minimal support beyond the maintenance of the source drawings.There are several challenges in a solution like this:</p>
+        <p>Sync Engine uses python and Safe Software's FME to automate spatial data update processes. It is a general concept that could be used to automate many processes, with some special features like playlists, built in QA, and change detection that provide a sophisticated way to automate multiple processing steps.</p>
+          <p>Currently the emphasis is on Campus Floorplans and Routing sync from CAD-GIS. In this space, the main requirement is to build and incrementally update a seamless 2D and 3D Campus database from source CAD drawings. It's an industrial-strength solution that is capable of handling large volumes of data with minimal support beyond the maintenance of the source drawings. There are several challenges for a solution like this:</p>
         <ul>
           <li>Coordinate transformation from paper space to geographic space</li>
           <li>Build derived data - add the third dimension and additional data required for GIS applications</li>
-          <li>Perform change detection and only update the database with things that have changed</li>
-          <li>Support multiple processing steps, and if any of the steps do not pass QA rules or fail for any reason then skip to the next drawing without posting any of the data from steps along the way</li>
+          <li>Perform change detection and change-only updates to the database</li>
+          <li>Support multiple processing steps, and if any of the steps do not pass QA rules or fail for any other reason then skip to the next drawing without posting any of the data from steps along the way</li>
+          <li>Provide logging capabilities that support debugging and problem solving for drawings and individual features</li>
         </ul>
 
         <h3>Folders</h3>
