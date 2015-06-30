@@ -16,17 +16,6 @@ published: true
         <p>Sync Engine takes the Gizinta idea further by providing a way to execute playlists, write data to a staging database, and update the target database with change-only updates if all playlists run successfully.</p>
         <p>Implementation projects are built and managed using Github private repositories, and they include most of the content from the gseBase project - with names like gseVT and gseUW.</p>	
 		
-        <h3>Key Concepts</h3>
-        <p>Sync Engine uses python and Safe Software's FME to automate spatial data update processes. It is a general concept that could be used to automate many processes, with some special features like playlists, built in QA, and change detection that provide a sophisticated way to automate multiple processing steps.</p>
-          <p>Currently the emphasis is on Campus Floorplans and Routing sync from CAD-GIS. In this space, the main requirement is to build and incrementally update a seamless 2D and 3D Campus database from source CAD drawings. It's an industrial-strength solution that is capable of handling large volumes of data with minimal support beyond the maintenance of the source drawings. There are several challenges for a solution like this:</p>
-        <ul>
-          <li>Coordinate transformation from paper space to geographic space</li>
-          <li>Build derived data - add the third dimension and additional data required for GIS applications</li>
-          <li>Perform change detection and change-only updates to the database</li>
-          <li>Support multiple processing steps, and if any of the steps do not pass QA rules or fail for any other reason then skip to the next drawing without posting any of the data from steps along the way</li>
-          <li>Provide logging capabilities that support debugging and problem solving for drawings and individual features</li>
-        </ul>
-
         <h3>Folders</h3>
 		<p>The project is organized into multiple folders. The base location for these files on disk is typically C:\Apps\Gizinta\gseBase or the specific project that you are working on.</p>
 
@@ -39,9 +28,17 @@ published: true
 -->
   <li><a href="{{ site.url }}ETL/index.html">ETL (Extract, Transform and Load) Folder</a> - the ETL folder contains the scripts that run the tools, along with subfolders for different parts of the Sync Engine.</li>
 </ul>
-<!--
-		<p><a href="ETL/index.html">ETL</a></p>
--->
+        <h3>Key Concepts</h3>
+        <p>Sync Engine uses python and Safe Software's FME to automate spatial data update processes. It is a general concept that could be used to automate many processes, with some special features like playlists, built in QA, and change detection that provide a sophisticated way to automate multiple processing steps.</p>
+          <p>Currently the emphasis is on Campus Floorplans and Routing sync from CAD-GIS. In this space, the main requirement is to build and incrementally update a seamless 2D and 3D Campus database from source CAD drawings. It's an industrial-strength solution that is capable of handling large volumes of data with minimal support beyond the maintenance of the source drawings. There are several challenges for a solution like this:</p>
+        <ul>
+          <li>Coordinate transformation from paper space to geographic space</li>
+          <li>Build derived data - add the third dimension and additional data required for GIS applications</li>
+          <li>Perform change detection and change-only updates to the database</li>
+          <li>Support multiple processing steps, and if any of the steps do not pass QA rules or fail for any other reason then skip to the next drawing without posting any of the data from steps along the way</li>
+          <li>Provide logging capabilities that support debugging and problem solving for drawings and individual features</li>
+        </ul>
+
         <h3>Authors and Contributors</h3>
         <p><a href="https://github.com/SteveGrise" target='new' class="user-mention">Steve Grise</a> from <a href="https://github.com/Vertex3" target='new' class="user-mention">Vertex3</a> developed <a href="https://github.com/Gizinta/gzTools"  target='new' class="user-mention">Gizinta</a> and the Sync Engine</p>
 
