@@ -14,7 +14,7 @@ layout: default
 
 	  <h3><a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gizinta Sync Engine Base (gseBase) Documentation</h3>
         <p>gseBase contains the common files for the Gizinta Sync Engine Solution, and it is extended for use on specific projects.</p>
-        <p>Current implementations include Floorplan solutions for the University of Washington (UW) and Virginia Tech (VT). These projects are defined as Github private repositories, and they include most of the content from the gseBase project - gseVT and gseUW.</p>	
+        <p>Implementation projects are built using Github private repositories, and they include most of the content from the gseBase project - with names like gseVT and gseUW.</p>	
 		
         <h3></a>Folders</h3>
 		<p>The project is organized into multiple folders. The base location for these files on disk is typically C:\Apps\Gizinta\gseBase or the specific project that you are working on.</p>
@@ -22,7 +22,7 @@ layout: default
 <ul>
   {% for page in site.pages %}
   {% if page.title != 'GseBase' %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    <li><a href="{{ site.url }}/{{ page.url }}">{{ page.title }}</a></li>
   {% endif %}
   {% endfor %}
 </ul>
