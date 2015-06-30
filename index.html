@@ -29,7 +29,7 @@ published: true
           <li>Coordinate transformation from paper space to geographic space</li>
           <li>Build derived data - add the third dimension and additional data required for GIS applications</li>
           <li>Perform change detection and change-only updates to the database</li>
-          <li>Changes should be written only if some fields change. For example, the LastUpdate field is updated every time a feature is written, so there is a need to update the database only if some fields have changed.</li>
+          <li>Changes should be written only if some fields change. For example, the LastUpdate field is updated every time a feature is written, so this field should not be included in change detection logic.</li>
           <li>Support multiple processing steps, and if any of the steps do not pass QA rules or fail for any other reason then skip to the next drawing without posting any of the data from steps along the way</li>
           <li>Provide logging capabilities that support debugging and problem solving for drawings and individual features</li>
           <li>Provide full access to FME and ArcGIS capabilities</li>
