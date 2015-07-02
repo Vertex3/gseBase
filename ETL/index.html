@@ -1,20 +1,23 @@
 ---
-title: ETL folder (Extract, Transform, and Load)
+title: "ETL folder (Extract, Transform, and Load)"
 tagline: Gizinta Sync Engine
 layout: default
---- 
+published: true
+---
+
+ 
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
 		<p>The ETL folder contains the main tools for sync processing, and there are several subfolders that contain the python and fme tools that perform the processing.</p>
 
 		<h3>Folders:</h3>
-		<p><a href="batch/index.html">batch</a> - the batch update folder that has some multiprocessing tools plus Routing and Exterior line processing that is run in batch mode</p>
-		<p><a href="config/index.html">config</a> - the gizinta xml files that match source feature classes and attributes to the target data model</p>
+		<p><a href="batch/index.html">batch</a> - the batch update folder has some multiprocessing tools, plus Routing and Exterior line processing that is run in batch mode</p>
+		<p><a href="config/index.html">config</a> - the gizinta xml files that match source feature classes and attributes to the target data model. There are multiple subfolders that contain the Gizinta XML files, the config folder has the playlists</p>
 		<p><a href="fme/index.html">fme</a> - the fme workbench files used for processing. The \log subfolder contains the fme log files that are useful for debugging</p>
-		<p><a href="py/index.html">py</a> - the python folder that contains the sync engine script logic. the \log folder contains python log files that are useful for debugging</p>
-		<p>scrap - some scrap files</p>
-		<p><a href="serverConfig/index.html">serverConfig</a> - contains xml files that set the folder locations for drawings and other config items. Also contains the .sde connection files used for all processing</p>
-		<p><a href="views/index.html">views</a> - a folder for view scripts, especially the publication views that are used to join other tables and populate the publication database</p>
+		<p><a href="py/index.html">py</a> - the python folder contains the sync engine script logic. the \log folder contains python log files that are useful for debugging</p>
+		<p>scrap - scrap files we want to keep in Github but aren't part of the processing</p>
+		<p><a href="serverConfig/index.html">serverConfig</a> - contains XML files that set the folder locations for drawings and other config items. Also contains the .sde connection files used for all processing</p>
+		<p><a href="views/index.html">views</a> - a folder for view scripts. There are 2 main files - the view creation scripts for change detection (generated using a python script), along with the SQL Script to create publication views that are used to join other tables and populate the publication database</p>
 
 		<p><h3>Files:</h3></p>
 
