@@ -15,8 +15,8 @@ published: true
 	  <h3><a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
         <p>Sync Engine builds on the basic <a href="http://github.com/Gizinta/gzTools" target='new'>Gizinta</a> library. Gizinta makes it easier to move data between databases using XML configuration files to map source datasets to target data models. Gizinta also has 'playlists' - all Gizinta tools have the ability to run one or more datasets at a time, and this makes it possible to update parts or all of a target database by just passing an XML file to the process to be run.</p>
         <p>Sync Engine takes the Gizinta idea further by providing a way to execute enhanced playlists and update the target database with change-only updates if all playlists run successfully. Playlists are enhanced with a reference to an FME process to run, along with details about the database views to be created for change-only updates.</p>
-        <p>Implementation projects are built and managed using Github private repositories, and they include most of the content from the gseBase project - with names like gseVT and gseUW.</p>	
-		
+        <p>The gseBase repository contains most of the code and the folder structure for the Sync Engine tools. Implementation projects are built and managed using Github private repositories, and they include most of the content from the gseBase project - with names like gseVT and gseUW.</p>	
+        
         <h3>Folders</h3>
 		<p>The project is organized into multiple folders. The base location for these files on disk is typically C:\Apps\Gizinta\gseBase or the specific project that you are working on.</p>
 
@@ -25,7 +25,7 @@ published: true
 </ul>
         <h3>Key Concepts</h3>
         <p>Sync Engine uses python and Safe Software's FME to automate spatial data update processes. It is a general concept that could be used to automate many processes, with some special features like playlists, built in QA, and change detection that provide a sophisticated way to automate multiple processing steps. The concepts and implementation were developed based on many years building these kinds of solutions. Even though it might look a bit complicated at first, it's the kind of thing after working on this for a few years you might appreciate.</p>
-          <p>Currently the emphasis is on Campus Floorplans and Routing sync from CAD-GIS. In this space, the main requirement is to build and incrementally update a seamless 2D and 3D Campus database from source CAD drawings. It requires an industrial-strength solution that is capable of handling large volumes of data with minimal support beyond the maintenance of the source drawings. There are several challenges for a solution like this:</p>
+          <p>Currently the emphasis is on Campus Floorplans and Routing sync from CAD-GIS. In this space, the main requirement is to build and incrementally update a seamless 2D and 3D Campus database from source CAD drawings. This requires an industrial-strength solution that is capable of handling large volumes of data with minimal support beyond the maintenance of the source drawings. There are several challenges for a solution like this:</p>
         <ul>
           <li>Coordinate transformation from paper space to geographic space</li>
           <li>Build derived data - add the third dimension and additional data required for GIS applications</li>
@@ -34,7 +34,8 @@ published: true
           <li>Support multiple processing steps, and if any of the steps do not pass QA rules or fail for any other reason then skip to the next drawing without posting any of the data from steps along the way</li>
           <li>Provide logging capabilities that support debugging and problem solving for drawings and individual features</li>
           <li>Provide full access to FME and ArcGIS capabilities</li>
-          <li>Build a modular system that is supportable and manageable</li>
+          <li>Support batch loading for thousands of drawings, along with incremental update that can run for days</li>
+          <li>Make sure the solution is supportable and manageable</li>
         </ul>
 
         <h3>Authors and Contributors</h3>
