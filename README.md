@@ -1,3 +1,3 @@
 # gseBase
 Gizinta Sync Engine
-Check out documentation at http://vertex3.github.io/gseBase
+This is not the right repo for floorplans - Check out documentation at http://gizinta.github.io/gseFP
