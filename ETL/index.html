@@ -1,5 +1,5 @@
 ---
-title: "ETL folder (Extract, Transform, and Load)"
+title: 'ETL folder (Extract, Transform, and Load)'
 tagline: Gizinta Sync Engine
 layout: default
 published: true
@@ -21,21 +21,10 @@ published: true
 
 		<h3>Files:</h3>
 
-		<strong>The 2 most important files are Floorplan_exec_all and Routing_exec_all. These 2 batch files run the entire sync process from end to end</strong>
+		<strong>The 2 most important files are runSyncSites.py and runSyncNavigation.py. These 2 python scripts run the entire sync process from end to end</strong>
 
-		<p>Basemap_sync.bat - script to load from siteplan drawings to cadsde</p>
-		<p>BldgOutline_archive.bat - archive buildings</p>
-		<p>BldgOutline_sync.bat - Load building outlines from source dwg files to cadsde</p>
-		<p>Floorplan_archive.bat - archive floorplan drawings</p>
-		<p>Floorplan_exec_all.bat - run all of the floorplan processing by drawing with sync to publication</p>
-		<p>Floorplan_sync.bat - Load floorplans from source cad drawings to cadsde</p>
 		<p>gse.py - some site-level folder structure settings used by other scripts. No need to change this unless the folder structure is changed</p>
 		<p>gse.tbx - contains several geoprocessing tools used to create difference views and analyze datasets</p>
 		<p>gseLocal.tbx - some site-specific geoprocessing models that use tools in gse.tbx</p>
-		<p>Publication_sync.bat - sync floorplan and building data to the publication database (incremental update)</p>
-		<p>PublicationRouting_sync.bat - sync routing data to the publication database (batch replace)</p>
-		<p>Routing_ElevatorRebuild_Sync.bat - rebuild all elevators on cadsde</p>
-		<p>Routing_exec_all.bat - run all of the Routing processes with sync to the nav serverConfig</p>
-		<p>Routing_sync.bat - Load routing drawings from source cad drawings to cadsde</p>
 </section>
 </div>
