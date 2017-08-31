@@ -1,0 +1,22 @@
+---
+title: 'runSyncNavigation.py script'
+tagline: Floorplan Sync Engine
+layout: default
+published: true
+---
+ <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<p>Documentation for runSyncNavigation.py script</p>
+<p>This process is the main synchronization process for extracting and validating Routing data. It is run on a regular basis as a scheduled task. The process typically runs at the end of each day and processes all routing features.</p>
+
+<p>The script uses the sitesNavigation.txt file for the list of sites to process</p>
+<p>For each site:
+        <li>Run the gseRoutingElevatorConstructor.fmw process to rebuild elevators for the campus</li>
+        <li>Run the gseBuildingConnector.fmw process to construct exterior Building Connectors where there are dangling lines between the buildings and exterior lines.</li>
+        <li>Delete the existing Routing.gdb and copy a new Routing.gdb from the Template.gdb file Geodatabase. This ensures that the Routing network dataset is 'dirty' and a build network command will rebuild everything</li>
+<li>Run the GenerateNetworkDataset.fmw process to load data from the Routing feature classes in the Cadsde database to the Routing.gdb</li>
+<li>Run BuildNDS.py to initiate a rebuild of the network dataset.</li>
+<li>Delete the folder contents of RemoteRouting.gdb/* and replace with the file contents of Routing.gdb/*. We use this approach to swap out the content of the routing geodatabase for the navigation application without having to restart the map/geoprocessing services.</li>
+</p>
+  </section>
+  </div>
