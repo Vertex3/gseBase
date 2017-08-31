@@ -21,10 +21,16 @@ published: true
 
 		<h3>Files:</h3>
 
-        <strong>The 2 most important files are <a href='runSyncSites.py.html'>runSyncSites.py</a> and runSyncNavigation.py. These 2 python scripts run the entire sync process from end to end</strong>
-
-		<p>gse.py - some site-level folder structure settings used by other scripts. No need to change this unless the folder structure is changed</p>
+        <strong>The 2 most important files are <a href='runSyncSites.py.html'>runSyncSites.py</a> and <a href='runSyncNavigation.py.html'>runSyncNavigation.py</a>. These 2 python scripts run the entire sync process from end to end</strong>
+		<p>The Site Sync typically runs every hour while the Navigation Sync runs once per day.</p>
+		<p>There are several supporting files in the ETL folder:</p>
+		<p>etl.py - Supporting .py functions for the run*.py scripts in this folder.</p>
+		<p>gse.py - some site-level folder structure settings used by all gse*.py scripts. There is no need to change this file unless the entire folder structure is changed</p>
 		<p>gse.tbx - contains several geoprocessing tools used to create difference views and analyze datasets</p>
 		<p>gseLocal.tbx - some site-specific geoprocessing models that use tools in gse.tbx</p>
+		<p>sitesCAD.txt - list of Sites used by the runSyncSites.py script</p>
+		<p>sitesNavigation.txt - list of Sites used by the runSyncNavigation.py script</p>
+		<p>tIncremental_Scheduled_Task.bat - perform a partial CAD Vault mirror and run the runSyncSites.py script - intended to be set up as a scheduled task.</p>
+		<p>tNavigation_Scheduled_Task.bat - run the runSyncNavigation.py script - intended to be set up as a scheduled task.</p>
 </section>
 </div>
