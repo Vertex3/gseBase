@@ -9,6 +9,7 @@ published: true
 <p>Documentation for runRoutingExtract.py script</p>
 <p>This process extracts routing data by Building ID where any features in the building were created since the time provided as a parameter to the script. This time is typically the start time of the last runSyncSites.py script.</p>
 
-<p>This process runs the ETL\batch\routing\RT_Extract.fmw tool and outputs an RT_Extract.dwg file in C:\Vault_Mirror\BatchGIS\Export\RT_Extract.dwg </p>
+<p>This process runs the ETL\batch\routing\RT_Extract.fmw tool and outputs an RT_Extract.dwg file in C:\Vault_Mirror\BatchGIS\Export\RT_Extract.dwg</p>
+<p>This process will also run *** future *** the ETL\fme\BuildingChecker.fmw process that uses the RT_Extract drawing to check for CAD errors. Any errors will be output in C:\Vault_Mirror\BatchGIS\Export\(BUILDINGID)RT_Errors.dwg - a CAD drawing per building with errors.</p>
   </section>
   </div>
